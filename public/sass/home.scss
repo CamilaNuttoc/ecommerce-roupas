@@ -1,8 +1,39 @@
 @import "compass";
 
+//Media queries
+$xs-size: "only screen and (max-width: 576px)";
+$sm-size: "only screen and (min-width: 576px)";
+$md-size: "only screen and (min-width: 768px)";
+$lg-size: "only screen and (min-width: 992px)";
+
+//Limita imagens ao seu container
 img{
 	width: 100%;
 }
+
+//Cria espaço entre seções
 .row{
 	margin-bottom: 20px;
+}
+
+//Para lidar com imagens de tamanhos diferentes
+#myCarousel img{
+	max-height: 400px;
+	min-height: 400px;
+	@media #{$xs-size}{
+    max-height: 150px;
+	  min-height: 150px;
+  }
+  @media #{$sm-size}{
+    max-height: 250px;
+	  min-height: 250px;
+  }
+  @media #{$md-size}{
+    max-height: 280px;
+	  min-height: 280px;
+  }
+  @media #{$lg-size}{
+    max-height: 400px;
+	  min-height: 400px;
+  }
 }

@@ -1,9 +1,43 @@
-/* line 3, ../sass/home.scss */
+/* line 10, ../sass/home.scss */
 img {
   width: 100%;
 }
 
-/* line 6, ../sass/home.scss */
+/* line 15, ../sass/home.scss */
 .row {
   margin-bottom: 20px;
+}
+
+/* line 20, ../sass/home.scss */
+#myCarousel img {
+  max-height: 400px;
+  min-height: 400px;
+}
+@media only screen and (max-width: 576px) {
+  /* line 20, ../sass/home.scss */
+  #myCarousel img {
+    max-height: 150px;
+    min-height: 150px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  /* line 20, ../sass/home.scss */
+  #myCarousel img {
+    max-height: 250px;
+    min-height: 250px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 20, ../sass/home.scss */
+  #myCarousel img {
+    max-height: 280px;
+    min-height: 280px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 20, ../sass/home.scss */
+  #myCarousel img {
+    max-height: 400px;
+    min-height: 400px;
+  }
 }
