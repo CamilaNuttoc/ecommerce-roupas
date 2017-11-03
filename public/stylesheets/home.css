@@ -82,42 +82,66 @@ img {
   border: 1px solid #ffa500;
 }
 /* line 80, ../sass/home.scss */
+.thumbnail img {
+  min-height: 200px;
+  max-height: 380px;
+}
+/* line 84, ../sass/home.scss */
 .thumbnail h3 {
   font-size: 18px;
   margin: 5px 0 10px;
 }
-/* line 84, ../sass/home.scss */
+/* line 88, ../sass/home.scss */
 .thumbnail .preco-original, .thumbnail .preco-desconto {
   display: block;
 }
-/* line 87, ../sass/home.scss */
+/* line 91, ../sass/home.scss */
 .thumbnail .preco-original {
   text-decoration: line-through;
   font-size: 13px;
 }
-/* line 91, ../sass/home.scss */
+/* line 95, ../sass/home.scss */
 .thumbnail .preco-desconto, .thumbnail button {
   font-size: 24px;
   margin-top: 8px;
 }
-/* line 95, ../sass/home.scss */
+/* line 99, ../sass/home.scss */
 .thumbnail .favBtn {
   position: absolute;
   top: 3px;
   right: 12px;
 }
-/* line 100, ../sass/home.scss */
+/* line 104, ../sass/home.scss */
 .thumbnail .comprarBtn {
   width: 100%;
 }
+/* line 107, ../sass/home.scss */
+.thumbnail .img-categoria {
+  min-height: 300px;
+  max-height: 300px;
+  filter: brightness(50%);
+}
+/* line 113, ../sass/home.scss */
+.thumbnail .titulo-categoria {
+  position: absolute;
+  width: 70%;
+  text-align: center;
+  top: 130px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 4px 4px 8px #000;
+  background: none;
+}
 
-/* line 106, ../sass/home.scss */
+/* line 128, ../sass/home.scss */
 a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 112, ../sass/home.scss */
+/* line 134, ../sass/home.scss */
 [class*='col-'] {
   padding: 0 5px;
 }
