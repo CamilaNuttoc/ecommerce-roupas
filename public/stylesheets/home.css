@@ -8,34 +8,69 @@ img {
   margin-bottom: 20px;
 }
 
-/* line 20, ../sass/home.scss */
+/* line 21, ../sass/home.scss */
+.carousel-hidden {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 27, ../sass/home.scss */
+.carousel-nowrap {
+  white-space: nowrap;
+}
+
+/* line 32, ../sass/home.scss */
+.carousel-nowrap .col-md-1 {
+  display: inline-block;
+  float: none;
+  padding: 0 10px;
+}
+
+/* line 39, ../sass/home.scss */
+[id*='btnMarca'] {
+  position: absolute;
+  top: 20%;
+  z-index: 1;
+}
+
+/* line 44, ../sass/home.scss */
+#btnMarcaNext {
+  right: 0;
+}
+
+/* line 48, ../sass/home.scss */
+#btnMarcaPrev {
+  left: 0;
+}
+
+/* line 54, ../sass/home.scss */
 #myCarousel img {
   max-height: 400px;
   min-height: 400px;
 }
 @media only screen and (max-width: 576px) {
-  /* line 20, ../sass/home.scss */
+  /* line 54, ../sass/home.scss */
   #myCarousel img {
     max-height: 150px;
     min-height: 150px;
   }
 }
 @media only screen and (min-width: 576px) {
-  /* line 20, ../sass/home.scss */
+  /* line 54, ../sass/home.scss */
   #myCarousel img {
     max-height: 250px;
     min-height: 250px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 20, ../sass/home.scss */
+  /* line 54, ../sass/home.scss */
   #myCarousel img {
     max-height: 280px;
     min-height: 280px;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 20, ../sass/home.scss */
+  /* line 54, ../sass/home.scss */
   #myCarousel img {
     max-height: 400px;
     min-height: 400px;

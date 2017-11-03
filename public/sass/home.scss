@@ -16,7 +16,41 @@ img{
 	margin-bottom: 20px;
 }
 
-//Para lidar com imagens de tamanhos diferentes
+//CARROSSEL DE MARCAS
+//Esconde parte do carrossel e faz ajustes
+.carousel-hidden{
+	display: block;
+	overflow: hidden;
+}
+
+//Evita quebra de linha
+.carousel-nowrap{
+	white-space: nowrap;
+}
+
+//Muda comportamento de elementos
+.carousel-nowrap .col-md-1{
+	display: inline-block;
+	float: none;
+	padding: 0 10px;
+}
+
+//Posiciona botões de controle das marcas
+[id*='btnMarca']{
+	position: absolute;
+	top: 20%;
+	z-index: 1;
+}
+#btnMarcaNext{
+	right: 0;
+}
+
+#btnMarcaPrev{
+	left: 0;
+}
+
+//CARROSSEL DE SLIDES BOOTSTRAP
+//Para lidar com imagens de tamanhos diferentes no carrossel
 #myCarousel img{
 	max-height: 400px;
 	min-height: 400px;

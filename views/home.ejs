@@ -32,6 +32,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script>
+    <script src="/scripts/carrosselMarcas.js"></script>
   
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -41,6 +42,24 @@
   	<div class="container">
   		<div class="row">
   			<div class="col-xs-12">
+  			<!-- CARROSSEL DE MARCAS -->
+  			<button onclick="movePrev();" id="btnMarcaPrev">A</button>
+  			<div class="carousel-hidden">
+  				<div class="carousel-nowrap">
+  					<% for(var i=0; i<17; i++){ %>
+  					<div class="col-md-1 col-xs-2 marca<%= i %>">
+  						<img src="http://1.bp.blogspot.com/-RZF4-M4j4PU/UCsg42KEZBI/AAAAAAAA79U/T3gY9GDu4j8/s1600/chanel%2Blogo.jpg"/>
+  					</div>
+  					<% } %>
+  				</div>
+  			</div>
+  			<button onclick="moveNext();" id="btnMarcaNext">P</button>
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-xs-12">
+
+  				<!-- CARROSSEL BOOTSTRAP DE BANNERS -->
   				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				    <!-- Indicadores -->
 				    <ol class="carousel-indicators">
