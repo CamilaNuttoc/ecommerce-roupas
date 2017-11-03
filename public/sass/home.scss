@@ -71,3 +71,44 @@ img{
 	  min-height: 400px;
   }
 }
+
+//ITENS À VENDA
+.thumbnail{
+	&:hover{
+		border: 1px solid #ffa500;
+	}
+	h3{
+		font-size: 18px; 
+		margin: 5px 0 10px;
+	}
+	.preco-original, .preco-desconto{
+		display: block;
+	}
+	.preco-original{
+	    text-decoration: line-through;
+	    font-size: 13px; 
+	}
+	.preco-desconto, button{
+	 	font-size: 24px;
+	 	margin-top: 8px;
+	}
+	.favBtn{
+	  position: absolute;
+	  top: 3px;
+	  right: 12px;
+	}
+	.comprarBtn{
+		width: 100%;
+	}
+}
+
+//Links
+a:hover, a:active, a:visited, a:focus{
+	text-decoration: none;
+	outline: none
+}
+
+//Remove espaço entre elementos
+[class*='col-']{
+  padding: 0 5px;
+}
