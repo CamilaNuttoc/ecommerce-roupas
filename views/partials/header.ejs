@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Configurações básicas -->
+    <meta charset="UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<title>E-commerce de roupas</title>
+    <meta name="author" content="Camila Nuttoc"/>
+    <meta name="description" content=""/>
+  
+    <!-- Facebook -->
+    <meta property="og:image" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+  
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content=""/>
+  
+    <!-- Style -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+    <link href="/stylesheets/header.css" type="text/css" rel="stylesheet"/>
+    <link href="/stylesheets/home.css" type="text/css" rel="stylesheet"/>
+    <link href="/stylesheets/footer.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+    <script src="/scripts/carrosselMarcas.js"></script>
+    <script src="/scripts/hoverBtn.js"></script>
+    <script src="/scripts/dropdownContent.js"></script>
+    <script src="/scripts/searchForm.js"></script>
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  </head>
+  <body>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
+            <span class="sr-only">Toggle navigation</span>  
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>  
+          </button> 
+          <a class= "navbar-brand" href="#"><img src="http://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png" alt="logo"/></a>  
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav categorias">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Feminino</a>
+                <ul class="dropdown-menu" id="dropdown-feminino">
+                  <li class="categoria-bloco main-bloco">
+                    <ul>
+                      <li><a href="#">Roupas</a></li>
+                      <li><a href="#">Acessórios</a></li>
+                      <li><a href="#">Calçados</a></li>
+                      <li><a href="#">Íntimas</a></li>
+                    </ul>
+                  </li>
+                  <li class="categoria-bloco sub-bloco-feminino">
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Masculino</a>
+                <ul class="dropdown-menu" id="dropdown-masculino">
+                  <li class="categoria-bloco main-bloco">
+                    <ul>
+                      <li><a href="#">Roupas</a></li>
+                      <li><a href="#">Acessórios</a></li>
+                      <li><a href="#">Calçados</a></li>
+                      <li><a href="#">Íntimas</a></li>
+                    </ul>
+                  </li>
+                  <li class="categoria-bloco sub-bloco-masculino">
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Infantil</a>
+                <ul class="dropdown-menu" id="dropdown-infantil">
+                  <li class="categoria-bloco main-bloco">
+                    <ul>
+                      <li><a href="#">Meninos</a></li>
+                      <li><a href="#">Meninas</a></li>
+                    </ul>
+                  </li>
+                  <li class="categoria-bloco sub-bloco-infantil">
+                  </li>
+                </ul>
+              </li>
+            </ul>   
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left">
+              <div class="form-group" id="search-form">
+                <input type="text" class="form-control" id="search" placeholder="Saia chanel">
+                <button type="submit" id="search-form-btn"class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              </div>
+            </form>
+            <li id="searchBtn"><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-  haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+              <ul class="dropdown-menu" id="dropdown-user">
+                <li><a href="#">Meu carrinho</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Sair</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>

@@ -43,16 +43,11 @@ img {
   left: 0;
 }
 
-/* line 54, ../sass/home.scss */
-#myCarousel img {
-  max-height: 400px;
-  min-height: 400px;
-}
 @media only screen and (max-width: 576px) {
   /* line 54, ../sass/home.scss */
   #myCarousel img {
-    max-height: 150px;
-    min-height: 150px;
+    max-height: 180px;
+    min-height: 180px;
   }
 }
 @media only screen and (min-width: 576px) {

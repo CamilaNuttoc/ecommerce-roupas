@@ -1,0 +1,10 @@
+/* line 1, ../sass/footer.scss */
+footer {
+  background: #eee;
+  padding: 20px;
+}
+/* line 4, ../sass/footer.scss */
+footer ul {
+  display: inline-block;
+  margin: 0 20px;
+}
