@@ -17,92 +17,93 @@ a:hover {
 /* line 13, ../sass/header.scss */
 body {
   margin-top: 70px;
+  font-family: 'Maven Pro', sans-serif;
 }
 
-/* line 16, ../sass/header.scss */
+/* line 17, ../sass/header.scss */
 .container-fluid {
   margin: 0 5%;
 }
 
-/* line 19, ../sass/header.scss */
+/* line 20, ../sass/header.scss */
 .navbar-brand {
   padding: 0;
 }
-/* line 21, ../sass/header.scss */
+/* line 22, ../sass/header.scss */
 .navbar-brand img {
   max-height: 100%;
   width: auto;
 }
 
-/* line 26, ../sass/header.scss */
+/* line 27, ../sass/header.scss */
 .navbar-nav {
   margin-left: 5%;
 }
-/* line 28, ../sass/header.scss */
+/* line 29, ../sass/header.scss */
 .navbar-nav > li > a {
   padding: 12px;
 }
 
-/* line 32, ../sass/header.scss */
+/* line 33, ../sass/header.scss */
 .categorias > li {
   border-right: 1px solid #ddd;
 }
-/* line 34, ../sass/header.scss */
+/* line 35, ../sass/header.scss */
 .categorias > li:first-of-type {
   border-left: 1px solid #ddd;
 }
-/* line 37, ../sass/header.scss */
+/* line 38, ../sass/header.scss */
 .categorias > li a {
   padding: 13px;
 }
 
-/* line 42, ../sass/header.scss */
+/* line 43, ../sass/header.scss */
 .glyphicon {
   font-size: 20px;
 }
 
-/* line 46, ../sass/header.scss */
+/* line 47, ../sass/header.scss */
 #search-form {
   position: relative;
 }
 @media (max-width: 935px) and (min-width: 768px) {
-  /* line 46, ../sass/header.scss */
+  /* line 47, ../sass/header.scss */
   #search-form {
     display: none;
   }
 }
-/* line 51, ../sass/header.scss */
+/* line 52, ../sass/header.scss */
 #search-form button {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 56, ../sass/header.scss */
+/* line 57, ../sass/header.scss */
 #search-form .glyphicon-search {
   font-size: 15px;
 }
 
-/* line 61, ../sass/header.scss */
+/* line 62, ../sass/header.scss */
 #searchBtn {
   display: none;
 }
 
-/* line 65, ../sass/header.scss */
+/* line 66, ../sass/header.scss */
 .dropdown-menu {
   min-width: 0;
   max-width: 190px;
   width: 190px;
 }
-/* line 69, ../sass/header.scss */
+/* line 70, ../sass/header.scss */
 .dropdown-menu .categoria-bloco {
   float: left;
 }
-/* line 72, ../sass/header.scss */
+/* line 73, ../sass/header.scss */
 .dropdown-menu ul > li:hover {
   background: #ddd;
 }
 
-/* line 77, ../sass/header.scss */
+/* line 78, ../sass/header.scss */
 #dropdown-user {
   left: -45px;
   right: none;
