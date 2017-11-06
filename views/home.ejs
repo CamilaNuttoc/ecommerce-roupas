@@ -1,21 +1,6 @@
 <% include ./partials/header.ejs %>
   	<div class="container">
-  		<div class="row">
-  			<div class="col-xs-12">
-  			<!-- CARROSSEL DE MARCAS -->
-  			<button onclick="movePrev();" id="btnMarcaPrev">A</button>
-  			<div class="carousel-hidden">
-  				<div class="carousel-nowrap">
-  					<% for(var i=0; i<17; i++){ %>
-  					<div class="col-md-1 col-xs-2 marca<%= i %>">
-  						<img src="http://1.bp.blogspot.com/-RZF4-M4j4PU/UCsg42KEZBI/AAAAAAAA79U/T3gY9GDu4j8/s1600/chanel%2Blogo.jpg"/>
-  					</div>
-  					<% } %>
-  				</div>
-  			</div>
-  			<button onclick="moveNext();" id="btnMarcaNext">P</button>
-  			</div>
-  		</div>
+  		
   		<div class="row">
   			<div class="col-xs-12">
 
@@ -60,17 +45,24 @@
 				  </div>
   			</div>
   		</div>
+      <% var arrFlorais = ['https://ph-cdn2.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestido-curto/vestido-floral-dark-com-saia-evase_215676_600_1.jpg', 'https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg', 'http://static.cloud-boxloja.com/lojas/wlx53/produtos/3a44a836-af12-4b7c-9600-e08b2808fe92.jpg', 'http://schonefrau.com/files/2011/05/Floral-Print-Dress-1.jpeg'] %>
+      <% var arrDestaque = ['https://ph-cdn1.ecosweb.com.br/Web/posthaus/foto/moda-feminina/blusas-de-alcas/blusa-de-alca-azul-marinho_123922_600_1.jpg', 'https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg', 'https://ph-cdn2.ecosweb.com.br/imagens01/foto/moda-feminina/blusas-manga-longa/blusa-azul-mineral_158245_301_1.jpg', 'https://www.kes.com.br/wp-content/uploads/2016/11/DSCN5134.jpg'] %>
+      <% var arrNovos = ['https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg', 'http://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/blusa-com-alca/blusa-cetim-floral-com-detalhe-de-renda-guipir_189076_600_1.jpg', 'http://aquamar.vteximg.com.br/arquivos/ids/241348-320-480/02032585_1034_1-BLUSA-CIGANINHA-NIHAU.jpg', 'https://ph-cdn1.ecosweb.com.br/Web/posthaus/foto/moda-feminina/blusas-de-alcas/blusa-de-alca-azul-marinho_123922_600_1.jpg', 'https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg', 'http://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/blusa-com-alca/blusa-cetim-floral-com-detalhe-de-renda-guipir_189076_600_1.jpg', 'http://aquamar.vteximg.com.br/arquivos/ids/241348-320-480/02032585_1034_1-BLUSA-CIGANINHA-NIHAU.jpg', 'https://ph-cdn1.ecosweb.com.br/Web/posthaus/foto/moda-feminina/blusas-de-alcas/blusa-de-alca-azul-marinho_123922_600_1.jpg'] %>
   		<div class="row">
+        <div class="limit-heading">
+          <h2 class="heading"><span>Destaque</span></h2>
+        </div>
         <% for(var i=0; i<4; i++){ %>
-  			<div class="col-md-3 col-xs-6">
+  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
+            <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
             <a href="#">
-              <img src="https://t-static.dafiti.com.br/NwTulSPmSiLUrjK2bNoc-FctqSo=/fit-in/333x483/dafitistatic-a.akamaihd.net%2fp%2ffiveblu-vestido-fiveblu-curto-mix-preto%252frosa-6717-0751672-1-product.jpg" alt="Vestido estampado roxo"/>
+              <img src="<%= arrDestaque[i] %>" alt="Vestido estampado"/>
               <div class="caption">
-                <h3>Vestido feminino estampado MarcaImaginária1</h3>
+                <h3>Vestido estampado Marca Imaginária</h3>
                 <span class="preco-original">De: R$39,90</span>
                 <span class="preco-desconto">R$29,90</span>
-                <button class="btn comprarBtn">Comprar</button> <button class="btn btn-default pull-right favBtn"><3</button>
+                <button class="btn comprarBtn">Comprar</button>
               </div>
             </a>
           </div>
@@ -78,16 +70,19 @@
         <% } %>
   		</div>
   		<div class="row">
-  			<% for(var i=0; i<4; i++){ %>
-        <div class="col-md-3 col-xs-6">
+        <div class="limit-heading">
+          <h2 class="heading"><span>Novos</span></h2>
+        </div>
+  			<% for(var i=0; i<8; i++){ %>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
+            <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
             <a href="#">
-              <img src="https://t-static.dafiti.com.br/NwTulSPmSiLUrjK2bNoc-FctqSo=/fit-in/333x483/dafitistatic-a.akamaihd.net%2fp%2ffiveblu-vestido-fiveblu-curto-mix-preto%252frosa-6717-0751672-1-product.jpg" alt="Vestido estampado roxo"/>
+              <img src="<%= arrNovos[i] %>" alt="Vestido estampado"/>
               <div class="caption">
                 <h3>Vestido feminino estampado MarcaImaginária1</h3>
-                <span class="preco-original">De: R$39,90</span>
                 <span class="preco-desconto">R$29,90</span>
-                <button class="btn comprarBtn">Comprar</button> <button class="btn btn-default pull-right favBtn"><3</button>
+                <button class="btn comprarBtn">Comprar</button> 
               </div>
             </a>
           </div>
@@ -95,39 +90,68 @@
         <% } %>
   		</div>
       <div class="row">
-        <div class="col-xs-12">
-          <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg"/>
+        <div class="limit-heading">
+          <h2 class="heading"><span>Flores</span></h2>
         </div>
-      </div>
-      <div class="row">
         <% for(var i=0; i<4; i++){ %>
-        <div class="col-md-3 col-xs-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
+            <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
             <a href="#">
-              <img src="https://t-static.dafiti.com.br/NwTulSPmSiLUrjK2bNoc-FctqSo=/fit-in/333x483/dafitistatic-a.akamaihd.net%2fp%2ffiveblu-vestido-fiveblu-curto-mix-preto%252frosa-6717-0751672-1-product.jpg" alt="Vestido estampado roxo"/>
+              <img src="<%= arrFlorais[i] %>" alt="Vestido estampado"/>
               <div class="caption">
                 <h3>Vestido feminino estampado MarcaImaginária1</h3>
-                <span class="preco-original">De: R$39,90</span>
+                <span class="preco-original">R$39,90</span>
                 <span class="preco-desconto">R$29,90</span>
-                <button class="btn comprarBtn">Comprar</button> <button class="btn btn-default pull-right favBtn"><3</button>
+                <button class="btn comprarBtn">Comprar</button>
               </div>
             </a>
           </div>
         </div>
         <% } %>
       </div>
-  		<div class="row">
-        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Vestidos', 'Sapatos', 'Bolsas'] %>
-        <% for(var i=0; i<6; i++){ %>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-          <div class="thumbnail">
-            <a href="#">
-              <img class="img-categoria" src="https://t-static.dafiti.com.br/NwTulSPmSiLUrjK2bNoc-FctqSo=/fit-in/333x483/dafitistatic-a.akamaihd.net%2fp%2ffiveblu-vestido-fiveblu-curto-mix-preto%252frosa-6717-0751672-1-product.jpg" alt="Vestido estampado roxo"/>
-              <button class="titulo-categoria"><%= arr[i] %></button>
-            </a>
-          </div>
+      <style>
+        @media only screen and (max-width: 768px) {
+          /* line 57, ../sass/home.scss */
+          .anuncio img:nth-of-type(2){
+            display: block;
+          }
+          .anuncio img:nth-of-type(1){
+            display: none;
+          }
+
+        }
+        @media only screen and (min-width: 768px) {
+          .anuncio img:nth-of-type(1){
+            display: block;
+          }
+          .anuncio img:nth-of-type(2){
+            display: none;
+          }
+        }
+        @media only screen and (max-width: 992px) {
+          .thumbnail .favBtn{
+            right: 30px;
+          }
+        }
+
+      </style>
+      <div class="row">
+        <div class="col-xs-12 anuncio">
+          <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg"/>
+          <img src="http://www.evef.com.br/images/logotipo/anuncio_publicitario_marca_moda_roupa_missguided.jpg"/>
         </div>
+      </div>
+  		<div class="row">
+        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos', 'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões', 'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos', 'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 'Salto Alto', 'Sapatos'] %>
+        <div class="limit-heading">
+        <h2 class="heading"><span>Categorias</span></h2>
+      </div>
+        <ul id="categorias-bottom">
+        <% for(var i=0; i<arr.length; i++){ %>
+          <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
         <% } %>
+        </ul>
       </div>
   	</div>
 <% include ./partials/footer.ejs %>
