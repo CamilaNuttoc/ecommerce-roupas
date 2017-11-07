@@ -1,8 +1,30 @@
 footer{
-  background: #eee;
+  background: #111;
   padding: 20px;
+  .row{
+  	margin: 0;
+  }
   ul{
     display: inline-block;
     margin: 0 20px;
+  }
+  a{
+  	color: #ccc;
+    &:hover{
+      color: #fff;
+    }
+  }
+  address{
+    padding-top: 0;
+  	color: #ccc;
+  }
+  h4{
+    font-weight: 800;
+  	padding-bottom: 5px;
+    margin-top: 0;
+    border-bottom: 3px solid #333;
+  }
+  .col-xs-6{
+    margin-bottom: 20px;
   }
 }

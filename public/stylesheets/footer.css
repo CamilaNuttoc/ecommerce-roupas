@@ -1,10 +1,38 @@
 /* line 1, ../sass/footer.scss */
 footer {
-  background: #eee;
+  background: #111;
   padding: 20px;
 }
 /* line 4, ../sass/footer.scss */
+footer .row {
+  margin: 0;
+}
+/* line 7, ../sass/footer.scss */
 footer ul {
   display: inline-block;
   margin: 0 20px;
+}
+/* line 11, ../sass/footer.scss */
+footer a {
+  color: #ccc;
+}
+/* line 13, ../sass/footer.scss */
+footer a:hover {
+  color: #fff;
+}
+/* line 17, ../sass/footer.scss */
+footer address {
+  padding-top: 0;
+  color: #ccc;
+}
+/* line 21, ../sass/footer.scss */
+footer h4 {
+  font-weight: 800;
+  padding-bottom: 5px;
+  margin-top: 0;
+  border-bottom: 3px solid #333;
+}
+/* line 27, ../sass/footer.scss */
+footer .col-xs-6 {
+  margin-bottom: 20px;
 }
