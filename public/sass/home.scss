@@ -68,6 +68,9 @@ img{
 .thumbnail{
 	border-color: #fff;
 	text-align: center;
+	position: relative;
+	display: table;
+	margin: 0 auto;
 	&:hover{
 		.comprarBtn{
 			color: #fff;
@@ -98,16 +101,17 @@ img{
 	 	margin-top: 8px;
 	 	min-height: 18px;
 	}
-	.favBtn{
+	.wrapBtn{
 	  position: absolute;
 	  top: 11px;
 	  right: 14px;
+	}
+	.favBtn{
 	  background: none;
 	  color: #555;
 	  border: none;
       outline: none;
       opacity: .2;
-      width: 23%;
       &:hover{
       		opacity: 1;
   		}
@@ -116,7 +120,7 @@ img{
 		position: absolute;
 		font-size: 17px;
 		bottom: 25px;
-		right: 12px;
+		right: 0;
 		font-weight: 800;
 	}
 	.comprarBtn{
