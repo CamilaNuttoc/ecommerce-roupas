@@ -96,30 +96,31 @@ img {
   font-weight: 800;
   margin: 5px 0 10px;
   min-height: 32px;
+  max-width: 270px;
 }
-/* line 91, ../sass/home.scss */
+/* line 92, ../sass/home.scss */
 .thumbnail .preco-original, .thumbnail .preco-desconto {
   display: block;
 }
-/* line 94, ../sass/home.scss */
+/* line 95, ../sass/home.scss */
 .thumbnail .preco-original {
   text-decoration: line-through;
   font-size: 13px;
   min-height: 18px;
 }
-/* line 99, ../sass/home.scss */
+/* line 100, ../sass/home.scss */
 .thumbnail .preco-desconto, .thumbnail button {
   font-size: 20px;
   margin-top: 8px;
   min-height: 18px;
 }
-/* line 104, ../sass/home.scss */
+/* line 105, ../sass/home.scss */
 .thumbnail .wrapBtn {
   position: absolute;
   top: 11px;
   right: 14px;
 }
-/* line 109, ../sass/home.scss */
+/* line 110, ../sass/home.scss */
 .thumbnail .favBtn {
   background: none;
   color: #555;
@@ -127,11 +128,11 @@ img {
   outline: none;
   opacity: .2;
 }
-/* line 115, ../sass/home.scss */
+/* line 116, ../sass/home.scss */
 .thumbnail .favBtn:hover {
   opacity: 1;
 }
-/* line 119, ../sass/home.scss */
+/* line 120, ../sass/home.scss */
 .thumbnail .favText {
   position: absolute;
   font-size: 17px;
@@ -139,7 +140,7 @@ img {
   right: 0;
   font-weight: 800;
 }
-/* line 126, ../sass/home.scss */
+/* line 127, ../sass/home.scss */
 .thumbnail .comprarBtn {
   border: 4px solid #665;
   background: none;
@@ -147,12 +148,12 @@ img {
   border-radius: 10px;
 }
 
-/* line 133, ../sass/home.scss */
+/* line 134, ../sass/home.scss */
 #categorias-bottom {
   padding: 10px;
   text-align: center;
 }
-/* line 136, ../sass/home.scss */
+/* line 137, ../sass/home.scss */
 #categorias-bottom .titulo-categoria {
   display: inline-block;
   color: #333;
@@ -164,30 +165,30 @@ img {
   outline: none;
   margin-bottom: 10px;
 }
-/* line 146, ../sass/home.scss */
+/* line 147, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a:hover {
   color: white;
   background: #333;
 }
-/* line 150, ../sass/home.scss */
+/* line 151, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a {
   padding: 10px;
   display: block;
   transition: .3s;
 }
 
-/* line 159, ../sass/home.scss */
+/* line 160, ../sass/home.scss */
 a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 165, ../sass/home.scss */
+/* line 166, ../sass/home.scss */
 [class*='col-'] {
   padding: 0 5px;
 }
 
-/* line 169, ../sass/home.scss */
+/* line 170, ../sass/home.scss */
 [class*='glyphicon-heart'] {
   font-size: 30px;
 }
