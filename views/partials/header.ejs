@@ -47,74 +47,19 @@
   </head>
   <body>
   <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
+          
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
             <span class="sr-only">Toggle navigation</span>  
             <span class="icon-bar"></span>  
             <span class="icon-bar"></span>  
             <span class="icon-bar"></span>  
-          </button> 
-          <a class= "navbar-brand" href="#"><img src="http://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png" alt="logo"/></a>  
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav categorias">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Feminino</a>
-                <ul class="dropdown-menu" id="dropdown-feminino">
-                  <li class="categoria-bloco main-bloco">
-                    <ul>
-                      <li><a href="#">Roupas</a></li>
-                      <li><a href="#">Acessórios</a></li>
-                      <li><a href="#">Calçados</a></li>
-                      <li><a href="#">Íntimas</a></li>
-                    </ul>
-                  </li>
-                  <li class="categoria-bloco sub-bloco-feminino">
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Masculino</a>
-                <ul class="dropdown-menu" id="dropdown-masculino">
-                  <li class="categoria-bloco main-bloco">
-                    <ul>
-                      <li><a href="#">Roupas</a></li>
-                      <li><a href="#">Acessórios</a></li>
-                      <li><a href="#">Calçados</a></li>
-                      <li><a href="#">Íntimas</a></li>
-                    </ul>
-                  </li>
-                  <li class="categoria-bloco sub-bloco-masculino">
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Infantil</a>
-                <ul class="dropdown-menu" id="dropdown-infantil">
-                  <li class="categoria-bloco main-bloco">
-                    <ul>
-                      <li><a href="#">Meninos</a></li>
-                      <li><a href="#">Meninas</a></li>
-                    </ul>
-                  </li>
-                  <li class="categoria-bloco sub-bloco-infantil">
-                  </li>
-                </ul>
-              </li>
-            </ul>   
-          <ul class="nav navbar-nav navbar-right">
-            <form class="navbar-form navbar-left">
-              <div class="form-group" id="search-form">
-                <input type="text" class="form-control" id="search" placeholder="Saia chanel">
-                <button type="submit" id="search-form-btn"class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-              </div>
-            </form>
-            <li id="searchBtn"><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
-            <li class="dropdown">
+          </button>
+          <ul class="pull-right iconsPersist">
+            <li class="dropdown iconSm">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-  haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
               <ul class="dropdown-menu" id="dropdown-user">
                 <li><a href="#">Meu carrinho</a></li>
@@ -124,9 +69,97 @@
                 <li><a href="#">Sair</a></li>
               </ul>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+            <li class="iconSm"><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+          </ul>
+          <a class= "navbar-brand" href="#"><img src="http://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png" alt="logo"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav categorias">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Feminino<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="dropdown-feminino">
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roupas<span class="caret caret-right"></span></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acessórios<span class="caret caret-right"></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calçados<span class="caret caret-right"></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li><a href="#">Íntimas</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Masculino<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="dropdown-masculino">
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roupas<span class="caret caret-right"></span></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acessórios<span class="caret caret-right"></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calçados<span class="caret caret-right"></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li><a href="#">Íntimas</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Infantil<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="dropdown-infantil">
+                  <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meninos<span class="caret caret-right"></span></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                      <li class="dropdown t-sub-menu">
+                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meninas<span class="caret caret-right"></a>
+                        <ul class="dropdown-menu sub-menu">
+                        </ul>
+                      </li>
+                </ul>
+              </li>
+            </ul>   
+          <ul class="nav navbar-nav navbar-right">
+            <li id="cancelBtn" style="display: none;"><a href="#">Cancelar</a></li>
+            <form class="navbar-form navbar-left">
+              <div class="form-group" id="search-form">
+                <input type="text" class="form-control" id="search" placeholder="Saia chanel">
+                <button type="submit" id="search-form-btn"class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              </div>
+            </form>
+            <li id="searchBtn"><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+            <li class="dropdown iconLg">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-  haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+              <ul class="dropdown-menu" id="dropdown-user">
+                <li><a href="#">Meu carrinho</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Sair</a></li>
+              </ul>
+            </li>
+            <li class="iconLg"><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+      </div><!-- /.container -->
     </nav>
   </header>

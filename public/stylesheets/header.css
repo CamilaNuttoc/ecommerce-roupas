@@ -1,113 +1,177 @@
-/* line 1, ../sass/header.scss */
+/* line 3, ../sass/header.scss */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
-/* line 5, ../sass/header.scss */
+/* line 7, ../sass/header.scss */
 a {
   text-decoration: none;
   color: black;
 }
-/* line 8, ../sass/header.scss */
+/* line 10, ../sass/header.scss */
 a:hover {
   color: #000;
 }
 
-/* line 13, ../sass/header.scss */
+/* line 15, ../sass/header.scss */
 body {
   margin-top: 70px;
   font-family: 'Maven Pro', sans-serif;
 }
 
-/* line 17, ../sass/header.scss */
+/* line 19, ../sass/header.scss */
 .container-fluid {
   margin: 0 5%;
 }
 
-/* line 20, ../sass/header.scss */
+/* line 22, ../sass/header.scss */
 .navbar-brand {
   padding: 0;
 }
-/* line 22, ../sass/header.scss */
+/* line 24, ../sass/header.scss */
 .navbar-brand img {
   max-height: 100%;
   width: auto;
 }
 
-/* line 27, ../sass/header.scss */
-.navbar-nav {
+/* line 30, ../sass/header.scss */
+.collapse .navbar-nav {
   margin-left: 5%;
 }
-/* line 29, ../sass/header.scss */
-.navbar-nav > li > a {
-  padding: 12px;
+@media only screen and (max-width: 767px) {
+  /* line 30, ../sass/header.scss */
+  .collapse .navbar-nav {
+    margin: 0;
+    text-align: center;
+  }
 }
 
-/* line 33, ../sass/header.scss */
+/* line 39, ../sass/header.scss */
 .categorias > li {
   border-right: 1px solid #ddd;
 }
-/* line 35, ../sass/header.scss */
+/* line 41, ../sass/header.scss */
 .categorias > li:first-of-type {
   border-left: 1px solid #ddd;
 }
-/* line 38, ../sass/header.scss */
-.categorias > li a {
-  padding: 13px;
+@media only screen and (max-width: 767px) {
+  /* line 41, ../sass/header.scss */
+  .categorias > li:first-of-type {
+    border: 0;
+  }
+}
+/* line 47, ../sass/header.scss */
+.categorias > li > a {
+  padding: 17px;
 }
 
-/* line 43, ../sass/header.scss */
+/* line 52, ../sass/header.scss */
 .glyphicon {
   font-size: 20px;
 }
 
-/* line 47, ../sass/header.scss */
+/* line 56, ../sass/header.scss */
 #search-form {
   position: relative;
 }
 @media (max-width: 935px) and (min-width: 768px) {
-  /* line 47, ../sass/header.scss */
+  /* line 56, ../sass/header.scss */
   #search-form {
     display: none;
   }
 }
-/* line 52, ../sass/header.scss */
+/* line 61, ../sass/header.scss */
 #search-form button {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 57, ../sass/header.scss */
+/* line 66, ../sass/header.scss */
 #search-form .glyphicon-search {
   font-size: 15px;
 }
 
-/* line 62, ../sass/header.scss */
+/* line 71, ../sass/header.scss */
 #searchBtn {
   display: none;
 }
 
-/* line 66, ../sass/header.scss */
+/* line 75, ../sass/header.scss */
 .dropdown-menu {
   min-width: 0;
-  max-width: 190px;
-  width: 190px;
+  max-width: 400px;
 }
-/* line 70, ../sass/header.scss */
+/* line 78, ../sass/header.scss */
 .dropdown-menu .categoria-bloco {
   float: left;
 }
-/* line 73, ../sass/header.scss */
+/* line 81, ../sass/header.scss */
 .dropdown-menu ul > li:hover {
   background: #ddd;
 }
+@media only screen and (max-width: 767px) {
+  /* line 75, ../sass/header.scss */
+  .dropdown-menu {
+    text-align: center;
+    max-width: none;
+  }
+}
 
-/* line 78, ../sass/header.scss */
+/* line 90, ../sass/header.scss */
 #dropdown-user {
   left: -45px;
   right: none;
   text-align: center;
   min-width: 140px;
   width: auto;
+}
+
+/* line 98, ../sass/header.scss */
+.iconsPersist {
+  margin: 2.5px 7px;
+}
+
+/* line 101, ../sass/header.scss */
+.iconSm {
+  float: left;
+  padding: 9px 14px;
+}
+/* line 104, ../sass/header.scss */
+.iconSm a {
+  color: #999;
+}
+@media only screen and (min-width: 768px) {
+  /* line 101, ../sass/header.scss */
+  .iconSm {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 112, ../sass/header.scss */
+  .nav .iconLg {
+    display: none;
+  }
+}
+
+/* line 118, ../sass/header.scss */
+.t-sub-menu {
+  position: relative;
+}
+/* line 120, ../sass/header.scss */
+.t-sub-menu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+/* line 126, ../sass/header.scss */
+.t-sub-menu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* line 131, ../sass/header.scss */
+.caret-right {
+  transform: rotate(270deg);
 }
