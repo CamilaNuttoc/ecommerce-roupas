@@ -49,7 +49,7 @@
         <div class="limit-heading">
           <h2 class="heading"><span>Destaque</span></h2>
         </div>
-        <% itens.forEach(function(item){ %>
+        <% if(itens){ itens.forEach(function(item){ %>
   			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
             <div class="wrapBtn">
@@ -66,13 +66,13 @@
             </a>
           </div>
   			</div>
-        <% }); %>
+        <% }); } %>
   		</div>
   		<div class="row">
         <div class="limit-heading">
           <h2 class="heading"><span>Novos</span></h2>
         </div>
-  			<% itens.forEach(function(item){ %>
+  			<% if(itens){ itens.forEach(function(item){ %>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
             <div class="wrapBtn">
@@ -88,7 +88,7 @@
             </a>
           </div>
         </div>
-        <% }); %>
+        <% }); }%>
   		</div>
       <style>
         @media only screen and (max-width: 768px) {
