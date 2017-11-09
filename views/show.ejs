@@ -1,0 +1,150 @@
+<% include ./partials/header.ejs %>
+<div class="container">
+	<section class="item-area">
+		<div class="row">
+			<div class="col-md-1 preview">
+				<img src="<%= item.imagem %>">
+				<img src="<%= item.imagem %>">
+				<img src="<%= item.imagem %>">
+				<img src="<%= item.imagem %>">
+				<img src="<%= item.imagem %>">
+			</div>
+			<div class="col-md-5 main">
+				<img src="<%= item.imagem %>">
+			</div>
+			<div class="col-md-6 info">
+				<h2><%= item.titulo %></h2>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<h2><%= item.precoOriginal %></h2>
+				<h2><%= item.precoPromocao %></h2>
+				<hr>
+				<section class="form-sec">
+					<form>
+					  <label>Cor:</label>
+						<input type="radio" name="cor" value="branco" checked>
+						<input type="radio" name="cor" value="azul">
+						<input type="radio" name="cor" value="preto"><br>
+					  <label>Tamanho:</label>
+					  	<input type="radio" name="tam" value="PP">
+					  	<input type="radio" name="tam" value="P" checked>
+					  	<input type="radio" name="tam" value="M">
+					  	<input type="radio" name="tam" value="G">
+					  	<input type="radio" name="tam" value="GG"><br>
+					  <button type="submit">Adicionar ao carrinho</button>
+					</form>
+					<button type="submit">Salvar para depois</button>
+				</section>
+				<hr>
+				<ul>
+					<li>Curabitur sed cursus ex. Morbi ornare maximus felis, a 
+					elementum lectus elementum in.</li>
+					<li>Vivamus a metus vehicula, accumsan purus vel, aliquet 
+					nisl. Duis turpis urna, accumsan vel tristique et, 
+					tincidunt facilisis mauris.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<script>
+// 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+//   e.target // newly activated tab
+//   e.relatedTarget // previous active tab
+// })
+	$('#myTabs a').click(function (e) {
+ 		e.preventDefault()
+  		$(this).tab('show')
+	})
+</script>
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="nav nav-tabs">
+			   <li><a href="#descricao" data-toggle="tab">Descrição</a></li>
+			   <li><a href="#avaliacao" data-toggle="tab">Avaliação</a></li>
+			</ul>
+			
+			<div class="tab-content">
+			   <div class="tab-pane active" id="descricao">Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.</div>
+               <div class="tab-pane" id="avaliacao">nice content wow</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="limit-heading">
+          <h2 class="heading"><span>Talvez você também goste de...</span></h2>
+        </div>
+        <% for(var i=0; i<8; i++){ %>
+  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+         	    <div class="thumbnail">
+           			<div class="wrapBtn">
+             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+            		</div>
+            		<a href="/<%= item._id %>">
+            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+            		  <div class="caption">
+            		    <h3><%= item.titulo %></h3>
+            		    <span class="preco-original">De: <%= item.precoOriginal %></span>
+            		    <span class="preco-desconto"><%= item.precoPromocao %></span>
+            		    <button class="btn comprarBtn">Comprar</button>
+            		  </div>
+            		</a>
+          		</div>
+  			</div>
+        <% } %>
+  	</div>
+	<div class="row">
+		<% for(var i=0; i<5; i++){ %>
+		<div class="col-md-12">
+			<div class="media">
+			  <div class="media-left">
+			    <a href="#">
+			      <img class="media-object" src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg" alt="girl">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading">Nome do usuário</h4>
+			    Comentário demonstrando satisfação!
+			  </div>
+			</div>
+		</div>
+		<% } %>
+	</div>
+	<div class="row">
+        <div class="limit-heading">
+          <h2 class="heading"><span>Mais em Vestidos</span></h2>
+        </div>
+        <% for(var i=0; i<8; i++){ %>
+  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+         	    <div class="thumbnail">
+           			<div class="wrapBtn">
+             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+            		</div>
+            		<a href="/<%= item._id %>">
+            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+            		  <div class="caption">
+            		    <h3><%= item.titulo %></h3>
+            		    <span class="preco-original">De: <%= item.precoOriginal %></span>
+            		    <span class="preco-desconto"><%= item.precoPromocao %></span>
+            		    <button class="btn comprarBtn">Comprar</button>
+            		  </div>
+            		</a>
+          		</div>
+  			</div>
+        <% } %>
+  	</div>
+  	<div class="row">
+        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos', 'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões', 'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos', 'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 'Salto Alto', 'Sapatos'] %>
+        <div class="limit-heading">
+        <h2 class="heading"><span>Categorias</span></h2>
+      </div>
+        <ul id="categorias-bottom">
+        <% for(var i=0; i<arr.length; i++){ %>
+          <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
+        <% } %>
+        </ul>
+      </div>
+</div>
+<% include ./partials/footer.ejs %>

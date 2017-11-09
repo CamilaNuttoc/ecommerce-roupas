@@ -16,6 +16,16 @@ app.get("/", function(req, res){
 		}
 	});
 });
+
+app.get("/:id", function(req, res){
+	Item.findById(req.params.id, function(err, item){
+		if(err){
+			console.log(err);
+		}else{
+			res.render("show", {item: item});
+		}
+	});
+});
 // for (var i=0; i<12; i++){
 // 	var imagem = 'https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg';
 // 	var titulo = 'Vestido estampado preto';

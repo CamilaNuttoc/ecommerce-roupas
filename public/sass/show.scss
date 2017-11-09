@@ -1,0 +1,33 @@
+.item-area{
+  img{
+    width: 100%;
+  }
+}
+.preview{
+  img{
+    margin: 8px 0;
+  }
+  img:first-of-type{
+    margin: 0;
+  }
+}
+.item-area{
+  .info{
+    padding-left: 20px;
+  }
+}
+
+.form-sec{
+  border-left: 5px solid #777;
+  padding-left: 10px;
+}
+
+.media-left{
+  img{
+    width: 64px;
+  }
+}
+
+.media{
+  margin: 15px;
+}
