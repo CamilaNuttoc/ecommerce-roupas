@@ -1,58 +1,58 @@
-/* line 10, ../sass/home.scss */
-img {
+/* line 11, ../sass/home.scss */
+.home img {
   width: 100%;
 }
 
-/* line 15, ../sass/home.scss */
+/* line 17, ../sass/home.scss */
 .row {
   margin-bottom: 20px;
 }
 
-/* line 21, ../sass/home.scss */
+/* line 23, ../sass/home.scss */
 #myCarousel img {
   max-height: 400px;
   min-height: 400px;
 }
 @media only screen and (max-width: 576px) {
-  /* line 21, ../sass/home.scss */
+  /* line 23, ../sass/home.scss */
   #myCarousel img {
     max-height: 150px;
     min-height: 150px;
   }
 }
 @media only screen and (min-width: 576px) {
-  /* line 21, ../sass/home.scss */
+  /* line 23, ../sass/home.scss */
   #myCarousel img {
     max-height: 250px;
     min-height: 250px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 21, ../sass/home.scss */
+  /* line 23, ../sass/home.scss */
   #myCarousel img {
     max-height: 280px;
     min-height: 280px;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 21, ../sass/home.scss */
+  /* line 23, ../sass/home.scss */
   #myCarousel img {
     max-height: 400px;
     min-height: 400px;
   }
 }
 
-/* line 43, ../sass/home.scss */
+/* line 45, ../sass/home.scss */
 .limit-heading {
   width: 60%;
   margin: 0 auto;
 }
-/* line 46, ../sass/home.scss */
+/* line 48, ../sass/home.scss */
 .limit-heading .heading {
   position: relative;
   text-align: center;
 }
-/* line 49, ../sass/home.scss */
+/* line 51, ../sass/home.scss */
 .limit-heading .heading:before {
   content: "";
   display: block;
@@ -63,7 +63,7 @@ img {
   top: 50%;
   z-index: 1;
 }
-/* line 59, ../sass/home.scss */
+/* line 61, ../sass/home.scss */
 .limit-heading .heading span {
   background: #fff;
   padding: 0 20px;
@@ -71,7 +71,7 @@ img {
   z-index: 2;
 }
 
-/* line 68, ../sass/home.scss */
+/* line 70, ../sass/home.scss */
 .thumbnail {
   border-color: #fff;
   text-align: center;
@@ -79,18 +79,18 @@ img {
   display: table;
   margin: 0 auto;
 }
-/* line 75, ../sass/home.scss */
+/* line 77, ../sass/home.scss */
 .thumbnail:hover .comprarBtn {
   color: #fff;
   background: #665;
 }
-/* line 80, ../sass/home.scss */
+/* line 82, ../sass/home.scss */
 .thumbnail img {
   min-height: 400px;
   max-height: 400px;
   width: auto;
 }
-/* line 85, ../sass/home.scss */
+/* line 87, ../sass/home.scss */
 .thumbnail h3 {
   font-size: 15px;
   font-weight: 800;
@@ -98,29 +98,29 @@ img {
   min-height: 32px;
   max-width: 270px;
 }
-/* line 92, ../sass/home.scss */
+/* line 94, ../sass/home.scss */
 .thumbnail .preco-original, .thumbnail .preco-desconto {
   display: block;
 }
-/* line 95, ../sass/home.scss */
+/* line 97, ../sass/home.scss */
 .thumbnail .preco-original {
   text-decoration: line-through;
   font-size: 13px;
   min-height: 18px;
 }
-/* line 100, ../sass/home.scss */
+/* line 102, ../sass/home.scss */
 .thumbnail .preco-desconto, .thumbnail button {
   font-size: 20px;
   margin-top: 8px;
   min-height: 18px;
 }
-/* line 105, ../sass/home.scss */
+/* line 107, ../sass/home.scss */
 .thumbnail .wrapBtn {
   position: absolute;
   top: 11px;
   right: 14px;
 }
-/* line 110, ../sass/home.scss */
+/* line 112, ../sass/home.scss */
 .thumbnail .favBtn {
   background: none;
   color: #555;
@@ -128,11 +128,11 @@ img {
   outline: none;
   opacity: .2;
 }
-/* line 116, ../sass/home.scss */
+/* line 118, ../sass/home.scss */
 .thumbnail .favBtn:hover {
   opacity: 1;
 }
-/* line 120, ../sass/home.scss */
+/* line 122, ../sass/home.scss */
 .thumbnail .favText {
   position: absolute;
   font-size: 17px;
@@ -140,7 +140,7 @@ img {
   right: 0;
   font-weight: 800;
 }
-/* line 127, ../sass/home.scss */
+/* line 129, ../sass/home.scss */
 .thumbnail .comprarBtn {
   border: 4px solid #665;
   background: none;
@@ -148,12 +148,12 @@ img {
   border-radius: 10px;
 }
 
-/* line 134, ../sass/home.scss */
+/* line 136, ../sass/home.scss */
 #categorias-bottom {
   padding: 10px;
   text-align: center;
 }
-/* line 137, ../sass/home.scss */
+/* line 139, ../sass/home.scss */
 #categorias-bottom .titulo-categoria {
   display: inline-block;
   color: #333;
@@ -165,30 +165,30 @@ img {
   outline: none;
   margin-bottom: 10px;
 }
-/* line 147, ../sass/home.scss */
+/* line 149, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a:hover {
   color: white;
   background: #333;
 }
-/* line 151, ../sass/home.scss */
+/* line 153, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a {
   padding: 10px;
   display: block;
   transition: .3s;
 }
 
-/* line 160, ../sass/home.scss */
+/* line 162, ../sass/home.scss */
 a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 166, ../sass/home.scss */
+/* line 168, ../sass/home.scss */
 [class*='col-'] {
   padding: 0 5px;
 }
 
-/* line 170, ../sass/home.scss */
+/* line 172, ../sass/home.scss */
 [class*='glyphicon-heart'] {
   font-size: 30px;
 }
