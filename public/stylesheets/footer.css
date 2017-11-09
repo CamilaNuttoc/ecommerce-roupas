@@ -11,28 +11,30 @@ footer .row {
 footer ul {
   display: inline-block;
   margin: 0 20px;
+  list-style-type: none;
+  padding: 0;
 }
-/* line 11, ../sass/footer.scss */
+/* line 13, ../sass/footer.scss */
 footer a {
   color: #ccc;
 }
-/* line 13, ../sass/footer.scss */
+/* line 15, ../sass/footer.scss */
 footer a:hover {
   color: #fff;
 }
-/* line 17, ../sass/footer.scss */
+/* line 19, ../sass/footer.scss */
 footer address {
   padding-top: 0;
   color: #ccc;
 }
-/* line 21, ../sass/footer.scss */
+/* line 23, ../sass/footer.scss */
 footer h4 {
   font-weight: 800;
   padding-bottom: 5px;
   margin-top: 0;
   border-bottom: 3px solid #333;
 }
-/* line 27, ../sass/footer.scss */
+/* line 29, ../sass/footer.scss */
 footer .col-xs-6 {
   margin-bottom: 20px;
 }
