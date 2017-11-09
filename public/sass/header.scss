@@ -1,8 +1,10 @@
 $sm-sz: "only screen and (max-width: 767px)";
 
-ul{
-  list-style-type: none;
-  padding: 0;
+.navbar{
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
 }
 a{
   text-decoration: none;
