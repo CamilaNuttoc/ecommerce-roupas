@@ -91,15 +91,7 @@ $lg-size: "only screen and (min-width: 992px)";
 		min-height: 32px;
 		max-width: 270px;
 	}
-	.preco-original, .preco-desconto{
-		display: block;
-	}
-	.preco-original{
-	    text-decoration: line-through;
-	    font-size: 13px; 
-	    min-height: 18px;
-	}
-	.preco-desconto, button{
+	button{
 	 	font-size: 20px;
 	 	margin-top: 8px;
 	 	min-height: 18px;
@@ -132,6 +124,20 @@ $lg-size: "only screen and (min-width: 992px)";
 		font-size: 15px;
 		border-radius: 10px;
 	}
+}
+
+[class*='preco-']{
+	display: block;
+}
+.preco-original{
+    text-decoration: line-through;
+    font-size: 13px; 
+    min-height: 18px;
+}
+.preco-desconto{
+	 font-size: 20px;
+	 margin-top: 8px;
+	 min-height: 18px;
 }
 #categorias-bottom{
 	padding: 10px;
