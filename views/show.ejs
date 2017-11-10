@@ -14,6 +14,7 @@
 			</div>
 			<div class="col-md-6 col-xs-12 info">
 				<h2><%= item.titulo %></h2>
+				<p>Vendido e entregue por XXXXXX.</p>
 				<div class="avaliacao-item"></div>
 				<script>
 					var avaliacoes = 0;
@@ -61,19 +62,51 @@
   		$(this).tab('show')
 	})
 </script>
+	<section class="descricao-area">
 	<div class="row">
 		<div class="col-md-12">
 			<ul class="nav nav-tabs">
-			   <li><a href="#descricao" data-toggle="tab">Descrição</a></li>
-			   <li><a href="#avaliacao" data-toggle="tab">Avaliação</a></li>
+			   <li><a href="#descricao">Descrição</a></li>
+			   <li><a href="#avaliacao">Avaliações</a></li>
 			</ul>
-			
+			<script>
+			$(document).on('click', 'a[href^="#avaliacao"]', function (event) {
+			  event.preventDefault();
+		
+		    $('html, body').animate({
+		      scrollTop: $($.attr(this, 'href')).offset().top
+			  }, 800);
+			});
+			</script>
 			<div class="tab-content">
-			   <div class="tab-pane active" id="descricao">Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.</div>
-         <div class="tab-pane" id="avaliacao">nice content wow</div>
+			  <div class="tab-pane active">Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis
+			   	eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.<br><br>
+
+			    <strong>DETALHES DO PRODUTO</strong><br>
+					Vestido preto estampado<br>
+					Tipo de Produto: Vestido<br>
+					Modelagem: Evasê<br>
+					Manga: Curta<br>
+					Comprimento: Curto<br>
+					Estampas: Poás<br>
+					Decote: Redondo<br>
+					Composição: 97% Poliéster e 3% Elastano<br>
+					Medidas da peça: Ombro: 6cm/ Ombro a ombro: 36cm/ Manga: 15cm/ Busto: 90cm/ Comprimento: 96cm<br>
+					Medidas da Modelo: Altura: 1,78m/ Busto: 88cm/ Cintura: 60cm/ Quadril: 87cm.<br>
+					Tipo de Tecido: Malha<br><br>
+
+					<strong>INFORMAÇÕES</strong><br>
+					SKU	FI911APF89DDY<br>
+					Modelo	FiveBlu 302814<br>
+					Material	Poliéster<br>
+					Cor	Preto<br>
+					Lavagem	Pode ser lavado na máquina<br>
+					Tipo de frete:	Leve<br>
+				</div>
 			</div>
 		</div>
 	</div>
+	</section>
 	<div class="row after-item1">
     <div class="limit-heading">
       <h2 class="heading"><span>Talvez você também goste de...</span></h2>
@@ -103,7 +136,7 @@
     <button class="btnCtrlPrev" onclick="previous();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
     <button class="btnCtrlNext" onclick="next();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
   </div>
-	<div class="row">
+	<div class="row" id="avaliacao">
 		<div class="limit-heading">
       <h2 class="heading"><span>Avaliações</span></h2>
     </div>

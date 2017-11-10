@@ -38,7 +38,7 @@
 
 /* line 38, ../sass/show.scss */
 .avaliacao-item span {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* line 42, ../sass/show.scss */
@@ -91,4 +91,34 @@
 /* line 77, ../sass/show.scss */
 .after-item1 .btnCtrlPrev {
   left: 10px;
+}
+
+/* line 82, ../sass/show.scss */
+.tab-content {
+  background: #eee;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+}
+
+/* line 88, ../sass/show.scss */
+.nav-tabs > li:first-of-type > a {
+  background: #777;
+  color: #eee;
+}
+/* line 91, ../sass/show.scss */
+.nav-tabs > li:first-of-type > a:hover {
+  background: #777;
+  color: #eee;
+  border: 1px solid transparent;
+}
+
+/* line 98, ../sass/show.scss */
+.nav-tabs > li:last-of-type > a {
+  background: transparent;
+  color: #777;
+}
+/* line 101, ../sass/show.scss */
+.nav-tabs > li:last-of-type > a:hover {
+  background: #aaa;
+  color: #fff;
 }

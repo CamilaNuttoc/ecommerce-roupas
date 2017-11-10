@@ -36,7 +36,7 @@
 }
 
 .avaliacao-item span{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .carrossel-overfl{
@@ -76,5 +76,30 @@
   }
   .btnCtrlPrev{
     left: 10px;
+  }
+}
+
+.tab-content{
+  background: #eee;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+}
+
+.nav-tabs > li:first-of-type > a{
+  background: #777;
+  color: #eee;
+  &:hover{
+    background: #777;
+    color: #eee;
+    border: 1px solid transparent;
+  }
+}
+
+.nav-tabs > li:last-of-type > a{
+  background: transparent;
+  color: #777;
+  &:hover{
+    background: #aaa;
+    color: #fff;
   }
 }
