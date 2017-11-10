@@ -38,3 +38,43 @@
 .avaliacao-item span{
   font-size: 30px;
 }
+
+.carrossel-overfl{
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrossel{
+  white-space: nowrap;
+  transition: 1s;
+  .content{
+    display: inline-block;
+    float: none;
+  }
+}
+.after-item1{
+  position: relative;
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+  [class*='btnCtrl']{
+    position: absolute;
+    top: 260px;
+    border: 3px solid #fff;
+    border-radius: 40%;
+    background: #fff;
+    padding: 20px;
+    outline: 0;
+    span{
+      font-size: 20px;
+      color: #777;
+    }
+  }
+  .btnCtrlNext{
+    right: 0;
+  }
+  .btnCtrlPrev{
+    left: 10px;
+  }
+}

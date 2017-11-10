@@ -2,17 +2,17 @@
 <div class="container">
 	<section class="item-area">
 		<div class="row">
-			<div class="col-md-1 preview">
+			<div class="col-md-1 col-xs-2 preview">
 				<img src="<%= item.imagem %>">
 				<img src="<%= item.imagem %>">
 				<img src="<%= item.imagem %>">
 				<img src="<%= item.imagem %>">
 				<img src="<%= item.imagem %>">
 			</div>
-			<div class="col-md-5 main">
+			<div class="col-md-5 col-xs-10 main">
 				<img src="<%= item.imagem %>">
 			</div>
-			<div class="col-md-6 info">
+			<div class="col-md-6 col-xs-12 info">
 				<h2><%= item.titulo %></h2>
 				<div class="avaliacao-item"></div>
 				<script>
@@ -70,38 +70,44 @@
 			
 			<div class="tab-content">
 			   <div class="tab-pane active" id="descricao">Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.</div>
-               <div class="tab-pane" id="avaliacao">nice content wow</div>
+         <div class="tab-pane" id="avaliacao">nice content wow</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-        <div class="limit-heading">
-          <h2 class="heading"><span>Talvez você também goste de...</span></h2>
-        </div>
-        <% for(var i=0; i<8; i++){ %>
-  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-         	    <div class="thumbnail">
-           			<div class="wrapBtn">
-             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
-            		</div>
-            		<a href="/<%= item._id %>">
-            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
-            		  <div class="caption">
-            		    <h3><%= item.titulo %></h3>
-            		    <span class="preco-original">De: <%= item.precoOriginal %></span>
-            		    <span class="preco-desconto"><%= item.precoPromocao %></span>
-            		    <button class="btn comprarBtn">Comprar</button>
-            		  </div>
-            		</a>
-          		</div>
+	<div class="row after-item1">
+    <div class="limit-heading">
+      <h2 class="heading"><span>Talvez você também goste de...</span></h2>
+    </div>
+    <div class="carrossel-overfl">
+    	<div class="carrossel" style="transform: translateX(0)">
+    		<% for(var i=0; i<12; i++){ %>
+ 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content">
+     	    <div class="thumbnail">
+       			<div class="wrapBtn">
+         			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+            </div>
+            <a href="/<%= item._id %>">
+             	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
+             	<div class="caption">
+              		<h3><%= item.titulo %></h3>
+              		<span class="preco-original">De: <%= item.precoOriginal %></span>
+              		<span class="preco-desconto"><%= item.precoPromocao %></span>
+              		<button class="btn comprarBtn">Comprar</button>
+             	</div>
+            </a>
+          </div>
   			</div>
         <% } %>
-  	</div>
+    	</div>
+    </div>
+    <button class="btnCtrlPrev" onclick="previous();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+    <button class="btnCtrlNext" onclick="next();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+  </div>
 	<div class="row">
 		<div class="limit-heading">
-          <h2 class="heading"><span>Avaliações</span></h2>
-        </div>
-        <% var num = 0; %>
+      <h2 class="heading"><span>Avaliações</span></h2>
+    </div>
+    <% var num = 0; %>
 		<% item.comentarios.forEach(function(comentario){ %>
 		<div class="col-md-12">
 		  <div class="media">
