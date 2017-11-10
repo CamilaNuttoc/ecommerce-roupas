@@ -3,8 +3,8 @@ var mongoose = require ("mongoose");
 var itemSchema = new mongoose.Schema({
 	imagem: String,
 	titulo: String,
-	precoOriginal: String,
-	precoPromocao: String,
+	precoOriginal: Number,
+	precoPromocao: Number,
 	comentarios: [
       {
          type: mongoose.Schema.Types.ObjectId,
