@@ -1,4 +1,4 @@
-function genStars(length, num){
+function genStars(length, num, users){
   var dataStars = '';
   for(var i=0; i< length; i++){
     dataStars += '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>';
@@ -10,6 +10,7 @@ function genStars(length, num){
   if(num != -1){
   	$('.avaliacao-user'+num).html(dataStars);
   }else{
+    dataStars += '<span style="font-size: 20px;">('+users+')</span>';
   	$('.avaliacao-item').html(dataStars);
   }
 }
