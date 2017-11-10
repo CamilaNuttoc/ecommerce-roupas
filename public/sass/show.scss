@@ -5,15 +5,34 @@
 }
 .preview{
   img{
-    margin: 8px 0;
+    margin: 6.8% 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+      border-color: #ccc;
+    }
   }
   img:first-of-type{
-    margin: 0;
+    margin-top: 0;
   }
 }
 .item-area{
+  width: 90%;
+  margin: 0 auto;
   .info{
     padding-left: 20px;
+    ul{
+      padding-left: 15px;
+    }
+  }
+  .preco-original{
+    margin-top: 10px;
+  }
+  .preco-desconto{
+    font-size: 30px;
+    margin: 0;
   }
 }
 
@@ -103,3 +122,19 @@
     color: #fff;
   }
 }
+
+.botaoStyle{
+  border: 3px solid #777; 
+  background: none; 
+  padding: 10px; 
+  border-radius: 10px; 
+  outline: none; 
+  width: 100%;
+  margin-bottom: 5px;
+  transition: .3s;
+  &:hover{
+    color: #fff;
+    background: #777;
+  }
+}
+

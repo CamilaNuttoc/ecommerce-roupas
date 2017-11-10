@@ -4,17 +4,36 @@
 		<div class="row">
 			<div class="col-md-1 col-xs-2 preview">
 				<img src="<%= item.imagem %>">
+				<img src="https://ph-cdn2.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestido-curto/vestido-floral-dark-com-saia-evase_215676_600_1.jpg">
 				<img src="<%= item.imagem %>">
-				<img src="<%= item.imagem %>">
-				<img src="<%= item.imagem %>">
-				<img src="<%= item.imagem %>">
-			</div>
-			<div class="col-md-5 col-xs-10 main">
+				<img src="https://ph-cdn2.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestido-curto/vestido-floral-dark-com-saia-evase_215676_600_1.jpg">
 				<img src="<%= item.imagem %>">
 			</div>
-			<div class="col-md-6 col-xs-12 info">
+			<div class="col-md-6 col-xs-10 main">
+				<span class="zoom">
+				<img src="<%= item.imagem %>"></span>
+			</div>
+			<script>
+				$('.preview img').click(function(){
+					var novaImg = $(this).attr('src');
+					$('.main span img').attr('src', novaImg);
+				});
+				$(document).ready(function(){
+				  	$('.main span').zoom();
+				})
+				
+			</script>
+			<style>
+				.zoom {
+					display:inline-block;
+					position: relative;
+				}
+				.zoom img {
+					display: block;
+				}
+			</style>
+			<div class="col-md-5 col-xs-12 info">
 				<h2><%= item.titulo %></h2>
-				<p>Vendido e entregue por XXXXXX.</p>
 				<div class="avaliacao-item"></div>
 				<script>
 					var avaliacoes = 0;
@@ -24,26 +43,29 @@
 						users ++; 
 					<% }); %> 
 					var length = Math.round(avaliacoes/users);
-					genStars(length, -1);
+					genStars(length, -1, users);
 				</script>
-				<h2><%= item.precoOriginal %></h2>
-				<h2><%= item.precoPromocao %></h2>
+				<span class="preco-original">R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+				<span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
+				<p><strong>3x</strong> de <strong>R$<%= (item.precoPromocao/3).toFixed(2).replace(".", ",") %> %></strong> sem juros no cartão</p>
 				<hr>
 				<section class="form-sec">
 					<form>
+						<label>Tamanho:</label>
+					  <select name="tamanho">
+  						<option value="PP">PP</option>
+  						<option value="P">P</option>
+  						<option value="M">M</option>
+  						<option value="G">G</option>
+  						<option value="GG">GG</option>
+						</select><br>
 					  <label>Cor:</label>
-						<input type="radio" name="cor" value="branco" checked>
-						<input type="radio" name="cor" value="azul">
-						<input type="radio" name="cor" value="preto"><br>
-					  <label>Tamanho:</label>
-					  	<input type="radio" name="tam" value="PP">
-					  	<input type="radio" name="tam" value="P" checked>
-					  	<input type="radio" name="tam" value="M">
-					  	<input type="radio" name="tam" value="G">
-					  	<input type="radio" name="tam" value="GG"><br>
-					  <button type="submit">Adicionar ao carrinho</button>
+						<input type="radio" name="cor" value="branco" checked>Branco
+						<input type="radio" name="cor" value="azul">Azul
+						<input type="radio" name="cor" value="preto">Preto
+					  <button type="submit" class="botaoStyle">Adicionar ao carrinho</button>
 					</form>
-					<button type="submit">Salvar para depois</button>
+					<button type="submit" class="botaoStyle">Salvar para depois</button>
 				</section>
 				<hr>
 				<ul>
@@ -52,6 +74,7 @@
 					<li>Vivamus a metus vehicula, accumsan purus vel, aliquet 
 					nisl. Duis turpis urna, accumsan vel tristique et, 
 					tincidunt facilisis mauris.</li>
+					<li>Vendido e entregue por X.</li>
 				</ul>
 			</div>
 		</div>
@@ -123,8 +146,8 @@
              	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
              	<div class="caption">
               		<h3><%= item.titulo %></h3>
-              		<span class="preco-original">De: <%= item.precoOriginal %></span>
-              		<span class="preco-desconto"><%= item.precoPromocao %></span>
+              		<span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+              		<span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
               		<button class="btn comprarBtn">Comprar</button>
              	</div>
             </a>
@@ -171,7 +194,7 @@
 				<span class="star5 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 			</div>
 			<textarea style="width: 95%; margin: 15px 0; border: none; border-radius: 20px; outline: none; padding: 20px; resize: none; box-shadow: 0 0 20px #bbb; height: 100px" placeholder="Digite seu comentário..."></textarea>
-			<button type="submit" style="border: 3px solid #777; background: none; padding: 10px; border-radius: 10px; outline: none; width: 95%;">Comentar</button>
+			<button type="submit" class="botaoStyle">Comentar</button>
 		</form>
 		</div>
 	</div>
@@ -189,8 +212,8 @@
             		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
             		  <div class="caption">
             		    <h3><%= item.titulo %></h3>
-            		    <span class="preco-original">De: <%= item.precoOriginal %></span>
-            		    <span class="preco-desconto"><%= item.precoPromocao %></span>
+            		    <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+            		    <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
             		    <button class="btn comprarBtn">Comprar</button>
             		  </div>
             		</a>
