@@ -14,11 +14,17 @@
 			</div>
 			<div class="col-md-6 info">
 				<h2><%= item.titulo %></h2>
-				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<div class="avaliacao-item"></div>
+				<script>
+					var avaliacoes = 0;
+					var users = 0; 
+					<% item.comentarios.forEach(function(comentario){ %>
+					    avaliacoes += <%= comentario.avaliacao %>; 
+						users ++; 
+					<% }); %> 
+					var length = Math.round(avaliacoes/users);
+					genStars(length, -1);
+				</script>
 				<h2><%= item.precoOriginal %></h2>
 				<h2><%= item.precoPromocao %></h2>
 				<hr>
@@ -50,10 +56,6 @@
 		</div>
 	</section>
 	<script>
-// 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-//   e.target // newly activated tab
-//   e.relatedTarget // previous active tab
-// })
 	$('#myTabs a').click(function (e) {
  		e.preventDefault()
   		$(this).tab('show')
@@ -96,27 +98,49 @@
         <% } %>
   	</div>
 	<div class="row">
-		<% for(var i=0; i<5; i++){ %>
+		<div class="limit-heading">
+          <h2 class="heading"><span>Avaliações</span></h2>
+        </div>
+        <% var num = 0; %>
+		<% item.comentarios.forEach(function(comentario){ %>
 		<div class="col-md-12">
-			<div class="media">
-			  <div class="media-left">
-			    <a href="#">
-			      <img class="media-object" src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg" alt="girl">
-			    </a>
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading">Nome do usuário</h4>
-			    Comentário demonstrando satisfação!
-			  </div>
-			</div>
+		  <div class="media">
+		    <div class="media-left">
+		        <img class="media-object" src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg" alt="girl">
+		    </div>
+		    <div class="media-body">
+		      <p class="pull-right">Postado há X tempo</p>
+		      <h4 class="media-heading"><strong>Nome do usuário</strong></h4>
+		      <div class="avaliacao-user<%= num %>"></div>
+		      <script> genStars(<%= comentario.avaliacao %>, <%= num %>);</script>
+		      <% num++; %>
+		      <p>Comentário demonstrando satisfação!Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.</p>
+		    </div>
+		  </div>
 		</div>
-		<% } %>
+		<% }); %>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form style="width: 95%; margin: 0 auto; text-align: center">
+			<h4>Faça <a href="/login"><strong><i>login</i></strong></a> e deixe sua avaliação! :)</h4>
+			<div class="avaliacao-user-online">
+				<span class="star1 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<span class="star2 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<span class="star3 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<span class="star4 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<span class="star5 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+			</div>
+			<textarea style="width: 95%; margin: 15px 0; border: none; border-radius: 20px; outline: none; padding: 20px; resize: none; box-shadow: 0 0 20px #bbb; height: 100px" placeholder="Digite seu comentário..."></textarea>
+			<button type="submit" style="border: 3px solid #777; background: none; padding: 10px; border-radius: 10px; outline: none; width: 95%;">Comentar</button>
+		</form>
+		</div>
 	</div>
 	<div class="row">
         <div class="limit-heading">
           <h2 class="heading"><span>Mais em Vestidos</span></h2>
         </div>
-        <% for(var i=0; i<8; i++){ %>
+        <% for(var i=0; i<12; i++){ %>
   			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
          	    <div class="thumbnail">
            			<div class="wrapBtn">

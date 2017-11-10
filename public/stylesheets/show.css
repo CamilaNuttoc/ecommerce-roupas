@@ -31,4 +31,12 @@
 /* line 31, ../sass/show.scss */
 .media {
   margin: 15px;
+  background: #eee;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* line 38, ../sass/show.scss */
+.avaliacao-item span {
+  font-size: 30px;
 }
