@@ -1,0 +1,61 @@
+/* line 1, ../sass/categoria.scss */
+.pagination > li {
+  display: inline-block;
+}
+
+/* line 5, ../sass/categoria.scss */
+.categoria-filter {
+  padding: 0;
+  float: left;
+}
+/* line 8, ../sass/categoria.scss */
+.categoria-filter label {
+  font-weight: 500;
+}
+/* line 11, ../sass/categoria.scss */
+.categoria-filter .categoria {
+  margin-bottom: 20px;
+  list-style-type: none;
+  display: block;
+  float: left;
+}
+/* line 16, ../sass/categoria.scss */
+.categoria-filter .categoria .form-check {
+  margin-right: 20px;
+  float: left;
+}
+
+/* line 23, ../sass/categoria.scss */
+.ad {
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+/* line 28, ../sass/categoria.scss */
+.path-categoria {
+  color: #aaa;
+  padding-left: 10px;
+}
+/* line 31, ../sass/categoria.scss */
+.path-categoria a {
+  color: #aaa;
+}
+/* line 33, ../sass/categoria.scss */
+.path-categoria a:hover {
+  color: #000;
+}
+
+/* line 39, ../sass/categoria.scss */
+select {
+  border-radius: 5px 5px 0 0;
+  outline: none;
+}
+/* line 42, ../sass/categoria.scss */
+select option {
+  outline: none;
+}
+
+/* line 48, ../sass/categoria.scss */
+.row-categoria hr {
+  margin-top: 15px;
+}

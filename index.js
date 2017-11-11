@@ -21,6 +21,16 @@ app.get("/", function(req, res){
 	});
 });
 
+app.get("/feminino", function(req, res){
+	Item.find({}, function(err, itens){
+		if(err){
+			console.log(err);
+		}else{
+			res.render("categoria", {itens: itens})
+		}
+	});
+});
+
 app.get("/:id", function(req, res){
 	Item.findById(req.params.id).populate("comentarios").exec(function(err, item){
 		if(err){

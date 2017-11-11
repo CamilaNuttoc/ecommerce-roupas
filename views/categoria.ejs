@@ -1,0 +1,140 @@
+<% include ./partials/header.ejs %>
+<div class="container">
+	<div class="row row-categoria">
+		<div class="sup-elems hidden-xs">
+			<div class="pull-right">
+				<span>Ordernar por:</span>
+				<select>
+				  <option value="MelhoresAvaliados">Melhores Avaliados</option>
+				  <option value="Recentes">Recentes</option>
+				  <option value="Maiores Preços">Maiores Preços</option>
+				  <option value="Menores Preços">Menores Preços</option>
+				</select>
+			</div>
+			<p class="path-categoria"><a href="#">Feminino</a> > <a href="#">Roupas</a> > <a href="#">Vestidos</a></p>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
+			<h2>Filtros</h2><hr>
+			<ul class="categoria-filter">
+				<li class="categoria"><a href="#"><strong>Roupas femininas -</strong></a>
+					<% var arrRoupas = ['Vestidos', 'Calças', 'Blusas', 'Camisas', 'Saias', 'Shorts', 'Pijamas', 'Praia'] %>
+					<div class="open">
+						<% arrRoupas.forEach(function(roupa){ %>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" value="30">
+						    <%= roupa %>
+						  </label>
+						</div>
+						<% }); %>
+					</div>
+				</li>
+				<li class="categoria"><a href="#"><strong>Tamanho -</strong></a>
+					<% var arrTam = ['P', 'PP', 'M', 'G', 'GG'] %>
+					<div class="open">
+						<% arrTam.forEach(function(tam){ %>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" value="30">
+						    <%= tam %>
+						  </label>
+						</div>
+						<% }); %>
+					</div>	
+				</li>
+				<li class="categoria"><a href="#"><strong>Cores -</strong></a>
+					<% var arrCores = ['Amarelo', 'Azul', 'Verde', 'Vermelho', 'Rosa', 'Branco', 'Preto', 'Roxo', 'Laranja', 'Marrom', 'Bege'] %>
+					<div class="open">
+						<% arrCores.forEach(function(cor){ %>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" value="30">
+						    <%= cor %>
+						  </label>
+						</div>
+						<% }); %>
+					</div>	
+				</li>
+				<li class="categoria"><a href="#"><strong>Preço -</strong></a>
+					<% var arrPrecos = ['Até R$30,00', 'Até R$50,00', 'Até R$80,00', 'Até R$110,00', 'Até R$150,00', 'Até R$200,00'] %>
+					<div class="open">
+						<% arrPrecos.forEach(function(preco){ %>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" value="30">
+						    <%= preco %>
+						  </label>
+						</div>
+						<% }); %>
+					</div>
+				</li>
+				<li class="categoria"><a href="#"><strong>Tipo -</strong></a>
+					<% var arrTipos = ['Manga longa', 'Estampa corrida', 'Estampa lisa'] %>
+					<div class="open">
+						<% arrTipos.forEach(function(tipo){ %>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" value="30">
+						    <%= tipo %>
+						  </label>
+						</div>
+						<% }); %>
+					</div>
+				</li>
+			</ul>
+			<img class="ad" src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
+			<img class="ad" src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
+		</div>
+		<style>
+		@media (max-width:1200px) and (min-width:992px) {
+		  /* line 23, ../sass/home.scss */
+		  .row-categoria img {
+		    max-height: 320px;
+		    min-height: 320px;
+		  }
+		}
+		</style>
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+			<h2>Vestidos</h2><hr>
+			<% itens.forEach(function(item){ %>
+  			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="thumbnail">
+            <div class="wrapBtn">
+              <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+            </div>
+            <a href="/<%= item._id %>">
+              <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+              <div class="caption">
+                <h3><%= item.titulo %></h3>
+                <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+                <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
+                <button class="btn comprarBtn">Comprar</button>
+              </div>
+            </a>
+          </div>
+  			</div>
+      <% }); %>
+      <nav aria-label="Page navigation example" class="text-center">
+			  <ul class="pagination">
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			        <span class="sr-only">Previous</span>
+			      </a>
+			    </li>
+			    <li class="page-item"><a class="page-link" href="#">1</a></li>
+			    <li class="page-item"><a class="page-link" href="#">2</a></li>
+			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			        <span class="sr-only">Next</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+    </div>
+		</div>
+	</div>
+</div>
+<% include ./partials/footer.ejs %>

@@ -59,8 +59,8 @@
               <img src="<%= item.imagem %>" alt="Vestido estampado"/>
               <div class="caption">
                 <h3><%= item.titulo %></h3>
-                <span class="preco-original">De: <%= item.precoOriginal %></span>
-                <span class="preco-desconto"><%= item.precoPromocao %></span>
+                <span class="preco-original">De: <%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+                <span class="preco-desconto"><%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
                 <button class="btn comprarBtn">Comprar</button>
               </div>
             </a>
@@ -82,7 +82,7 @@
               <img src="<%= item.imagem %>" alt="Vestido estampado"/>
               <div class="caption">
                 <h3><%= item.titulo %></h3>
-                <span class="preco-desconto"><%= item.precoOriginal %></span>
+                <span class="preco-desconto"><%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
                 <button class="btn comprarBtn">Comprar</button> 
               </div>
             </a>

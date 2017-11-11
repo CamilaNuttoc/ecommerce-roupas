@@ -1,0 +1,51 @@
+.pagination>li{
+  display: inline-block;
+}
+
+.categoria-filter{
+  padding: 0;
+  float: left;
+  label{
+    font-weight: 500;
+  }
+  .categoria{
+    margin-bottom: 20px;
+    list-style-type: none;
+    display: block;
+    float: left;
+    .form-check{
+      margin-right: 20px;
+      float: left;
+    }
+  }
+}
+
+.ad{
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.path-categoria{
+  color: #aaa;
+  padding-left: 10px;
+  a{
+    color: #aaa;
+    &:hover{
+      color: #000;
+    }
+  }
+}
+
+select{
+  border-radius: 5px 5px 0 0;
+  outline: none;
+  option{
+    outline: none;
+  }
+}
+
+.row-categoria{
+  hr{
+    margin-top: 15px;
+  }
+}
