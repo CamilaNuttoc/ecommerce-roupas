@@ -16,7 +16,7 @@
 .categoria-filter .categoria {
   margin-bottom: 20px;
   list-style-type: none;
-  display: block;
+  width: 100%;
   float: left;
 }
 /* line 16, ../sass/categoria.scss */
@@ -49,13 +49,45 @@
 select {
   border-radius: 5px 5px 0 0;
   outline: none;
+  padding-right: 10px;
 }
-/* line 42, ../sass/categoria.scss */
+/* line 43, ../sass/categoria.scss */
 select option {
   outline: none;
 }
 
-/* line 48, ../sass/categoria.scss */
+/* line 49, ../sass/categoria.scss */
 .row-categoria hr {
   margin-top: 15px;
+}
+
+/* line 54, ../sass/categoria.scss */
+.shown-filtro {
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px #ccc;
+  background: #fff;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  padding: 0 10%;
+}
+
+/* line 64, ../sass/categoria.scss */
+.toggleFiltro {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* line 70, ../sass/categoria.scss */
+.filtroBtn {
+  background: #fff;
+  z-index: 4;
+  left: 0;
+  transition: all .6s;
+}
+
+/* line 77, ../sass/categoria.scss */
+.filtrarBtn {
+  width: 100%;
 }

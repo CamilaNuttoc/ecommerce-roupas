@@ -11,7 +11,7 @@
   .categoria{
     margin-bottom: 20px;
     list-style-type: none;
-    display: block;
+    width: 100%;
     float: left;
     .form-check{
       margin-right: 20px;
@@ -39,6 +39,7 @@
 select{
   border-radius: 5px 5px 0 0;
   outline: none;
+  padding-right: 10px;
   option{
     outline: none;
   }
@@ -48,4 +49,31 @@ select{
   hr{
     margin-top: 15px;
   }
+}
+
+.shown-filtro{
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px #ccc;
+    background: #fff;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.toggleFiltro{
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.filtroBtn{ 
+  background: #fff;
+  z-index: 4;
+  left: 0;
+  transition: all .6s;
+}
+
+.filtrarBtn{
+  width: 100%;
 }
