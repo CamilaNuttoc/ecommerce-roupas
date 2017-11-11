@@ -78,19 +78,25 @@
   position: relative;
   display: table;
   margin: 0 auto 10px auto;
+  transition: 1s;
 }
 /* line 77, ../sass/home.scss */
+.thumbnail:hover {
+  filter: brightness(110%);
+}
+/* line 81, ../sass/home.scss */
 .thumbnail:hover .comprarBtn {
   color: #fff;
   background: #665;
 }
-/* line 82, ../sass/home.scss */
+/* line 86, ../sass/home.scss */
 .thumbnail img {
   min-height: 400px;
   max-height: 400px;
   width: auto;
+  border-radius: 5px;
 }
-/* line 87, ../sass/home.scss */
+/* line 92, ../sass/home.scss */
 .thumbnail h3 {
   font-size: 15px;
   font-weight: 800;
@@ -98,19 +104,19 @@
   min-height: 32px;
   max-width: 270px;
 }
-/* line 94, ../sass/home.scss */
+/* line 99, ../sass/home.scss */
 .thumbnail button {
   font-size: 20px;
   margin-top: 8px;
   min-height: 18px;
 }
-/* line 99, ../sass/home.scss */
+/* line 104, ../sass/home.scss */
 .thumbnail .wrapBtn {
   position: absolute;
   top: 11px;
   right: 14px;
 }
-/* line 104, ../sass/home.scss */
+/* line 109, ../sass/home.scss */
 .thumbnail .favBtn {
   background: none;
   color: #555;
@@ -118,11 +124,11 @@
   outline: none;
   opacity: .2;
 }
-/* line 110, ../sass/home.scss */
+/* line 115, ../sass/home.scss */
 .thumbnail .favBtn:hover {
   opacity: 1;
 }
-/* line 114, ../sass/home.scss */
+/* line 119, ../sass/home.scss */
 .thumbnail .favText {
   position: absolute;
   font-size: 17px;
@@ -130,39 +136,40 @@
   right: 0;
   font-weight: 800;
 }
-/* line 121, ../sass/home.scss */
+/* line 126, ../sass/home.scss */
 .thumbnail .comprarBtn {
   border: 4px solid #665;
   background: none;
   font-size: 15px;
   border-radius: 10px;
+  transition: .3s;
 }
 
-/* line 128, ../sass/home.scss */
+/* line 135, ../sass/home.scss */
 [class*='preco-'] {
   display: block;
 }
 
-/* line 131, ../sass/home.scss */
+/* line 138, ../sass/home.scss */
 .preco-original {
   text-decoration: line-through;
   font-size: 13px;
   min-height: 18px;
 }
 
-/* line 136, ../sass/home.scss */
+/* line 143, ../sass/home.scss */
 .preco-desconto {
   font-size: 20px;
   margin-top: 8px;
   min-height: 18px;
 }
 
-/* line 141, ../sass/home.scss */
+/* line 148, ../sass/home.scss */
 #categorias-bottom {
   padding: 10px;
   text-align: center;
 }
-/* line 144, ../sass/home.scss */
+/* line 151, ../sass/home.scss */
 #categorias-bottom .titulo-categoria {
   display: inline-block;
   color: #333;
@@ -174,30 +181,31 @@
   outline: none;
   margin-bottom: 10px;
 }
-/* line 154, ../sass/home.scss */
+/* line 161, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a:hover {
   color: white;
-  background: #333;
+  background: #555;
 }
-/* line 158, ../sass/home.scss */
+/* line 165, ../sass/home.scss */
 #categorias-bottom .titulo-categoria a {
+  color: #555;
   padding: 10px;
   display: block;
   transition: .3s;
 }
 
-/* line 167, ../sass/home.scss */
+/* line 175, ../sass/home.scss */
 a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 173, ../sass/home.scss */
+/* line 181, ../sass/home.scss */
 [class*='col-'] {
   padding: 0 5px;
 }
 
-/* line 177, ../sass/home.scss */
+/* line 185, ../sass/home.scss */
 [class*='glyphicon-heart'] {
   font-size: 30px;
 }

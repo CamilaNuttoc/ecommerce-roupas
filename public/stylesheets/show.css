@@ -152,7 +152,7 @@
 /* line 126, ../sass/show.scss */
 .botaoStyle {
   border: 3px solid #777;
-  background: none;
+  background: #fff;
   padding: 10px;
   border-radius: 10px;
   outline: none;
