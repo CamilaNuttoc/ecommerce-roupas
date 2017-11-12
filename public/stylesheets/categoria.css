@@ -70,16 +70,17 @@ select option {
   display: block;
   width: 100%;
   padding: 0 10%;
+  margin-bottom: 15px;
 }
 
-/* line 64, ../sass/categoria.scss */
+/* line 65, ../sass/categoria.scss */
 .toggleFiltro {
   background: none;
   border: none;
   outline: none;
 }
 
-/* line 70, ../sass/categoria.scss */
+/* line 71, ../sass/categoria.scss */
 .filtroBtn {
   background: #fff;
   z-index: 4;
@@ -87,7 +88,7 @@ select option {
   transition: all .6s;
 }
 
-/* line 77, ../sass/categoria.scss */
+/* line 78, ../sass/categoria.scss */
 .filtrarBtn {
   width: 100%;
 }
