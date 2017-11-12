@@ -31,6 +31,16 @@ app.get("/feminino", function(req, res){
 	});
 });
 
+app.get("/carrinho", function(req, res){
+	Item.find().limit(2).exec(function(err, itens){
+		if(err){
+			console.log(err);
+		}else{
+			res.render("carrinho", {itens: itens})
+		}
+	});
+});
+
 app.get("/:id", function(req, res){
 	Item.findById(req.params.id).populate("comentarios").exec(function(err, item){
 		if(err){
