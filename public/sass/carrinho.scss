@@ -1,0 +1,41 @@
+.cont-carrinho{
+	margin-bottom: 20px;
+}
+.row.row-carrinho{
+	margin: 0;
+	background: #eee;
+	padding: 10px;
+	h4{
+		background: #ddd;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	img{
+		width: 100px;
+		float: left;
+		border-radius: 5px;
+	}
+	.info{
+		margin-left: 120px;
+		h4{
+			background: none;
+			padding: 0;
+		}
+	}
+	.form-sec{
+		select{
+			margin: 10px 0;
+		}
+	}
+}
+
+input[type="text"]{
+	&:first-of-type{
+		width: 70px; 
+	}
+	&:last-of-type{
+		width: 40px; 
+	}
+	
+}
+

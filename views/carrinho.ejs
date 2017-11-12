@@ -1,0 +1,84 @@
+<% include ./partials/header.ejs %>
+<div class="container cont-carrinho">
+	<div class="row row-carrinho">
+		<div class="col-md-5">
+			<h4><strong>PRODUTO</strong></h4>
+		</div>
+		<div class="col-md-4">
+			<h4><strong>DETALHES</strong></h4>
+		</div>
+		<div class="col-md-2">
+			<h4><strong>PREÇO</strong></h4>
+		</div>
+		<div class="col-md-1">
+			<h4><strong>TOTAL</strong></h4>
+		</div>
+	</div>
+	<% for(var i=0; i<3; i++){ %>
+	<div class="row row-carrinho">
+		<div class="col-md-5">
+			<img src="<%= itens[0].imagem %>" alt="Vestido estampado"/>
+			<div class="info">
+      	<h4><%= itens[0].titulo %></h4>
+      	<p>COD.: <%= itens[0]._id %></p>
+      	<p>Vendido e entregue por X.</p>
+      </div>
+		</div>
+		<div class="col-md-4">
+			<section class="form-sec">
+						<label>Cor:</label>
+						<input type="radio" name="cor" value="branco" checked>Branco
+						<input type="radio" name="cor" value="azul">Azul
+						<input type="radio" name="cor" value="preto">Preto<br>
+						<label>Tamanho:</label>
+					  <select name="tamanho">
+  						<option value="PP">PP</option>
+  						<option value="P">P</option>
+  						<option value="M">M</option>
+  						<option value="G">G</option>
+  						<option value="GG">GG</option>
+						</select><br>
+						<label>Quantidade:</label>
+					  <select name="tamanho">
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+						</select>
+			</section>
+		</div>
+		<div class="col-md-2">
+			<span class="preco-original">De: R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
+      <span class="preco-desconto">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+		</div>
+		<div class="col-md-1">
+      <span class="preco-desconto">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+		</div>
+	</div>
+	<% } %>
+	<div class="col-md-8">
+			<span>Prazo de Entrega - Informe o CEP para consultar: </span>
+			<input type="text">
+			<input type="text">
+			<button>Consultar</button>
+			<a href="#">Não sei meu CEP</a><hr>
+      <button class="botaoStyle" style="width: 50%;">Adicionar cupom de desconto</button>
+	</div>
+	<div class="col-md-4">
+			<span>Você está economizando R$XX,XX!</span><hr>
+			<div class="pull-right">
+      	<h4 class="preco-total" style="margin: 0;">R$XXX,XX</h4>
+      	<h4>Em até 5x de R$XX,XX</h4>
+    	</div>
+    	<h3>TOTAL</h3>
+    	<button class="botaoStyle">Finalizar Compra</button>
+      <button class="botaoStyle">Escolher mais produtos</button>
+	</div>
+</div>
+<% include ./partials/footer.ejs %>

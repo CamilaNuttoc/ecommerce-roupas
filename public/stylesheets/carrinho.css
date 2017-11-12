@@ -1,0 +1,45 @@
+/* line 1, ../sass/carrinho.scss */
+.cont-carrinho {
+  margin-bottom: 20px;
+}
+
+/* line 4, ../sass/carrinho.scss */
+.row.row-carrinho {
+  margin: 0;
+  background: #eee;
+  padding: 10px;
+}
+/* line 8, ../sass/carrinho.scss */
+.row.row-carrinho h4 {
+  background: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* line 13, ../sass/carrinho.scss */
+.row.row-carrinho img {
+  width: 100px;
+  float: left;
+  border-radius: 5px;
+}
+/* line 18, ../sass/carrinho.scss */
+.row.row-carrinho .info {
+  margin-left: 120px;
+}
+/* line 20, ../sass/carrinho.scss */
+.row.row-carrinho .info h4 {
+  background: none;
+  padding: 0;
+}
+/* line 26, ../sass/carrinho.scss */
+.row.row-carrinho .form-sec select {
+  margin: 10px 0;
+}
+
+/* line 33, ../sass/carrinho.scss */
+input[type="text"]:first-of-type {
+  width: 70px;
+}
+/* line 36, ../sass/carrinho.scss */
+input[type="text"]:last-of-type {
+  width: 40px;
+}
