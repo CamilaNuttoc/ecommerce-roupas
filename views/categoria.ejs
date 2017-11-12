@@ -89,6 +89,8 @@
 					$( window ).resize(function() {
 					  if($(document).width() >= 768){
 							$('.hidden-filtro').css('display', 'block');
+							$('.hidden-filtro').removeClass('shown-filtro');
+							$('.row-categoria h3').css('text-align', 'left');
 						}else{
 							$('.hidden-filtro').css('display', 'none');
 						}
