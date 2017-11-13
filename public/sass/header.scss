@@ -90,11 +90,12 @@ body{
 }
 
 #dropdown-user{
-  left: -45px;
-  right: none;
   text-align: center;
   min-width: 140px;
-  width: auto;
+  width: 250px;
+  left: -100px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .iconsPersist{
@@ -106,7 +107,7 @@ body{
   a{
     color: #999;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 767px) {
     display: none;
   }
 }
