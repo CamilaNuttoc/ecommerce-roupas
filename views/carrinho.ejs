@@ -16,21 +16,23 @@
 		</div>
   </div>
 	<% for(var i=0; i<3; i++){ %>
-	<div class="row row-carrinho hidden-xs item-<%= i %>">
-		<div class="col-md-5 col-sm-6 col-xs-5">
+	<div class="row row-carrinho item-<%= i %>">
+		<div class="col-md-5 col-sm-6">
 			<img src="<%= itens[0].imagem %>" alt="Vestido estampado"/>
 			<div class="info">
       	<h4><%= itens[0].titulo %></h4>
-      	<p>COD.: <%= itens[0]._id %></p>
-      	<p>Vendido e entregue por X.</p>
+      	<div class="hidden-xs">
+      		<p>COD.: <%= itens[0]._id %></p>
+      		<p>Vendido e entregue por X.</p>
+      	</div>
       </div>
 		</div>
-		<div class="col-md-3 col-sm-4 col-xs-4">
+		<div class="col-md-3 col-sm-4">
 			<section class="form-sec">
 						<label>Cor:</label>
-						<input type="radio" name="cor<%= i %>" value="branco<%= i %>" checked="checked">Branco
-						<input type="radio" name="cor<%= i %>" value="azul<%= i %>">Azul
-						<input type="radio" name="cor<%= i %>" value="preto<%= i %>">Preto<br>
+						<input type="radio" name="cor<%= i %>" value="branco<%= i %>" checked="checked">Bra
+						<input type="radio" name="cor<%= i %>" value="azul<%= i %>">Azu
+						<input type="radio" name="cor<%= i %>" value="preto<%= i %>">Pre<br>
 						<label>Tamanho:</label>
 					  <select name="tamanho<%= i %>">
   						<option value="PP">PP</option>
@@ -54,54 +56,15 @@
 						</select>
 			</section>
 		</div>
-		<div class="col-md-2 hidden-sm col-xs-2">
+		<div class="col-md-2 hidden-sm hidden-xs">
 			<span class="preco-original">De: R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
       <span class="preco-desconto">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
 		</div>
-		<div class="col-md-2 col-sm-2 col-xs-1">
-			<button class="trash" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+		<div class="col-md-2 col-sm-2 col-xs-1 valores-xs">
+			<button class="trash hidden-xs" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+			<button class="trash hidden-lg hidden-md hidden-sm" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
 			<span class="preco-original promo-temp<%= i %> original<%= i %>">R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
 			<span class="preco-desconto total-temp<%= i %> desconto<%= i %>">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
-		</div>
-	</div>
-	<% } %>
-	<% for(var i=0; i<3; i++){ %>
-	<div class="row row-carrinho hidden-sm hidden-md hidden-lg item-<%= i %>" style="border-bottom: 1px solid #ccc; padding: 20px 10px;">
-		<div class="col-xs-12">
-			<img src="<%= itens[0].imagem %>" alt="Vestido estampado"/>
-			<div class="info">
-      	<h4 style="margin-top: 0;"><%= itens[0].titulo %></h4>
-      	<section>
-						<label>Cor:</label>
-						<input type="radio" name="cor<%= i %>" value="branco<%= i %>" checked="checked">Branco
-						<input type="radio" name="cor<%= i %>" value="azul<%= i %>">Azul
-						<input type="radio" name="cor<%= i %>" value="preto<%= i %>">Preto<br>
-						<label>Tamanho:</label>
-					  <select name="tamanho<%= i %>">
-  						<option value="PP">PP</option>
-  						<option value="P">P</option>
-  						<option value="M">M</option>
-  						<option value="G">G</option>
-  						<option value="GG">GG</option>
-						</select><br>
-						<label>Quantidade:</label>
-					  <select name="quantidade<%= i %>">
-  						<option value="1">1</option>
-  						<option value="2">2</option>
-  						<option value="3">3</option>
-  						<option value="4">4</option>
-  						<option value="5">5</option>
-  						<option value="6">6</option>
-  						<option value="7">7</option>
-  						<option value="8">8</option>
-  						<option value="9">9</option>
-  						<option value="10">10</option>
-						</select>
-			</section>
-			<span class="preco-original" style="float: left;">De: R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
-      <span class="preco-desconto" style="display: inline-block; margin: 0; margin-left: 10px;">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
-      <button class="trash" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-      </div>
 		</div>
 	</div>
 	<% } %>
@@ -137,7 +100,7 @@
 <script>
   var precosOriginal = [];
   var precosPromocao = [];
-  var length = $('.preco-desconto').length/3;
+  var length = $('.preco-desconto').length/2;
   for(var i=0; i<length; i++){ // set the length according to number of items inside cart.
   	precosOriginal.push(<%= itens[0].precoOriginal %>);
   	precosPromocao.push(<%= itens[0].precoPromocao %>);
@@ -148,9 +111,6 @@
 	for(var i=0; i<3; i++){
 		if(selElem == ('quantidade'+i)){
 			var quantidade =  Number($('[name="'+selElem+'"] option:selected').val());
-			$('[name="'+selElem+'"]').val(quantidade);
-
-			alert(quantidade);
 		  var original = <%= itens[0].precoOriginal %> * quantidade;
 			var promocao = <%= itens[0].precoPromocao %> * quantidade;
 			var originalElem = Number(original.toFixed(2));
@@ -161,9 +121,6 @@
 			$('.desconto'+i).text('R$'+promocaoElem.toFixed(2).toString().replace(".", ","));
 			$('.total-temp'+i).text('R$'+promocaoElem.toFixed(2).toString().replace(".", ","));
 			mudaTotal();
-		}else if(selElem == ('tamanho'+i)){
-			var tamanho =  $('[name="'+selElem+'"] option:selected').val();
-			$('[name="'+selElem+'"]').val(tamanho);
 		}
 	}
 });
@@ -176,7 +133,7 @@
   		totalPromo += precosPromocao[i];
   		totalOrig += precosOriginal[i];
   	}
-	economia = totalOrig - totalPromo;
+		economia = totalOrig - totalPromo;
   	totalParcl = totalPromo/5;
   	$('.economia').text('Você está economizando R$'+economia.toFixed(2).toString().replace(".", ",")+'!');
   	$('.preco-total').text('R$'+totalPromo.toFixed(2).toString().replace(".", ","));
@@ -187,16 +144,16 @@
 	precosOriginal.splice(index, 1);
 	precosPromocao.splice(index, 1);
 	var item = $('[class*="item-'+index+'"]');
-	item.fadeOut(500, function(){
-	  $(this).remove(); 
-	  if($('.row-carrinho').length){
+	  $(item).slideUp(500, function() {
+    	$(this).remove();
+    	if($('.row-carrinho').length){
 			mudaTotal();
 		}else{
 			$('.row-carrinho-bottom').hide();
 			$('.row-titulos').hide();
 			$('.row-carrinho-bottom2').show();
 		}
-	});
+		});
 });
 	$("#cep").on('input',function () {
     if($(this).val().length == $(this).attr('maxlength')) {

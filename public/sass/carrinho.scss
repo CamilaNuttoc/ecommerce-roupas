@@ -33,7 +33,7 @@
 		border-radius: 5px;
 	}
 	.info{
-		margin-left: 120px;
+		margin-left: 110px;
 		h4{
 			background: none;
 			padding: 0;
@@ -63,6 +63,7 @@
 	outline: 0;
 	top: 48px;
 	right: 8px;
+	z-index: 2;
 	transition: .3s;
 	span{
 		color: #ccc;
@@ -81,4 +82,21 @@
 	&:first-child{
 		top: 0;
 	}
+	@media only screen and (max-width:768px) {
+      right: 0;
+      top: 20px;
+    }
+}
+
+.valores-xs{
+	@media only screen and (max-width:767px) {
+      margin-left: 10px;
+      float: right;
+      width: -webkit-calc(100% - 110px);
+      width: 	-moz-calc(100% - 110px);
+      width: 		 calc(100% - 110px);
+    }
+    @media only screen and (max-width:374px) {
+      margin-left: 110px;
+    }
 }
