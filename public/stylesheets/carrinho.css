@@ -3,43 +3,98 @@
   margin-bottom: 20px;
 }
 
-/* line 4, ../sass/carrinho.scss */
-.row.row-carrinho {
-  margin: 0;
-  background: #eee;
-  padding: 10px;
-}
-/* line 8, ../sass/carrinho.scss */
-.row.row-carrinho h4 {
-  background: #ddd;
-  padding: 10px;
+/* line 5, ../sass/carrinho.scss */
+.row input[type="text"] {
   border-radius: 5px;
 }
-/* line 13, ../sass/carrinho.scss */
-.row.row-carrinho img {
+/* line 7, ../sass/carrinho.scss */
+.row input[type="text"]:first-of-type {
+  width: 70px;
+}
+/* line 10, ../sass/carrinho.scss */
+.row input[type="text"]:last-of-type {
+  width: 40px;
+}
+
+/* line 16, ../sass/carrinho.scss */
+.row-titulos {
+  margin: 0 10px;
+}
+/* line 18, ../sass/carrinho.scss */
+.row-titulos h4 {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+/* line 26, ../sass/carrinho.scss */
+.row-carrinho {
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 10px;
+}
+/* line 30, ../sass/carrinho.scss */
+.row-carrinho img {
   width: 100px;
   float: left;
   border-radius: 5px;
 }
-/* line 18, ../sass/carrinho.scss */
-.row.row-carrinho .info {
+/* line 35, ../sass/carrinho.scss */
+.row-carrinho .info {
   margin-left: 120px;
 }
-/* line 20, ../sass/carrinho.scss */
-.row.row-carrinho .info h4 {
+/* line 37, ../sass/carrinho.scss */
+.row-carrinho .info h4 {
   background: none;
   padding: 0;
 }
-/* line 26, ../sass/carrinho.scss */
-.row.row-carrinho .form-sec select {
+/* line 43, ../sass/carrinho.scss */
+.row-carrinho .form-sec select {
   margin: 10px 0;
 }
 
-/* line 33, ../sass/carrinho.scss */
-input[type="text"]:first-of-type {
-  width: 70px;
+/* line 49, ../sass/carrinho.scss */
+.row-carrinho-bottom {
+  padding: 20px;
+  text-align: center;
 }
-/* line 36, ../sass/carrinho.scss */
-input[type="text"]:last-of-type {
-  width: 40px;
+
+/* line 53, ../sass/carrinho.scss */
+#meuCarrinho {
+  border-left: 8px solid #aaa;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0 20px 15px;
+}
+
+/* line 59, ../sass/carrinho.scss */
+.trash {
+  position: absolute;
+  background: 0;
+  border: 0;
+  outline: 0;
+  top: 48px;
+  right: 8px;
+  transition: .3s;
+}
+/* line 67, ../sass/carrinho.scss */
+.trash span {
+  color: #ccc;
+  font-size: 15px;
+  transition: .3s;
+}
+/* line 72, ../sass/carrinho.scss */
+.trash:hover {
+  right: 5px;
+}
+/* line 74, ../sass/carrinho.scss */
+.trash:hover span {
+  cursor: pointer;
+  color: #777;
+  font-size: 25px;
+  transition: .5s;
+}
+/* line 81, ../sass/carrinho.scss */
+.trash:first-child {
+  top: 0;
 }

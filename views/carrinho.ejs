@@ -1,22 +1,23 @@
 <% include ./partials/header.ejs %>
 <div class="container cont-carrinho">
-	<div class="row row-carrinho">
-		<div class="col-md-5">
+  <h2 id="meuCarrinho">Meu carrinho</h2>
+  <div class="row row-titulos hidden-xs">
+  	<div class="col-md-5 col-sm-6 col-xs-5">
 			<h4><strong>PRODUTO</strong></h4>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3 col-sm-4 col-xs-4">
 			<h4><strong>DETALHES</strong></h4>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 hidden-sm col-xs-2">
 			<h4><strong>PREÇO</strong></h4>
 		</div>
-		<div class="col-md-1">
+		<div class="col-md-2 col-sm-2 col-xs-1">
 			<h4><strong>TOTAL</strong></h4>
 		</div>
-	</div>
+  </div>
 	<% for(var i=0; i<3; i++){ %>
-	<div class="row row-carrinho">
-		<div class="col-md-5">
+	<div class="row row-carrinho hidden-xs item-<%= i %>">
+		<div class="col-md-5 col-sm-6 col-xs-5">
 			<img src="<%= itens[0].imagem %>" alt="Vestido estampado"/>
 			<div class="info">
       	<h4><%= itens[0].titulo %></h4>
@@ -24,14 +25,14 @@
       	<p>Vendido e entregue por X.</p>
       </div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3 col-sm-4 col-xs-4">
 			<section class="form-sec">
 						<label>Cor:</label>
-						<input type="radio" name="cor" value="branco" checked>Branco
-						<input type="radio" name="cor" value="azul">Azul
-						<input type="radio" name="cor" value="preto">Preto<br>
+						<input type="radio" name="cor<%= i %>" value="branco<%= i %>" checked="checked">Branco
+						<input type="radio" name="cor<%= i %>" value="azul<%= i %>">Azul
+						<input type="radio" name="cor<%= i %>" value="preto<%= i %>">Preto<br>
 						<label>Tamanho:</label>
-					  <select name="tamanho">
+					  <select name="tamanho<%= i %>">
   						<option value="PP">PP</option>
   						<option value="P">P</option>
   						<option value="M">M</option>
@@ -39,7 +40,7 @@
   						<option value="GG">GG</option>
 						</select><br>
 						<label>Quantidade:</label>
-					  <select name="tamanho">
+					  <select name="quantidade<%= i %>">
   						<option value="1">1</option>
   						<option value="2">2</option>
   						<option value="3">3</option>
@@ -53,32 +54,155 @@
 						</select>
 			</section>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 hidden-sm col-xs-2">
 			<span class="preco-original">De: R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
       <span class="preco-desconto">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
 		</div>
-		<div class="col-md-1">
-      <span class="preco-desconto">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+		<div class="col-md-2 col-sm-2 col-xs-1">
+			<button class="trash" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+			<span class="preco-original promo-temp<%= i %> original<%= i %>">R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
+			<span class="preco-desconto total-temp<%= i %> desconto<%= i %>">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
 		</div>
 	</div>
 	<% } %>
-	<div class="col-md-8">
-			<span>Prazo de Entrega - Informe o CEP para consultar: </span>
-			<input type="text">
-			<input type="text">
-			<button>Consultar</button>
-			<a href="#">Não sei meu CEP</a><hr>
-      <button class="botaoStyle" style="width: 50%;">Adicionar cupom de desconto</button>
+	<% for(var i=0; i<3; i++){ %>
+	<div class="row row-carrinho hidden-sm hidden-md hidden-lg item-<%= i %>" style="border-bottom: 1px solid #ccc; padding: 20px 10px;">
+		<div class="col-xs-12">
+			<img src="<%= itens[0].imagem %>" alt="Vestido estampado"/>
+			<div class="info">
+      	<h4 style="margin-top: 0;"><%= itens[0].titulo %></h4>
+      	<section>
+						<label>Cor:</label>
+						<input type="radio" name="cor<%= i %>" value="branco<%= i %>" checked="checked">Branco
+						<input type="radio" name="cor<%= i %>" value="azul<%= i %>">Azul
+						<input type="radio" name="cor<%= i %>" value="preto<%= i %>">Preto<br>
+						<label>Tamanho:</label>
+					  <select name="tamanho<%= i %>">
+  						<option value="PP">PP</option>
+  						<option value="P">P</option>
+  						<option value="M">M</option>
+  						<option value="G">G</option>
+  						<option value="GG">GG</option>
+						</select><br>
+						<label>Quantidade:</label>
+					  <select name="quantidade<%= i %>">
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+						</select>
+			</section>
+			<span class="preco-original" style="float: left;">De: R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
+      <span class="preco-desconto" style="display: inline-block; margin: 0; margin-left: 10px;">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+      <button class="trash" value="<%= i %>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+      </div>
+		</div>
 	</div>
-	<div class="col-md-4">
-			<span>Você está economizando R$XX,XX!</span><hr>
-			<div class="pull-right">
-      	<h4 class="preco-total" style="margin: 0;">R$XXX,XX</h4>
-      	<h4>Em até 5x de R$XX,XX</h4>
-    	</div>
-    	<h3>TOTAL</h3>
-    	<button class="botaoStyle">Finalizar Compra</button>
-      <button class="botaoStyle">Escolher mais produtos</button>
+	<% } %>
+	<div class="row row-carrinho-bottom">
+		<div class="col-lg-8 col-xs-12">
+				<span>Prazo de Entrega - Informe o CEP para consultar: </span>
+				<input type="text" id="cep" size="5" maxlength="5">
+				<input type="text" size="3" maxlength="3">
+				<button class="botaoStyle" style="width: auto; padding: 5px; font-size: 12px;">Consultar</button><br>
+				<a href="#" style="text-decoration: underline; color: #aaa; font-size: 12px;">Não sei meu CEP</a><hr>
+  	    <button class="botaoStyle" style="width: 50%;">Adicionar cupom de desconto</button><hr>
+		</div>
+		<div class="col-lg-4 col-xs-12">
+				<span class="economia" style="float: right;">Você está economizando R$XX,XX!</span><hr>
+				<div class="pull-right">
+  	    	<h4 class="preco-total" style="margin: 0; text-align: right;">R$XXX,XX</h4>
+  	    	<h5 class="total-parcelado">Em até 5x de R$XX,XX</h5>
+  	  	</div>
+
+  	  	<h3 style="text-align: left;">TOTAL</h3>
+  	  	<button class="botaoStyle">Finalizar Compra</button>
+  	    <button class="botaoStyle">Escolher mais produtos</button>
+		</div>
+	</div>
+	<div class="row row-carrinho-bottom2" style="display: none">
+		<div class="col-xs-12" style="text-align: center">
+				<h3>Seu carrinho está vazio...</h3>
+				<p>Que tal escolher alguns produtos?</p><br>
+  	    <a href="/" class="botaoStyle" style="width: auto; margin-bottom: 200px;">Escolher produtos</a>
+		</div>
 	</div>
 </div>
-<% include ./partials/footer.ejs %>
+<script>
+  var precosOriginal = [];
+  var precosPromocao = [];
+  var length = $('.preco-desconto').length/3;
+  for(var i=0; i<length; i++){ // set the length according to number of items inside cart.
+  	precosOriginal.push(<%= itens[0].precoOriginal %>);
+  	precosPromocao.push(<%= itens[0].precoPromocao %>);
+  }
+  mudaTotal();
+  $("select").change( function(){
+	var selElem = $(this).attr('name');
+	for(var i=0; i<3; i++){
+		if(selElem == ('quantidade'+i)){
+			var quantidade =  Number($('[name="'+selElem+'"] option:selected').val());
+			$('[name="'+selElem+'"]').val(quantidade);
+
+			alert(quantidade);
+		  var original = <%= itens[0].precoOriginal %> * quantidade;
+			var promocao = <%= itens[0].precoPromocao %> * quantidade;
+			var originalElem = Number(original.toFixed(2));
+			precosOriginal[i] = originalElem;
+			var promocaoElem = Number(promocao.toFixed(2));
+			precosPromocao[i] = promocaoElem;
+			$('.original'+i).text('De: R$'+originalElem.toFixed(2).toString().replace(".", ","));
+			$('.desconto'+i).text('R$'+promocaoElem.toFixed(2).toString().replace(".", ","));
+			$('.total-temp'+i).text('R$'+promocaoElem.toFixed(2).toString().replace(".", ","));
+			mudaTotal();
+		}else if(selElem == ('tamanho'+i)){
+			var tamanho =  $('[name="'+selElem+'"] option:selected').val();
+			$('[name="'+selElem+'"]').val(tamanho);
+		}
+	}
+});
+  function mudaTotal(){
+  	var totalPromo = 0;
+  	var economia = 0;
+  	var totalOrig = 0;
+  	var totalParcl = 0;
+  	for(var i=0; i<precosOriginal.length; i++){
+  		totalPromo += precosPromocao[i];
+  		totalOrig += precosOriginal[i];
+  	}
+	economia = totalOrig - totalPromo;
+  	totalParcl = totalPromo/5;
+  	$('.economia').text('Você está economizando R$'+economia.toFixed(2).toString().replace(".", ",")+'!');
+  	$('.preco-total').text('R$'+totalPromo.toFixed(2).toString().replace(".", ","));
+  	$('.total-parcelado').text('Em até 5x de R$'+totalParcl.toFixed(2).toString().replace(".", ","));
+  }
+  $('.trash').click(function(){
+	var index = $(this).val();
+	precosOriginal.splice(index, 1);
+	precosPromocao.splice(index, 1);
+	var item = $('[class*="item-'+index+'"]');
+	item.fadeOut(500, function(){
+	  $(this).remove(); 
+	  if($('.row-carrinho').length){
+			mudaTotal();
+		}else{
+			$('.row-carrinho-bottom').hide();
+			$('.row-titulos').hide();
+			$('.row-carrinho-bottom2').show();
+		}
+	});
+});
+	$("#cep").on('input',function () {
+    if($(this).val().length == $(this).attr('maxlength')) {
+        $(this).next("input").focus();
+    }
+	});
+	</script>
+</body>
+</html>
