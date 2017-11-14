@@ -220,8 +220,8 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
+			<h4 style="text-align: center;">Faça <button id="abreLogin" style="border: 0; background: none; text-decoration: underline; outline: none;"><strong><i>login</i></strong></button> e deixe sua avaliação! :)</h4>
 			<form style="width: 95%; margin: 0 auto; text-align: center">
-			<h4>Faça <a href="/login"><strong><i>login</i></strong></a> e deixe sua avaliação! :)</h4>
 			<div class="avaliacao-user-online">
 				<span class="star1 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 				<span class="star2 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
@@ -234,6 +234,16 @@
 		</form>
 		</div>
 	</div>
+	<script>
+		var dropUser = $('.dropdown-user > #dropdown-user');
+		$('#abreLogin').click(function(e){
+			e.stopPropagation();
+			$('.dropdown-user > a').attr('aria-expanded', true);
+			$('.dropdown-user').addClass('open');
+			dropUser.hide();
+			dropUser.slideDown();
+		});
+	</script>
 	<div class="row">
         <div class="limit-heading">
           <h2 class="heading"><span>Mais em Vestidos</span></h2>
