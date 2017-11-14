@@ -59,13 +59,17 @@
   margin-left: 10px;
   display: inline-block;
 }
+/* line 49, ../sass/show.scss */
+.form-sec form {
+  margin: 0;
+}
 
-/* line 52, ../sass/show.scss */
+/* line 55, ../sass/show.scss */
 .media-left img {
   width: 64px;
 }
 
-/* line 57, ../sass/show.scss */
+/* line 60, ../sass/show.scss */
 .media {
   margin: 15px;
   background: #eee;
@@ -73,40 +77,40 @@
   border-radius: 10px;
 }
 
-/* line 64, ../sass/show.scss */
+/* line 67, ../sass/show.scss */
 .avaliacao-item span {
   font-size: 20px;
 }
 
-/* line 68, ../sass/show.scss */
+/* line 71, ../sass/show.scss */
 .carrossel-overfl {
   width: 95%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 74, ../sass/show.scss */
+/* line 77, ../sass/show.scss */
 .carrossel {
   white-space: nowrap;
   transition: 1s;
 }
-/* line 77, ../sass/show.scss */
+/* line 80, ../sass/show.scss */
 .carrossel .content {
   display: inline-block;
   float: none;
 }
 
-/* line 82, ../sass/show.scss */
+/* line 85, ../sass/show.scss */
 .after-item1 {
   position: relative;
 }
 @media only screen and (max-width: 992px) {
-  /* line 82, ../sass/show.scss */
+  /* line 85, ../sass/show.scss */
   .after-item1 {
     display: none;
   }
 }
-/* line 87, ../sass/show.scss */
+/* line 90, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] {
   position: absolute;
   top: 260px;
@@ -116,51 +120,51 @@
   padding: 20px;
   outline: 0;
 }
-/* line 95, ../sass/show.scss */
+/* line 98, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] span {
   font-size: 20px;
   color: #777;
 }
-/* line 100, ../sass/show.scss */
+/* line 103, ../sass/show.scss */
 .after-item1 .btnCtrlNext {
   right: 0;
 }
-/* line 103, ../sass/show.scss */
+/* line 106, ../sass/show.scss */
 .after-item1 .btnCtrlPrev {
   left: 10px;
 }
 
-/* line 108, ../sass/show.scss */
+/* line 111, ../sass/show.scss */
 .tab-content {
   background: #eee;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }
 
-/* line 114, ../sass/show.scss */
+/* line 117, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a {
   background: #777;
   color: #eee;
 }
-/* line 117, ../sass/show.scss */
+/* line 120, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a:hover {
   background: #777;
   color: #eee;
   border: 1px solid transparent;
 }
 
-/* line 124, ../sass/show.scss */
+/* line 127, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a {
   background: transparent;
   color: #777;
 }
-/* line 127, ../sass/show.scss */
+/* line 130, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a:hover {
   background: #aaa;
   color: #fff;
 }
 
-/* line 133, ../sass/show.scss */
+/* line 136, ../sass/show.scss */
 .botaoStyle {
   border: 3px solid #777;
   background: #fff;
@@ -171,8 +175,68 @@
   margin-bottom: 5px;
   transition: .3s;
 }
-/* line 142, ../sass/show.scss */
+/* line 145, ../sass/show.scss */
 .botaoStyle:hover {
   color: #fff;
   background: #777;
+}
+
+/* line 150, ../sass/show.scss */
+input[type='radio'] {
+  outline: none;
+}
+
+/* line 153, ../sass/show.scss */
+.button {
+  position: relative;
+  cursor: pointer;
+}
+/* line 156, ../sass/show.scss */
+.button > span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: -7px;
+  right: 5px;
+  z-index: 4;
+  border-radius: 100%;
+  background: #fff;
+  border: 2px solid #eee;
+  box-shadow: 0 0 1px #333;
+  transition: ease .3s;
+}
+/* line 168, ../sass/show.scss */
+.button > span > span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  right: 3px;
+  border-radius: 50%;
+}
+
+/* line 178, ../sass/show.scss */
+.azul .button > span {
+  background: steelblue;
+}
+
+/* line 181, ../sass/show.scss */
+.preto .button > span {
+  background: #000;
+}
+
+/* line 184, ../sass/show.scss */
+.branco .button > span {
+  border: 2px solid #ccc;
+}
+
+/* line 188, ../sass/show.scss */
+.tamanho .button > span {
+  background: #ddd;
+}
+/* line 190, ../sass/show.scss */
+.tamanho .button > span > span {
+  top: 0;
+  right: 5px;
+  color: #aaa;
 }

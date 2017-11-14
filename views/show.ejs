@@ -50,23 +50,59 @@
 				<p><strong>3x</strong> de <strong>R$<%= (item.precoPromocao/3).toFixed(2).replace(".", ",") %> %></strong> sem juros no cartão</p>
 				<hr>
 				<section class="form-sec">
-					<form>
-						<label>Tamanho:</label>
-					  <select name="tamanho">
-  						<option value="PP">PP</option>
-  						<option value="P">P</option>
-  						<option value="M">M</option>
-  						<option value="G">G</option>
-  						<option value="GG">GG</option>
-						</select><br>
-					  <label>Cor:</label>
-						<input type="radio" name="cor" value="branco" checked>Branco
-						<input type="radio" name="cor" value="azul">Azul
-						<input type="radio" name="cor" value="preto">Preto
-					  <button type="submit" class="botaoStyle">Adicionar ao carrinho</button>
+					<form action="/carrinho" method="GET">
+						<div class="tamanhos" style="margin-left: 0">
+							<label>Tamanho:</label>
+							<label class="tamanho">
+							  <input type="radio" name="tam" value="P" required>
+							  <div class="button"><span class="P"><span>P</span></span></div>
+							</label>
+							<label class="tamanho">
+							  <input type="radio" name="tam" value="M">
+							  <div class="button"><span class="M"><span>M</span></span></div>
+							</label>
+							<label class="tamanho">
+							  <input type="radio" name="tam" value="G">
+							  <div class="button"><span class="G"><span>G</span></span></div>
+							</label>
+						</div><br>
+						<div class="cores" style="margin: 10px 0">
+							<label>Cor:</label>
+							<label class="branco">
+							  <input type="radio" name="cor" value="branco" required>
+							  <div class="button"><span class="branco"><span></span></span></div>
+							</label>
+							<label class="preto">
+							  <input type="radio" name="cor" value="preto">
+							  <div class="button"><span class="preto"><span></span></span></div>
+							</label>
+							<label class="azul">
+							  <input type="radio" name="cor" value="azul">
+							  <div class="button"><span class="azul"><span></span></span></div>
+							</label>
+						</div>
+					  <button type="submit" onclick="checaRadios();" class="botaoStyle">Adicionar ao carrinho</button>
 					</form>
 					<button type="submit" class="botaoStyle">Salvar para depois</button>
 				</section>
+				<script>
+				$('.cores .button > span').click(function(){
+					$('.cores .button > span').css('border', '2px solid #eee');
+					$('.cores .branco .button > span').css('border', '2px solid #ccc');
+					if($(this).hasClass('branco')){
+						$(this).css('border', '8px solid #ccc');
+					}else{
+						$(this).css('border', '8px solid #fff');
+					}
+				});
+
+				$('.tamanhos .button > span').click(function(){
+					$('.tamanhos .button > span > span').css('color', '#aaa');
+					$('.tamanhos .button > span').css('background', '#ddd');
+					$(this).css('background', '#fff');
+					$(this).find('span').css('color', '#000');
+				});
+				</script>
 				<hr>
 				<ul>
 					<li>Curabitur sed cursus ex. Morbi ornare maximus felis, a 

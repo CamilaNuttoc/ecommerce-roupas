@@ -46,6 +46,9 @@
     margin-left: 10px;
     display: inline-block;
   }
+  form{
+    margin: 0;
+  }
 }
 
 .media-left{
@@ -144,4 +147,49 @@
     background: #777;
   }
 }
+input[type='radio']{
+  outline: none;
+}
+.button {
+  position: relative;
+  cursor: pointer;
+  > span{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: -7px;
+    right: 5px;
+    z-index: 4;
+    border-radius: 100%;
+    background: #fff;
+    border: 2px solid #eee;
+    box-shadow: 0 0 1px #333;
+    transition: ease .3s;
+    > span{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 2px;
+      right: 3px;
+      border-radius: 50%;
+    }
+  }
+}
+.azul .button > span{
+  background: steelblue;
+}
+.preto .button > span{
+  background: #000;
+}
+.branco .button > span{
+  border: 2px solid #ccc;
+}
 
+.tamanho .button > span{
+    background: #ddd;
+    > span{
+      top: 0;
+      right: 5px;
+      color: #aaa;
+    }
+}
