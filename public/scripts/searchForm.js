@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
  var width = ($(window).width()+17);
- if(width > 768 && width < 935){
+ if(width > 768 && width < 992){
    $('#searchBtn').show();
  }
   $(window).resize(function(){
     var width = ($(window).width()+17);
-    if(width > 935 || width < 768){
+    if(width > 992 || width < 768){
        $('#search-form').css({'display': ''});
        $('#search').css({'width': ''});
        $('.categorias').css({'display': ''});
