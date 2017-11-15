@@ -73,58 +73,9 @@
 				</li>
 			</ul>
 			<a class="filtrarBtn hidden-xs-up" href="#"><button class="botaoStyle">Filtrar</button></a>
-			<script>
-					if($(document).width() >= 768){
-						$('.hidden-filtro').css('display', 'block');
-					}
-					$( window ).resize(function() {
-					  if($(document).width() >= 768){
-							$('.hidden-filtro').css('display', 'block');
-							$('.hidden-filtro').removeClass('shown-filtro');
-							$('.row-categoria h3').css('text-align', 'left');
-						}else{
-							$('.hidden-filtro').css('display', 'none');
-							$('.filtroBtn').text('Filtrar');
-						}
-					});
-					$('.toggleFiltro').click(function(){
-						$(this).parent().find('.openClose').toggle();
-						var symbol = $(this).parent().find('.expand');
-						if(symbol.text() == "-"){
-							symbol.text('+');
-						}else{
-							symbol.text('-');
-						}
-					});
-					$('.filtroBtn').click(function(){
-						if($(this).text() == 'Filtrar'){
-							$(this).text('Cancelar');
-						}else{
-							$(this).text('Filtrar');
-							$(this).blur();
-						}
-						$('.row-categoria h3').css('text-align', 'center');
-						$('.hidden-filtro').toggleClass('shown-filtro');
-						$('.hidden-filtro').slideToggle();
-					});
-					$('.filtrarBtn').click(function(){
-						$('.hidden-filtro').slideToggle();
-						$('.hidden-filtro').toggleClass('shown-filtro');
-						$('.filtroBtn').text('Filtrar');
-					});
-				</script>
 			<img class="ad hidden-xs" src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
 			<img class="ad hidden-xs" src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
 		</div>
-		<style>
-		@media (max-width:1200px) and (min-width:992px) {
-		  /* line 23, ../sass/home.scss */
-		  .row-categoria img {
-		    max-height: 320px;
-		    min-height: 320px;
-		  }
-		}
-		</style>
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 			<h3 class="hidden-xs">Vestidos</h3><hr class="hidden-xs">
 			<% itens.forEach(function(item){ %>
