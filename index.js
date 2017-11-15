@@ -21,7 +21,7 @@ app.get("/", function(req, res){
 	});
 });
 
-app.get("/feminino", function(req, res){
+app.get("/categoria", function(req, res){
 	Item.find({}, function(err, itens){
 		if(err){
 			console.log(err);
