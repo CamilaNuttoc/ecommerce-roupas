@@ -23,6 +23,7 @@ $lg-size: "only screen and (min-width: 992px)";
 #myCarousel img{
 	max-height: 400px;
 	min-height: 400px;
+	width: 100%;
 	@media #{$xs-size}{
     max-height: 150px;
 	  min-height: 150px;
@@ -184,4 +185,9 @@ a:hover, a:active, a:visited, a:focus{
 
 [class*='glyphicon-heart']{
 	font-size: 30px;
+}
+
+.container-full{
+	max-width: 1330px;
+	margin: 0 auto;
 }
