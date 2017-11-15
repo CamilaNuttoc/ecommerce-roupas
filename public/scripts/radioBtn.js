@@ -4,10 +4,8 @@ $(document).ready(function(){
     var lastChar = classe.substr(classe.length-1);
     lastChar = Number(lastChar);
     if(!isNaN(lastChar)){
-      alert(" equals to NaN");
       $('[class*="cores'+lastChar+'"] .button > span').css('border', '2px solid #eee');
     }else{
-      alert(" different than NaN");
       $('.cores .button > span').css('border', '2px solid #eee');
     }
     $(this).css('border', '2px solid #eee');
