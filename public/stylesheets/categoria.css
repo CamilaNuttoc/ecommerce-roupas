@@ -14,54 +14,60 @@
 }
 /* line 11, ../sass/categoria.scss */
 .categoria-filter .categoria {
-  margin-bottom: 20px;
   list-style-type: none;
   width: 100%;
   float: left;
 }
-/* line 16, ../sass/categoria.scss */
+/* line 15, ../sass/categoria.scss */
 .categoria-filter .categoria .form-check {
   margin-right: 20px;
   float: left;
 }
 
-/* line 23, ../sass/categoria.scss */
+/* line 22, ../sass/categoria.scss */
+.form-check-label {
+  position: relative;
+}
+
+/* line 25, ../sass/categoria.scss */
 .ad {
   margin-bottom: 20px;
   max-width: 80%;
 }
 
-/* line 28, ../sass/categoria.scss */
+/* line 30, ../sass/categoria.scss */
 .path-categoria {
   color: #aaa;
   padding-left: 10px;
 }
-/* line 31, ../sass/categoria.scss */
+/* line 33, ../sass/categoria.scss */
 .path-categoria a {
   color: #aaa;
 }
-/* line 33, ../sass/categoria.scss */
+/* line 35, ../sass/categoria.scss */
 .path-categoria a:hover {
   color: #000;
 }
 
-/* line 39, ../sass/categoria.scss */
+/* line 41, ../sass/categoria.scss */
 select {
   border-radius: 5px 5px 0 0;
   outline: none;
   padding-right: 10px;
+  border: 1px solid #aaa;
+  color: #555;
 }
-/* line 43, ../sass/categoria.scss */
+/* line 47, ../sass/categoria.scss */
 select option {
   outline: none;
 }
 
-/* line 49, ../sass/categoria.scss */
+/* line 53, ../sass/categoria.scss */
 .row-categoria hr {
   margin-top: 15px;
 }
 
-/* line 54, ../sass/categoria.scss */
+/* line 58, ../sass/categoria.scss */
 .shown-filtro {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px #ccc;
@@ -73,22 +79,93 @@ select option {
   margin-bottom: 15px;
 }
 
-/* line 65, ../sass/categoria.scss */
+/* line 69, ../sass/categoria.scss */
 .toggleFiltro {
   background: none;
   border: none;
   outline: none;
+  position: relative;
+  color: #555;
 }
 
-/* line 71, ../sass/categoria.scss */
+/* line 77, ../sass/categoria.scss */
 .filtroBtn {
   background: #fff;
   z-index: 4;
   left: 0;
   transition: all .6s;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 78, ../sass/categoria.scss */
+/* line 87, ../sass/categoria.scss */
 .filtrarBtn {
   width: 100%;
+}
+/* line 89, ../sass/categoria.scss */
+.filtrarBtn button {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 89, ../sass/categoria.scss */
+  .filtrarBtn button {
+    width: 90%;
+  }
+}
+
+/* line 97, ../sass/categoria.scss */
+.botaoStyle-small {
+  font-size: 12px;
+  padding: 7px;
+  transition: .5s;
+}
+/* line 102, ../sass/categoria.scss */
+.botaoStyle-small:hover .glyphicon-remove {
+  color: #ccc;
+}
+/* line 106, ../sass/categoria.scss */
+.botaoStyle-small .glyphicon-remove, .botaoStyle-small .glyphicon-ok {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* line 113, ../sass/categoria.scss */
+.expand {
+  font-size: 30px;
+}
+
+/* line 117, ../sass/categoria.scss */
+.expand-adjust {
+  position: absolute;
+  top: 13px;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+/* line 124, ../sass/categoria.scss */
+.openClose {
+  margin-left: 10px;
+}
+
+/* line 128, ../sass/categoria.scss */
+[type=checkbox]:checked + span:before {
+  /* <-- style its checked state..with a ticked icon */
+  content: '\2714';
+  position: absolute;
+  top: -3px;
+  left: 2px;
+}
+
+/* line 135, ../sass/categoria.scss */
+.checkboxStyle {
+  position: absolute;
+  left: -7px;
+  top: 0;
+  padding: 8px;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 4px #ccc;
+  border-radius: 50%;
+  background: #fff;
 }
