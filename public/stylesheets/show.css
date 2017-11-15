@@ -27,49 +27,56 @@
 }
 /* line 24, ../sass/show.scss */
 .item-area .info {
-  padding-left: 20px;
+  padding: 0 15px;
 }
 /* line 26, ../sass/show.scss */
 .item-area .info ul {
   padding-left: 15px;
 }
-/* line 30, ../sass/show.scss */
+/* line 29, ../sass/show.scss */
+.item-area .info form {
+  width: 100%;
+}
+/* line 33, ../sass/show.scss */
 .item-area .preco-original {
   margin-top: 10px;
 }
-/* line 33, ../sass/show.scss */
+/* line 36, ../sass/show.scss */
 .item-area .preco-desconto {
   font-size: 30px;
   margin: 0;
 }
 
-/* line 39, ../sass/show.scss */
+/* line 42, ../sass/show.scss */
 .form-sec {
-  border-left: 5px solid #777;
-  padding-left: 10px;
+  border-left: 5px solid #aaa;
 }
 @media only screen and (max-width: 768px) {
-  /* line 39, ../sass/show.scss */
+  /* line 42, ../sass/show.scss */
   .form-sec {
     border: 0;
   }
+  /* line 46, ../sass/show.scss */
+  .form-sec button, .form-sec label:first-of-type {
+    margin-left: 0;
+  }
 }
-/* line 45, ../sass/show.scss */
+/* line 50, ../sass/show.scss */
 .form-sec * {
   margin-left: 10px;
   display: inline-block;
 }
-/* line 49, ../sass/show.scss */
+/* line 55, ../sass/show.scss */
 .form-sec form {
   margin: 0;
 }
 
-/* line 55, ../sass/show.scss */
+/* line 61, ../sass/show.scss */
 .media-left img {
   width: 64px;
 }
 
-/* line 60, ../sass/show.scss */
+/* line 66, ../sass/show.scss */
 .media {
   margin: 15px;
   background: #eee;
@@ -77,40 +84,34 @@
   border-radius: 10px;
 }
 
-/* line 67, ../sass/show.scss */
+/* line 73, ../sass/show.scss */
 .avaliacao-item span {
   font-size: 20px;
 }
 
-/* line 71, ../sass/show.scss */
+/* line 77, ../sass/show.scss */
 .carrossel-overfl {
   width: 95%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 77, ../sass/show.scss */
+/* line 83, ../sass/show.scss */
 .carrossel {
   white-space: nowrap;
   transition: 1s;
 }
-/* line 80, ../sass/show.scss */
+/* line 86, ../sass/show.scss */
 .carrossel .content {
   display: inline-block;
   float: none;
 }
 
-/* line 85, ../sass/show.scss */
+/* line 91, ../sass/show.scss */
 .after-item1 {
   position: relative;
 }
-@media only screen and (max-width: 992px) {
-  /* line 85, ../sass/show.scss */
-  .after-item1 {
-    display: none;
-  }
-}
-/* line 90, ../sass/show.scss */
+/* line 93, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] {
   position: absolute;
   top: 260px;
@@ -120,51 +121,51 @@
   padding: 20px;
   outline: 0;
 }
-/* line 98, ../sass/show.scss */
+/* line 101, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] span {
   font-size: 20px;
   color: #777;
 }
-/* line 103, ../sass/show.scss */
+/* line 106, ../sass/show.scss */
 .after-item1 .btnCtrlNext {
   right: 0;
 }
-/* line 106, ../sass/show.scss */
+/* line 109, ../sass/show.scss */
 .after-item1 .btnCtrlPrev {
   left: 10px;
 }
 
-/* line 111, ../sass/show.scss */
+/* line 114, ../sass/show.scss */
 .tab-content {
   background: #eee;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }
 
-/* line 117, ../sass/show.scss */
+/* line 120, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a {
   background: #777;
   color: #eee;
 }
-/* line 120, ../sass/show.scss */
+/* line 123, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a:hover {
   background: #777;
   color: #eee;
   border: 1px solid transparent;
 }
 
-/* line 127, ../sass/show.scss */
+/* line 130, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a {
   background: transparent;
   color: #777;
 }
-/* line 130, ../sass/show.scss */
+/* line 133, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a:hover {
   background: #aaa;
   color: #fff;
 }
 
-/* line 136, ../sass/show.scss */
+/* line 139, ../sass/show.scss */
 .botaoStyle {
   border: 3px solid #777;
   background: #fff;
@@ -175,23 +176,29 @@
   margin-bottom: 5px;
   transition: .3s;
 }
-/* line 145, ../sass/show.scss */
+/* line 148, ../sass/show.scss */
 .botaoStyle:hover {
   color: #fff;
   background: #777;
 }
 
-/* line 150, ../sass/show.scss */
+/* line 153, ../sass/show.scss */
+.botaoStyle2 {
+  font-size: 13px;
+  padding: 5px;
+}
+
+/* line 158, ../sass/show.scss */
 input[type='radio'] {
   outline: none;
 }
 
-/* line 153, ../sass/show.scss */
+/* line 161, ../sass/show.scss */
 .button {
   position: relative;
   cursor: pointer;
 }
-/* line 156, ../sass/show.scss */
+/* line 164, ../sass/show.scss */
 .button > span {
   position: absolute;
   width: 25px;
@@ -205,7 +212,7 @@ input[type='radio'] {
   box-shadow: 0 0 1px #333;
   transition: ease .3s;
 }
-/* line 168, ../sass/show.scss */
+/* line 176, ../sass/show.scss */
 .button > span > span {
   position: absolute;
   width: 10px;
@@ -215,28 +222,74 @@ input[type='radio'] {
   border-radius: 50%;
 }
 
-/* line 178, ../sass/show.scss */
+/* line 186, ../sass/show.scss */
 .azul .button > span {
   background: steelblue;
 }
 
-/* line 181, ../sass/show.scss */
+/* line 189, ../sass/show.scss */
 .preto .button > span {
   background: #000;
 }
 
-/* line 184, ../sass/show.scss */
+/* line 192, ../sass/show.scss */
 .branco .button > span {
   border: 2px solid #ccc;
 }
 
-/* line 188, ../sass/show.scss */
+/* line 196, ../sass/show.scss */
 .tamanho .button > span {
   background: #ddd;
 }
-/* line 190, ../sass/show.scss */
+/* line 198, ../sass/show.scss */
 .tamanho .button > span > span {
   top: 0;
   right: 5px;
   color: #aaa;
+}
+
+/* line 205, ../sass/show.scss */
+.avaliacao-user-online {
+  position: relative;
+  display: inline-block;
+}
+/* line 208, ../sass/show.scss */
+.avaliacao-user-online .glyphicon-star {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+/* line 212, ../sass/show.scss */
+.avaliacao-user-online .glyphicon-star:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+/* line 217, ../sass/show.scss */
+.avaliacao-user-online .glyphicon-star-empty {
+  width: 30px;
+}
+
+/* line 221, ../sass/show.scss */
+.star1 {
+  left: 5px;
+}
+
+/* line 224, ../sass/show.scss */
+.star2 {
+  left: 35px;
+}
+
+/* line 227, ../sass/show.scss */
+.star3 {
+  left: 65px;
+}
+
+/* line 230, ../sass/show.scss */
+.star4 {
+  left: 95px;
+}
+
+/* line 233, ../sass/show.scss */
+.star5 {
+  left: 125px;
 }

@@ -82,27 +82,9 @@
 							</label>
 						</div>
 					  <button type="submit" onclick="checaRadios();" class="botaoStyle">Adicionar ao carrinho</button>
+					  <button type="submit" class="botaoStyle">Salvar para depois</button>
 					</form>
-					<button type="submit" class="botaoStyle">Salvar para depois</button>
 				</section>
-				<script>
-				$('.cores .button > span').click(function(){
-					$('.cores .button > span').css('border', '2px solid #eee');
-					$('.cores .branco .button > span').css('border', '2px solid #ccc');
-					if($(this).hasClass('branco')){
-						$(this).css('border', '8px solid #ccc');
-					}else{
-						$(this).css('border', '8px solid #fff');
-					}
-				});
-
-				$('.tamanhos .button > span').click(function(){
-					$('.tamanhos .button > span > span').css('color', '#aaa');
-					$('.tamanhos .button > span').css('background', '#ddd');
-					$(this).css('background', '#fff');
-					$(this).find('span').css('color', '#000');
-				});
-				</script>
 				<hr>
 				<ul>
 					<li>Curabitur sed cursus ex. Morbi ornare maximus felis, a 
@@ -166,7 +148,7 @@
 		</div>
 	</div>
 	</section>
-	<div class="row after-item1">
+	<div class="row after-item1 hidden-sm hidden-xs">
     <div class="limit-heading">
       <h2 class="heading"><span>Talvez você também goste de...</span></h2>
     </div>
@@ -195,6 +177,29 @@
     <button class="btnCtrlPrev" onclick="previous();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
     <button class="btnCtrlNext" onclick="next();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
   </div>
+  <div class="row hidden-lg hidden-md">
+        <div class="limit-heading">
+          <h2 class="heading"><span>Sugestões</span></h2>
+        </div>
+        <% for(var i=0; i<2; i++){ %>
+  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+         	    <div class="thumbnail">
+           			<div class="wrapBtn">
+             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+            		</div>
+            		<a href="/<%= item._id %>">
+            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+            		  <div class="caption">
+            		    <h3><%= item.titulo %></h3>
+            		    <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+            		    <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
+            		    <button class="btn comprarBtn">Comprar</button>
+            		  </div>
+            		</a>
+          		</div>
+  			</div>
+        <% } %>
+  	</div>
 	<div class="row" id="avaliacao">
 		<div class="limit-heading">
       <h2 class="heading"><span>Avaliações</span></h2>
@@ -223,11 +228,19 @@
 			<h4 style="text-align: center;">Faça <button id="abreLogin" style="border: 0; background: none; text-decoration: underline; outline: none;"><strong><i>login</i></strong></button> e deixe sua avaliação! :)</h4>
 			<form style="width: 95%; margin: 0 auto; text-align: center">
 			<div class="avaliacao-user-online">
-				<span class="star1 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-				<span class="star2 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-				<span class="star3 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-				<span class="star4 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-				<span class="star5 glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<div class="container-stars">
+					<span class="estr1 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+					><span class="star1 glyphicon glyphicon-star" aria-hidden="true"></span
+					><span class="estr2 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+					><span class="star2 glyphicon glyphicon-star" aria-hidden="true"></span
+					><span class="estr3 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+					><span class="star3 glyphicon glyphicon-star" aria-hidden="true"></span
+					><span class="estr4 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+					><span class="star4 glyphicon glyphicon-star" aria-hidden="true"></span
+					><span class="estr5 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+					><span class="star5 glyphicon glyphicon-star" aria-hidden="true"></span
+					>
+				</div>
 			</div>
 			<textarea style="width: 95%; margin: 15px 0; border: none; border-radius: 20px; outline: none; padding: 20px; resize: none; box-shadow: 0 0 20px #bbb; height: 100px" placeholder="Digite seu comentário..."></textarea>
 			<button type="submit" class="botaoStyle">Comentar</button>
