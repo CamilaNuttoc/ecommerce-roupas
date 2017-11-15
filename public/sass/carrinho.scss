@@ -1,8 +1,14 @@
 .cont-carrinho{
 	margin-bottom: 20px;
+	form{
+	  @media only screen and (max-width:768px) {
+        margin-left: 10px;
+      }
+	}
 }
 .row{
 	input[type="text"]{
+		outline: 0;
 		border-radius: 5px;
 		&:first-of-type{
 			width: 70px; 
@@ -37,11 +43,6 @@
 		h4{
 			background: none;
 			padding: 0;
-		}
-	}
-	.form-sec{
-		select{
-			margin: 10px 0;
 		}
 	}
 }
@@ -98,5 +99,11 @@
     }
     @media only screen and (max-width:374px) {
       margin-left: 110px;
+    }
+}
+
+.labelBreak{
+	@media only screen and (max-width:370px) {
+      display: block;
     }
 }
