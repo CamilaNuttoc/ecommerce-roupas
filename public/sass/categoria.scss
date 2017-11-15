@@ -50,8 +50,13 @@ select{
 }
 
 .row-categoria{
+  margin-top: 20px;
   hr{
     margin-top: 15px;
+  }
+  @media (max-width:1200px) and (min-width:992px) {
+      max-height: 320px;
+      min-height: 320px;
   }
 }
 
@@ -141,4 +146,5 @@ select{
   box-shadow: 2px 2px 4px #ccc;
   border-radius: 50%;
   background: #fff;
+  cursor:pointer;
 }
