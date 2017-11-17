@@ -11,6 +11,8 @@ $(document).ready(function(){
        $('#search').css({'width': ''});
        $('.categorias').css({'display': ''});
        $('#searchBtn').hide();
+       $('#cancelBtn').hide();
+       $('#searchBtn').parent().css('width', 'auto');
     }else{
       if(!($('#search').is(':visible'))){
          $('#searchBtn').show();
@@ -23,6 +25,7 @@ $(document).ready(function(){
     $('#search').css({'width': '340px'});
     $('#searchBtn').hide();
     $('#cancelBtn').show();
+    $(this).parent().css('width', '450px');
   });
   $('#cancelBtn').on('click', function(){
     $('.categorias').show();
@@ -30,5 +33,6 @@ $(document).ready(function(){
     $('#search').css({'width': ''});
     $('#searchBtn').show();
     $('#cancelBtn').hide();
+    $(this).parent().css('width', 'auto');
   });
 });
