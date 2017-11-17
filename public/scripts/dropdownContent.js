@@ -21,58 +21,58 @@ $(document).ready(function(){
       arrTemp = [3, 4, 5];
     }
     if(content == 'Roupas'){
-      $('.sub-menu:eq('+arrTemp[0]+')').html(arr[0]);
+      $('.sub-menu-2:eq('+arrTemp[0]+')').html(arr[0]);
     }else if(content == 'Acessórios'){
-      $('.sub-menu:eq('+arrTemp[1]+')').html(arr[1]);
+      $('.sub-menu-2:eq('+arrTemp[1]+')').html(arr[1]);
     }else if(content == 'Calçados'){
-      $('.sub-menu:eq('+arrTemp[2]+')').html(arr[2]);
+      $('.sub-menu-2:eq('+arrTemp[2]+')').html(arr[2]);
     }
   }else{
     if(content == 'Meninos'){
-      $('.sub-menu:eq(6)').html(arr[0]);
+      $('.sub-menu-2:eq(6)').html(arr[0]);
     }else if(content == 'Meninas'){
-      $('.sub-menu:eq(7)').html(arr[1]);
+      $('.sub-menu-2:eq(7)').html(arr[1]);
     }
   }
  }
-  $('#dropdown-feminino .t-sub-menu a').click(function() {
-    var content = $(this).contents().text();
+  $('#dropdown-feminino .sub-menu-1 a').click(function() {
+    var content = $(this).contents().text().replace(/\s/g, '');
     var submenu = 'feminino';
     var arr = arrFeminino;
     genDropdown(content, arr, submenu);
   });
 
-  $('#dropdown-masculino .t-sub-menu a').click(function() {
-    var content = $(this).contents().text();
+  $('#dropdown-masculino .sub-menu-1 a').click(function() {
+    var content = $(this).contents().text().replace(/\s/g, '');
     var arr = arrMasculino;
     var submenu = 'masculino';
     genDropdown(content, arr, submenu);
   });
 
-  $('#dropdown-infantil .t-sub-menu a').click(function() {
-    var content = $(this).contents().text();
+  $('#dropdown-infantil .sub-menu-1 a').click(function() {
+    var content = $(this).contents().text().replace(/\s/g, '');
     var arr = arrInfantil;
     var submenu = '';
     genDropdown(content, arr, submenu);
   });
-  $('.t-sub-menu').click(function(e){
+  $('.sub-menu-1').click(function(e){
     e.stopPropagation();
     if($(this).hasClass('open')){
       $(this).removeClass('open');
       $(this).children('ul').html('');
       return;
     }
-    $('.t-sub-menu').removeClass('open');
+    $('.sub-menu-1').removeClass('open');
     $(this).addClass('open');
   });
    if($(window).width() < 768){
-    $('.t-sub-menu > a > span').removeClass('caret-right');
+    $('.sub-menu-1 > a > span').removeClass('caret-right');
   }
   $(window).resize(function(){
     if($(window).width() < 768){
-      $('.t-sub-menu > a > span').removeClass('caret-right');
+      $('.sub-menu-1 > a > span').removeClass('caret-right');
     }else{
-      $('.t-sub-menu > a > span').addClass('caret-right');
+      $('.sub-menu-1 > a > span').addClass('caret-right');
     }
   });
 });
