@@ -2,6 +2,7 @@
 $no-mobile: "only screen and (min-width: 768px)";
 $mobile: "only screen and (max-width: 767px)";
 $tablet: "(min-width:768px) and (max-width:992px)";
+$desktop: "(min-width:992px) and (max-width:1200px)";
 
 
 /* =================== Configurações gerais ===================  */
@@ -45,7 +46,7 @@ header{
 
 .collapse{
   text-align: center;
-  .navbar-nav{
+  .categorias{
     margin-left: 5%;
     transition: .5s;
     @media #{$mobile}{
@@ -66,8 +67,18 @@ header{
   }
   .navbar-right{
     margin-right: 90px;
-    @media #{$mobile}{
+    width: 50%;
+    overflow: hidden;
+    @media #{$desktop}{
+      width: 40%;
+    }
+    @media #{$tablet}{
       margin: 0;
+      width: 100%;
+    }
+    @media #{$mobile}{
+      margin: 2.5%;
+      width: 95%;
     }
   }
 }
@@ -141,6 +152,11 @@ header{
   min-width: 0;
   text-align: center;
   border-radius: 0 0 10px 10px;
+  .caret{
+    @media #{$no-mobile}{
+      transform: rotate(270deg);
+    }
+  }
 }
 
 .sub-menu-1{
@@ -161,12 +177,9 @@ header{
   color: #aaa;
 }
 
-.caret-right{
-   transform: rotate(270deg);
-}
-
 #search-form{
   position: relative;
+  width: 100%;
   button{
     position: absolute;
     top: 0;
@@ -175,8 +188,19 @@ header{
   .glyphicon-search{
     font-size: 15px;
   }
-  @media #{$tablet}{
-    display: none;
+  input[type="text"]{
+    width: 300px;
+    float: right;
+    transition: .5s;
+    &:focus{
+      width: 100%;
+    }
+    @media #{$tablet}{
+      width: 100%;
+    }
+    @media #{$mobile}{
+      width: 100%;
+    }
   }
 }
 
