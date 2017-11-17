@@ -51,8 +51,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
             crossorigin="anonymous"></script>
-    <script src="/scripts/dropdownContent.js"></script>
-    <script src="/scripts/searchForm.js"></script>
+    <script src="/scripts/header.js"></script>
     <script src="/scripts/hoverBtn.js"></script>
     <script src="/scripts/favStatus.js"></script>
     <script src="/scripts/radioBtn.js"></script>
@@ -153,7 +152,7 @@
           <ul class="nav navbar-nav categorias">
 
             <!-- Cria menus -->
-            <% arrMenus = ['Feminino', 'Masculino', 'Infantil'] %>
+            <% var arrMenus = ['Feminino', 'Masculino', 'Infantil'] %>
             <% for(var i=0; i<arrMenus.length; i++){ %>
 
               <!-- Dropdown <%= arrMenus[i] %> -->
@@ -165,7 +164,7 @@
                 <ul class="dropdown-menu" id="dropdown-<%= arrMenus[i].toLowerCase() %>">
                     
                   <!-- Cria sub-menus -->
-                  <% arrSubmenus = ['Roupas', 'Acessórios', 'Calçados'] %>
+                  <% var arrSubmenus = ['Roupas', 'Acessórios', 'Calçados'] %>
                   <% if(i === (arrMenus.length-1)){ %>
                     <% arrSubmenus = ['Meninos', 'Meninas'] %>
                   <% } %>
@@ -175,7 +174,7 @@
                     <li class="dropdown sub-menu-1">
                       <a href="#" class="dropdown-toggle padd" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false">
-                         <%= arrSubmenus[j] %><span class="caret caret-right"></span>
+                         <%= arrSubmenus[j] %><span class="caret"></span>
                       </a>
                       <!-- Sub-menu nível 2 -->
                       <ul class="dropdown-menu sub-menu-2"></ul>
@@ -194,29 +193,18 @@
 
           </ul>
 
-          <!-- Formulário de busca -->
           <ul class="nav navbar-nav navbar-right">
 
-            <!-- Esconde input de busca e volta a 
-                 mostrar categorias quando screen size 
-                 é insuficiente para ambos juntos.  -->
-            <li id="cancelBtn"><a href="#">Cancelar</a></li>
-
-              <form class="navbar-form" action="#" method="GET">
+            <!-- Formulário de busca -->
+            <form class="navbar-form" action="#" method="GET">
               <div class="form-group" id="search-form">
-                <input type="text" class="form-control" id="search" 
+                <input type="text" class="form-control" 
                        placeholder="Saia chanel">
                 <button type="submit" class="btn btn-default">
                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </button>
               </div>
             </form>
-
-            <!-- Ao clicar, esconde categorias 
-                 e abre input no lugar -->
-            <li id="searchBtn"><a href="#">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            </a></li>
 
           </ul>
         </div>
