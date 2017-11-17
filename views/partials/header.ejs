@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+
     <!-- Configurações básicas -->
     <meta charset="UTF-8"/>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   	<title>E-commerce de roupas</title>
-    <meta name="author" content="Camila Nuttoc"/>
-    <meta name="description" content=""/>
+
+    <meta name="description" 
+          content="Projeto com foco em front-end desenvolvido por Camila Nuttoc"/>
+    <meta name="keywords" 
+          content="Front-end, CamilaNuttoc, Desenvolvimento, Web">
+    <meta name="author" 
+          content="Camila Nuttoc"/>
   
     <!-- Facebook -->
-    <meta property="og:image" content=""/>
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:image" 
+          content="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg"/>
+    <meta property="og:title" 
+          content="E-commerce de roupas"/>
+    <meta property="og:description" 
+          content="Projeto com foco em front-end desenvolvido por Camila Nuttoc"/>
   
     <!-- Twitter -->
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content=""/>
-    <meta name="twitter:description" content=""/>
-    <meta name="twitter:image" content=""/>
+    <meta name="twitter:image" 
+          content="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg"/>
+    <meta name="twitter:title" 
+          content="E-commerce de roupas"/>
+    <meta name="twitter:description" 
+          content="Projeto com foco em front-end desenvolvido por Camila Nuttoc"/>
   
-    <!-- Style -->
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-    crossorigin="anonymous">
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          rel="stylesheet" crossorigin="anonymous"/>
     <link href="/stylesheets/header.css" type="text/css" rel="stylesheet"/>
     <link href="/stylesheets/home.css" type="text/css" rel="stylesheet"/>
     <link href="/stylesheets/show.css" type="text/css" rel="stylesheet"/>
@@ -33,170 +46,180 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-    crossorigin="anonymous"></script>
-    <script src="/scripts/radioBtn.js"></script>
-    <script src="/scripts/carrossel.js"></script>
-    <script src="/scripts/hoverBtn.js"></script>
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+            crossorigin="anonymous"></script>
     <script src="/scripts/dropdownContent.js"></script>
     <script src="/scripts/searchForm.js"></script>
+    <script src="/scripts/hoverBtn.js"></script>
     <script src="/scripts/favStatus.js"></script>
+    <script src="/scripts/radioBtn.js"></script>
     <script src="/scripts/genStars.js"></script>
+    <script src="/scripts/carrossel.js"></script>
     <script src="/scripts/starsRating.js"></script>
     <script src="/scripts/filtroCtrl.js"></script>
     <script src="/jquery-zoom/jquery.zoom.js"></script>
   
     <!-- Favicon -->
-    <link rel="shortcut icon" href="http://susteopenwrt.ipdns.hu/.favicon/home.png" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="http://susteopenwrt.ipdns.hu/.favicon/home.png"/>
   
   </head>
+
   <body>
+
   <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-          
+
+        <!-- Toggle de Bootstrap para melhor 
+             experiência em dispositivos móveis -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
-            <span class="sr-only">Toggle navigation</span>  
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                  data-target="#collapse-1" aria-expanded="false"> 
+            <span class="sr-only">Muda navegação</span>  
             <span class="icon-bar"></span>  
             <span class="icon-bar"></span>  
             <span class="icon-bar"></span>  
           </button>
-          <ul class="pull-right iconsPersist">
-            <li class="dropdown iconSm dropdown-user">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-  haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+
+          <!-- Menus que persistem mesmo 
+               após mudança de navegação -->
+          <ul class="pull-right">
+
+            <!-- Menu dropdown de usuário -->
+            <li class="dropdown icons">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+                 role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              </a>
               <ul class="dropdown-menu" id="dropdown-user">
+
+                <!-- Se não há um usuário logado, mostra 
+                     formulário de login/criação de conta -->
+                <% if(typeof currentUser === 'undefined'){ %>
                 <li>
-                <form>
-                  <div class="form-group">
-                    <label>Usuário</label>
-                    <input type="text" class="form-control" placeholder="Fulano1Knight">
-                  </div>
-                  <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" placeholder="SuperS3nha123">
-                  </div>
-                  <button type="submit" class="botaoStyle">Entrar</button>
-                </form>
+                  <form action="#" method="POST">
+                    <div class="form-group">
+                      <label>Usuário</label>
+                      <input type="text" class="form-control" required
+                             placeholder="Fulana1Daenerys">
+                    </div>
+                    <div class="form-group">
+                      <label>Senha</label>
+                      <input type="password" class="form-control" required
+                             placeholder="SuperS3nh@123">
+                    </div>
+                    <button type="submit" class="botao-default">Entrar</button>
+                  </form>
                 </li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Criar conta</a></li>
-                <!-- <li><a href="/carrinho">Meu carrinho</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Sair</a></li> -->
+
+                <!-- Caso usuário logado, fornece 
+                     acesso à coisas pessoais-->
+                <% }else{ %>
+                  <li><a href="/carrinho">Meu carrinho</a></li>
+                  <li><a href="#">Favoritos</a></li>
+                  <li><a href="#">Configurações</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Sair</a></li>
+                <% } %>
+
               </ul>
             </li>
-            <li class="iconSm"><a href="/carrinho"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+            <!-- Carrinho de compras -->
+            <li class="icons"><a href="/carrinho">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            </a></li>
+
           </ul>
-          <a class= "navbar-brand" href="/"><img src="http://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png" alt="logo"/></a>
+
+          <!-- Logo do e-commerce -->
+          <a class= "navbar-brand" href="/">
+            <img src="http://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png"
+                 alt="logo"/>
+          </a>
+
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav categorias">
+
+        <!-- Menus que serão ocultados em dispositivos móveis -->
+        <div class="collapse navbar-collapse" id="collapse-1">
+
+          <!-- Categorias -->
+          <ul class="nav navbar-nav categorias">
+
+            <!-- Cria menus -->
+            <% arrMenus = ['Feminino', 'Masculino', 'Infantil'] %>
+            <% for(var i=0; i<arrMenus.length; i++){ %>
+
+              <!-- Dropdown <%= arrMenus[i] %> -->
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Feminino<span class="caret"></span></a>
-                <ul class="dropdown-menu" id="dropdown-feminino">
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roupas<span class="caret caret-right"></span></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acessórios<span class="caret caret-right"></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calçados<span class="caret caret-right"></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li><a href="/categoria">Íntimas</a></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+                   role="button" aria-haspopup="true" aria-expanded="false">
+                   <%= arrMenus[i] %><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" id="dropdown-<%= arrMenus[i].toLowerCase() %>">
+                    
+                  <!-- Cria sub-menus -->
+                  <% arrSubmenus = ['Roupas', 'Acessórios', 'Calçados'] %>
+                  <% if(i === (arrMenus.length-1)){ %>
+                    <% arrSubmenus = ['Meninos', 'Meninas'] %>
+                  <% } %>
+
+                  <% for(var j=0; j<arrSubmenus.length; j++){ %>
+                    <!-- <%= arrSubmenus[j] %> / Sub-menu nível 1 -->
+                    <li class="dropdown sub-menu-1">
+                      <a href="#" class="dropdown-toggle padd" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false">
+                         <%= arrSubmenus[j] %><span class="caret caret-right"></span>
+                      </a>
+                      <!-- Sub-menu nível 2 -->
+                      <ul class="dropdown-menu sub-menu-2"></ul>
+                    </li>
+                  <% } %>
+
+                  <% if(i !== (arrMenus.length-1)){ %>
+                    <!-- Sub-menu nível 1 -->
+                    <li><a href="/categoria">Íntimas</a></li>
+                  <% } %>
+
                 </ul>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Masculino<span class="caret"></span></a>
-                <ul class="dropdown-menu" id="dropdown-masculino">
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roupas<span class="caret caret-right"></span></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acessórios<span class="caret caret-right"></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calçados<span class="caret caret-right"></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li><a href="/categoria">Íntimas</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Infantil<span class="caret"></span></a>
-                <ul class="dropdown-menu" id="dropdown-infantil">
-                  <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meninos<span class="caret caret-right"></span></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                      <li class="dropdown t-sub-menu">
-                        <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meninas<span class="caret caret-right"></a>
-                        <ul class="dropdown-menu sub-menu">
-                        </ul>
-                      </li>
-                </ul>
-              </li>
-            </ul>
+
+            <% } %>
+
+          </ul>
+
+          <!-- Formulário de busca -->
           <ul class="nav navbar-nav navbar-right">
-            <li id="cancelBtn" style="display: none;"><a href="#">Cancelar</a></li>
-            <form class="navbar-form navbar-left">
+
+            <!-- Esconde input de busca e volta a 
+                 mostrar categorias quando screen size 
+                 é insuficiente para ambos juntos.  -->
+            <li id="cancelBtn"><a href="#">Cancelar</a></li>
+
+              <form class="navbar-form" action="#" method="GET">
               <div class="form-group" id="search-form">
-                <input type="text" class="form-control" id="search" placeholder="Saia chanel">
-                <button type="submit" id="search-form-btn"class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                <input type="text" class="form-control" id="search" 
+                       placeholder="Saia chanel">
+                <button type="submit" class="btn btn-default">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
               </div>
             </form>
-            <li id="searchBtn"><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
-            <li class="dropdown iconLg dropdown-user">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-  haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-              <ul class="dropdown-menu" id="dropdown-user">
-                <li>
-                <form>
-                  <div class="form-group">
-                    <label>Usuário</label>
-                    <input type="text" class="form-control" placeholder="Fulano1Knight">
-                  </div>
-                  <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" placeholder="SuperS3nha123">
-                  </div>
-                  <button type="submit" class="botaoStyle">Entrar</button>
-                </form>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Criar conta</a></li>
-                <!-- <li><a href="#">Meu carrinho</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Sair</a></li> -->
-              </ul>
-            </li>
-            <li class="iconLg"><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+            <!-- Ao clicar, esconde categorias 
+                 e abre input no lugar -->
+            <li id="searchBtn"><a href="#">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </a></li>
+
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
+        </div>
+      </div>
     </nav>
   </header>
