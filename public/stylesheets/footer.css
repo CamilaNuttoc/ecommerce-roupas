@@ -3,38 +3,22 @@ footer {
   background: #111;
   padding: 20px;
 }
-/* line 4, ../sass/footer.scss */
+/* line 5, ../sass/footer.scss */
 footer .row {
   margin: 0;
 }
-/* line 7, ../sass/footer.scss */
-footer ul {
-  display: inline-block;
-  margin: 0 20px;
-  list-style-type: none;
-  padding: 0;
-}
-/* line 13, ../sass/footer.scss */
-footer a {
+/* line 9, ../sass/footer.scss */
+footer [class*='col-'] {
+  padding: 15px;
   color: #ccc;
 }
-/* line 15, ../sass/footer.scss */
-footer a:hover {
-  color: #fff;
-}
-/* line 19, ../sass/footer.scss */
-footer address {
-  padding-top: 0;
-  color: #ccc;
-}
-/* line 23, ../sass/footer.scss */
+/* line 14, ../sass/footer.scss */
 footer h4 {
-  font-weight: 800;
-  padding-bottom: 5px;
   margin-top: 0;
+  padding-bottom: 5px;
   border-bottom: 3px solid #333;
 }
-/* line 29, ../sass/footer.scss */
-footer .col-xs-6 {
-  margin-bottom: 20px;
+/* line 19, ../sass/footer.scss */
+footer a:visited {
+  color: #ccc;
 }
