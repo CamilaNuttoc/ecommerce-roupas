@@ -19,6 +19,6 @@ footer h4 {
   border-bottom: 3px solid #333;
 }
 /* line 19, ../sass/footer.scss */
-footer a:visited {
-  color: #ccc;
+footer a, footer a:hover, footer a:visited {
+  color: #aaa;
 }
