@@ -1,14 +1,12 @@
-@import "compass";
-$no-mobile: "only screen and (min-width: 768px)";
-$mobile: "only screen and (max-width: 767px)";
-$tablet: "(min-width:768px) and (max-width:992px)";
-$desktop: "(min-width:992px) and (max-width:1200px)";
-
+@import "variaveis";
 
 /* =================== Configurações gerais ===================  */
 
 body{
   margin-top: 50px;
+  @media #{$tablet}{
+    margin-top: 100px;
+  }
   font-family: 'Maven Pro', sans-serif;
 }
 
@@ -26,6 +24,10 @@ a{
   font-size: 20px;
 }
 
+input[type="text"]{
+  outline: 0;
+  border-radius: 5px;
+}
 
 /* ========================= Header ===========================  */
 
