@@ -1,33 +1,16 @@
-/* line 1, ../sass/carrinho.scss */
-.cont-carrinho {
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 768px) {
-  /* line 3, ../sass/carrinho.scss */
-  .cont-carrinho form {
-    margin-left: 10px;
-  }
+/* ============================== Carrinho ================================= */
+/* line 5, ../sass/carrinho.scss */
+#meuCarrinho {
+  border-left: 8px solid #aaa;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0 20px 15px;
 }
 
-/* line 10, ../sass/carrinho.scss */
-.row input[type="text"] {
-  outline: 0;
-  border-radius: 5px;
-}
-/* line 13, ../sass/carrinho.scss */
-.row input[type="text"]:first-of-type {
-  width: 70px;
-}
-/* line 16, ../sass/carrinho.scss */
-.row input[type="text"]:last-of-type {
-  width: 40px;
-}
-
-/* line 22, ../sass/carrinho.scss */
+/* line 11, ../sass/carrinho.scss */
 .row-titulos {
   margin: 0 10px;
 }
-/* line 24, ../sass/carrinho.scss */
+/* line 13, ../sass/carrinho.scss */
 .row-titulos h4 {
   background: #eee;
   padding: 10px;
@@ -35,101 +18,157 @@
   margin: 0;
 }
 
-/* line 32, ../sass/carrinho.scss */
+/* line 21, ../sass/carrinho.scss */
 .row-carrinho {
   margin: 0;
   border-bottom: 1px solid #ccc;
   padding: 20px 10px;
+  position: relative;
 }
-/* line 36, ../sass/carrinho.scss */
+/* line 26, ../sass/carrinho.scss */
 .row-carrinho img {
   width: 100px;
   float: left;
   border-radius: 5px;
 }
-/* line 41, ../sass/carrinho.scss */
+/* line 31, ../sass/carrinho.scss */
 .row-carrinho .info {
   margin-left: 110px;
 }
-/* line 43, ../sass/carrinho.scss */
-.row-carrinho .info h4 {
-  background: none;
-  padding: 0;
+@media only screen and (max-width: 767px) {
+  /* line 34, ../sass/carrinho.scss */
+  .row-carrinho form {
+    margin-left: 10px;
+  }
 }
 
-/* line 50, ../sass/carrinho.scss */
-.row-carrinho-bottom {
-  padding: 20px;
-  text-align: center;
+/* line 41, ../sass/carrinho.scss */
+[class*='tamanhos'] {
+  margin-left: 0;
 }
 
-/* line 54, ../sass/carrinho.scss */
-#meuCarrinho {
-  border-left: 8px solid #aaa;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0 20px 15px;
+/* line 45, ../sass/carrinho.scss */
+[class*='cores'] {
+  margin: 10px 0;
 }
 
-/* line 60, ../sass/carrinho.scss */
-.trash {
-  position: absolute;
-  background: 0;
-  border: 0;
-  outline: 0;
-  top: 48px;
-  right: 8px;
-  z-index: 2;
-  transition: .3s;
-}
-/* line 69, ../sass/carrinho.scss */
-.trash span {
-  color: #ccc;
-  font-size: 15px;
-  transition: .3s;
-}
-/* line 74, ../sass/carrinho.scss */
-.trash:hover {
-  right: 5px;
-}
-/* line 76, ../sass/carrinho.scss */
-.trash:hover span {
-  cursor: pointer;
-  color: #777;
-  font-size: 25px;
-  transition: .5s;
-}
-/* line 83, ../sass/carrinho.scss */
-.trash:first-child {
-  top: 0;
-}
-@media only screen and (max-width: 768px) {
-  /* line 60, ../sass/carrinho.scss */
-  .trash {
-    right: 0;
-    top: 20px;
+@media only screen and (max-width: 370px) {
+  /* line 49, ../sass/carrinho.scss */
+  .labelBreak {
+    display: block;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 92, ../sass/carrinho.scss */
+  /* line 55, ../sass/carrinho.scss */
   .valores-xs {
-    margin-left: 10px;
-    float: right;
-    width: -webkit-calc(100% - 110px);
-    width: -moz-calc(100% - 110px);
-    width: calc(100% - 110px);
+    margin-left: 5px;
   }
 }
-@media only screen and (max-width: 374px) {
-  /* line 92, ../sass/carrinho.scss */
+@media only screen and (max-width: 370px) {
+  /* line 55, ../sass/carrinho.scss */
   .valores-xs {
     margin-left: 110px;
   }
 }
 
-@media only screen and (max-width: 370px) {
-  /* line 105, ../sass/carrinho.scss */
-  .labelBreak {
-    display: block;
+/* line 64, ../sass/carrinho.scss */
+.trash {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  top: 20px;
+  right: 20px;
+  transition: .2s;
+}
+/* line 72, ../sass/carrinho.scss */
+.trash span {
+  color: #ccc;
+  font-size: 15px;
+  transition: .4s;
+}
+/* line 77, ../sass/carrinho.scss */
+.trash:hover {
+  right: 15px;
+}
+/* line 79, ../sass/carrinho.scss */
+.trash:hover span {
+  cursor: pointer;
+  color: #777;
+  font-size: 25px;
+  transition: .8s;
+}
+/* line 86, ../sass/carrinho.scss */
+.trash:first-child {
+  top: 150px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 64, ../sass/carrinho.scss */
+  .trash {
+    right: 5px;
+    top: 200px;
   }
+}
+@media only screen and (max-width: 370px) {
+  /* line 64, ../sass/carrinho.scss */
+  .trash {
+    right: 5px;
+    top: 256px;
+  }
+}
+
+/* line 99, ../sass/carrinho.scss */
+.row-carrinho-bottom {
+  padding: 20px;
+  text-align: center;
+}
+/* line 102, ../sass/carrinho.scss */
+.row-carrinho-bottom form {
+  padding: 5px;
+}
+/* line 105, ../sass/carrinho.scss */
+.row-carrinho-bottom input[type="submit"] {
+  width: auto;
+  padding: 4px;
+  font-size: 12px;
+}
+/* line 110, ../sass/carrinho.scss */
+.row-carrinho-bottom a {
+  text-decoration: underline;
+  color: #aaa;
+  font-size: 12px;
+}
+/* line 115, ../sass/carrinho.scss */
+.row-carrinho-bottom h3 {
+  text-align: left;
+}
+
+/* line 120, ../sass/carrinho.scss */
+.cupom {
+  width: 50%;
+}
+
+/* line 124, ../sass/carrinho.scss */
+.economia {
+  float: right;
+}
+
+/* line 128, ../sass/carrinho.scss */
+.preco-total {
+  margin: 0;
+  text-align: right;
+}
+
+/* line 133, ../sass/carrinho.scss */
+.row-carrinho-vazio {
+  display: none;
+}
+/* line 135, ../sass/carrinho.scss */
+.row-carrinho-vazio div {
+  text-align: center;
+}
+/* line 138, ../sass/carrinho.scss */
+.row-carrinho-vazio a {
+  width: auto;
 }
