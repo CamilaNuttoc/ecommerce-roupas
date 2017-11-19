@@ -1,10 +1,9 @@
-$('.after-item1 .content > div').slice(0, 1).clone().appendTo('.content2');
-
 $('.preview img').click(function(){
 	var novaImg = $(this).attr('src');
 	$('.main span img').attr('src', novaImg);
 });
 $(document).ready(function(){
+	$('.carrossel-container .content > div').slice(0, 1).clone().appendTo('.content2');
   	$('.main span').zoom();
 })
 var avaliacoes = 0;
