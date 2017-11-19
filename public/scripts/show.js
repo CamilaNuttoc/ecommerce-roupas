@@ -3,7 +3,7 @@ $(document).ready(function(){
 // ======================= Gera nota média de item ========================= //
 	
 	/* Reúne parâmetros para 
-   	   gerar nota média do item */
+   	 gerar notas de item */
 	var avaliacoes = 0;
 	var users = 0;
 	
