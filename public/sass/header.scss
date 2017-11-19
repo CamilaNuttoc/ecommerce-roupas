@@ -40,6 +40,23 @@ select{
   }
 }
 
+.form-sec{
+  border-left: 5px solid #aaa;
+  *{
+    margin-left: 10px;
+    display: inline-block;
+  }
+  form{
+    margin: 0;
+  }
+  @media #{$mobile}{
+    border: 0;
+    button, label:first-of-type{
+        margin-left: 0;
+    }
+  }
+}
+
 /* ========================= Header ===========================  */
 
 header{
