@@ -37,14 +37,21 @@
   color: #000;
 }
 
-/* line 31, ../sass/categoria.scss */
+@media only screen and (max-width: 767px) {
+  /* line 31, ../sass/categoria.scss */
+  .hidden-filtro {
+    display: none;
+  }
+}
+
+/* line 37, ../sass/categoria.scss */
 .filtroBtn {
   width: 90%;
   display: block;
   margin: 0 auto;
 }
 
-/* line 37, ../sass/categoria.scss */
+/* line 43, ../sass/categoria.scss */
 .shown-filtro {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px #ccc;
@@ -54,22 +61,22 @@
   margin-bottom: 15px;
 }
 
-/* line 47, ../sass/categoria.scss */
+/* line 53, ../sass/categoria.scss */
 .opcoes-filtro label {
   font-weight: 500;
 }
-/* line 50, ../sass/categoria.scss */
+/* line 56, ../sass/categoria.scss */
 .opcoes-filtro .opcao {
   float: left;
   width: 100%;
 }
-/* line 53, ../sass/categoria.scss */
+/* line 59, ../sass/categoria.scss */
 .opcoes-filtro .opcao .form-check {
   margin-right: 25px;
   float: left;
 }
 
-/* line 60, ../sass/categoria.scss */
+/* line 66, ../sass/categoria.scss */
 .toggleFiltro {
   background: none;
   border: none;
@@ -78,29 +85,29 @@
   color: #555;
 }
 
-/* line 68, ../sass/categoria.scss */
+/* line 74, ../sass/categoria.scss */
 .expand {
   font-size: 30px;
 }
 
-/* line 72, ../sass/categoria.scss */
+/* line 78, ../sass/categoria.scss */
 .expand-adjust {
   position: absolute;
   top: 13px;
   margin-left: 10px;
 }
 
-/* line 78, ../sass/categoria.scss */
+/* line 84, ../sass/categoria.scss */
 .openClose {
   margin-left: 10px;
 }
 
-/* line 82, ../sass/categoria.scss */
+/* line 88, ../sass/categoria.scss */
 .form-check-label {
   position: relative;
 }
 
-/* line 86, ../sass/categoria.scss */
+/* line 92, ../sass/categoria.scss */
 [type=checkbox]:checked + span:before {
   content: '\2714';
   position: absolute;
@@ -108,7 +115,7 @@
   left: 2px;
 }
 
-/* line 93, ../sass/categoria.scss */
+/* line 99, ../sass/categoria.scss */
 .checkbox-default {
   position: absolute;
   left: -7px;
@@ -120,30 +127,30 @@
   cursor: pointer;
 }
 
-/* line 105, ../sass/categoria.scss */
+/* line 111, ../sass/categoria.scss */
 .filtrarBtn button {
   margin: 25px 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 105, ../sass/categoria.scss */
+  /* line 111, ../sass/categoria.scss */
   .filtrarBtn button {
     width: 90%;
   }
 }
 
-/* line 113, ../sass/categoria.scss */
+/* line 119, ../sass/categoria.scss */
 .ad {
   margin-bottom: 20px;
   max-width: 80%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 113, ../sass/categoria.scss */
+  /* line 119, ../sass/categoria.scss */
   .ad {
     display: none;
   }
 }
 
-/* line 121, ../sass/categoria.scss */
+/* line 127, ../sass/categoria.scss */
 .pagination > li {
   display: inline-block;
 }

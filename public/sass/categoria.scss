@@ -28,6 +28,12 @@
   }
 }
 
+.hidden-filtro{
+  @media #{$mobile}{
+    display: none;
+  }
+}
+
 .filtroBtn{
   width: 90%;
   display: block;
