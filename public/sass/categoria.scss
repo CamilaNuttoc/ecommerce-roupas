@@ -31,6 +31,7 @@
 .hidden-filtro{
   @media #{$mobile}{
     display: none;
+    padding: 0 10%;
   }
 }
 
@@ -45,7 +46,6 @@
   box-shadow: 2px 2px 5px #ccc;
   display: block;
   width: 100%;
-  padding: 0 10%;
   margin-bottom: 15px;
 }
 

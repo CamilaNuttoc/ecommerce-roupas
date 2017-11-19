@@ -22,7 +22,12 @@ $(document).ready(function(){
   $('.filtroBtn').click(function(){
 
     //Mostra/esconde filtros
-    $('.hidden-filtro').slideToggle().toggleClass('shown-filtro');
+    if(!$('.hidden-filtro').hasClass('shown-filtro')){
+      $('.hidden-filtro').slideToggle().addClass('shown-filtro');
+    }else{
+      $('.hidden-filtro').slideToggle().removeClass('shown-filtro');
+    }
+    
 
     //Muda texto do botão
     if($(this).text() == 'Filtrar'){
