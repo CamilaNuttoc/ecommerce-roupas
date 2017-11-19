@@ -241,3 +241,35 @@ input[type='radio']{
 .star5{
   left: 125px;
 }
+
+#abreLogin{
+  border: 0; 
+  background: none; 
+  text-decoration: underline; 
+  outline: none;
+  i{
+    font-weight: 800;
+  }
+}
+
+.avaliacao-current-user{
+  form{
+    width: 95%; 
+    margin: 0 auto; 
+    text-align: center;
+  }
+  h4{
+    text-align: center;
+  }
+  textarea{
+    width: 95%; 
+    margin: 15px 0; 
+    border: none; 
+    border-radius: 20px; 
+    outline: none; 
+    padding: 20px; 
+    resize: none; 
+    box-shadow: 0 0 20px #bbb; 
+    height: 100px;
+  }
+}

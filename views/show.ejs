@@ -1,7 +1,13 @@
 <% include ./partials/header.ejs %>
+
 <div class="container">
+
+	<!-- Área que mostra item selecionado -->
 	<section class="item-area">
+
 		<div class="row">
+
+			<!-- Imagens a mais do mesmo produto -->
 			<div class="col-md-1 col-xs-2 preview">
 				<img src="<%= item.imagem %>">
 				<img src="https://ph-cdn2.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestido-curto/vestido-floral-dark-com-saia-evase_215676_600_1.jpg">
@@ -9,83 +15,108 @@
 				<img src="https://ph-cdn2.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestido-curto/vestido-floral-dark-com-saia-evase_215676_600_1.jpg">
 				<img src="<%= item.imagem %>">
 			</div>
+
+			<!-- Imagem principal do produto -->
 			<div class="col-md-6 col-xs-10 main">
 				<span class="zoom">
 				<img src="<%= item.imagem %>"></span>
 			</div>
-			<script>
-				$('.preview img').click(function(){
-					var novaImg = $(this).attr('src');
-					$('.main span img').attr('src', novaImg);
-				});
-				$(document).ready(function(){
-				  	$('.main span').zoom();
-				})
-				
-			</script>
-			<style>
-				.zoom {
-					display:inline-block;
-					position: relative;
-				}
-				.zoom img {
-					display: block;
-				}
-			</style>
+
+			<!-- Informações sobre o produto -->
 			<div class="col-md-5 col-xs-12 info">
+
 				<h3><%= item.titulo %></h3>
 				<div class="avaliacao-item"></div>
-				<script>
-					var avaliacoes = 0;
-					var users = 0; 
-					<% item.comentarios.forEach(function(comentario){ %>
-					    avaliacoes += <%= comentario.avaliacao %>; 
-						users ++; 
-					<% }); %> 
-					var length = Math.round(avaliacoes/users);
-					genStars(length, -1, users);
-				</script>
-				<span class="preco-original">R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-				<span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
-				<p><strong>3x</strong> de <strong>R$<%= (item.precoPromocao/3).toFixed(2).replace(".", ",") %> %></strong> sem juros no cartão</p>
+				<span class="preco-original">
+					R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+				</span>
+				<span class="preco-desconto">
+					R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+				</span>
+				<p><strong>5x</strong> de <strong>
+					R$<%= (item.precoPromocao/5).toFixed(2).replace(".", ",") %>
+				</strong> sem juros no cartão</p>
+
 				<hr>
+
 				<section class="form-sec">
+
+					<!-- Formúlario para adicionar item ao carrinho -->
 					<form action="/carrinho" method="GET">
-						<div class="tamanhos" style="margin-left: 0">
-							<label>Tamanho:</label>
-							<label class="tamanho">
-							  <input type="radio" name="tam" value="P" required>
-							  <div class="button"><span class="P"><span>P</span></span></div>
-							</label>
-							<label class="tamanho">
-							  <input type="radio" name="tam" value="M">
-							  <div class="button"><span class="M"><span>M</span></span></div>
-							</label>
-							<label class="tamanho">
-							  <input type="radio" name="tam" value="G">
-							  <div class="button"><span class="G"><span>G</span></span></div>
-							</label>
-						</div><br>
-						<div class="cores" style="margin: 10px 0">
-							<label>Cor:</label>
-							<label class="branco">
-							  <input type="radio" name="cor" value="branco" required>
-							  <div class="button"><span class="branco"><span></span></span></div>
-							</label>
-							<label class="preto">
-							  <input type="radio" name="cor" value="preto">
-							  <div class="button"><span class="preto"><span></span></span></div>
-							</label>
-							<label class="azul">
-							  <input type="radio" name="cor" value="azul">
-							  <div class="button"><span class="azul"><span></span></span></div>
-							</label>
-						</div>
-					  <button type="submit" onclick="checaRadios();" class="botaoStyle">Adicionar ao carrinho</button>
-					  <button type="submit" class="botaoStyle">Salvar para depois</button>
+
+						<!-- Opções de peça -->
+						<% var arrTam = ['tamanho', 'P', 'M', 'G'] %>
+						<% var arrCores = ['cor', 'branco', 'preto', 'azul'] %>
+
+						<!-- Reúne opções de peça -->
+						<% var arrAll = [arrTam, arrCores] %>
+
+						<!-- Gera opções -->
+						<% for(var i=0; i<arrAll.length; i++){ %>
+
+							<!-- Adiciona plural a classe -->
+							<% if(i == 0){ %>
+							<div class="<%= arrAll[i][0] %>s">
+							<% }else{ %>
+							<div class="<%= arrAll[i][0] %>es">
+							<% } %>
+
+							<!-- Adiciona letra maiúscula
+							     ao texto do label -->
+							<label><%= arrAll[i][0].charAt(0).toUpperCase() 
+											 + arrAll[i][0].slice(1) %>:</label>
+	
+							<!-- Percorre length de cada opção -->
+							<% for(var j=0; j<arrAll[i].length-1; j++){ %>
+
+								<!-- Gera classe apropriada a cada opção -->
+								<% if(i == 0){ %>
+								<label class="<%= arrAll[i][0] %>">
+								<% }else{ %>
+								<label class="<%= arrAll[i][(j+1)] %>">
+								<% } %>
+
+									<!-- Gera input personalizado -->
+								  <input type="radio" name="<%= arrAll[i][0].substring(0,3) %>"
+								  			 required value="<%= arrAll[i][(j+1)] %>">
+								 	<div class="button">
+								  	<span class="<%= arrAll[i][(j+1)] %>">
+
+								  		<% if(i == 0){ %>
+								  			<span><%= arrAll[i][(j+1)] %></span>
+								  		<% }else{ %>
+								  			<span></span>
+								  		<% } %>
+
+								  	</span>
+									</div>
+
+								</label>
+
+							<% } %>
+
+							</div>
+
+							<br>
+
+						<% } %>
+
+						<!-- Leva ao carrinho se opções da 
+						     peça tiverem sido escolhidas -->
+					  <button type="submit" onclick="checaRadios();" class="botao-default">
+					  	Adicionar ao carrinho
+					  </button>
+
 					</form>
+
+					<!-- Salva como favorito -->
+					<button type="submit" class="botao-default">Salvar para depois</button>
+
 				</section>
+
 				<hr>
+
+				<!-- Detalhes random -->
 				<ul>
 					<li>Curabitur sed cursus ex. Morbi ornare maximus felis, a 
 					elementum lectus elementum in.</li>
@@ -94,141 +125,233 @@
 					tincidunt facilisis mauris.</li>
 					<li>Vendido e entregue por X.</li>
 				</ul>
+
 			</div>
+
 		</div>
+
 	</section>
-	<script>
-	$('#myTabs a').click(function (e) {
- 		e.preventDefault()
-  		$(this).tab('show')
-	})
-</script>
+
+	<!-- Área de descrição do produto -->
 	<section class="descricao-area">
-	<div class="row">
-		<div class="col-md-12">
-			<ul class="nav nav-tabs">
-			   <li><a href="#descricao">Descrição</a></li>
-			   <li><a href="#avaliacao">Avaliações</a></li>
-			</ul>
-			<script>
-			$(document).on('click', 'a[href^="#avaliacao"]', function (event) {
-			  event.preventDefault();
-		
-		    $('html, body').animate({
-		      scrollTop: $($.attr(this, 'href')).offset().top
-			  }, 800);
-			});
-			</script>
-			<div class="tab-content">
-			  <div class="tab-pane active">Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis
-			   	eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.<br><br>
 
-			    <strong>DETALHES DO PRODUTO</strong><br>
-					Vestido preto estampado<br>
-					Tipo de Produto: Vestido<br>
-					Modelagem: Evasê<br>
-					Manga: Curta<br>
-					Comprimento: Curto<br>
-					Estampas: Poás<br>
-					Decote: Redondo<br>
-					Composição: 97% Poliéster e 3% Elastano<br>
-					Medidas da peça: Ombro: 6cm/ Ombro a ombro: 36cm/ Manga: 15cm/ Busto: 90cm/ Comprimento: 96cm<br>
-					Medidas da Modelo: Altura: 1,78m/ Busto: 88cm/ Cintura: 60cm/ Quadril: 87cm.<br>
-					Tipo de Tecido: Malha<br><br>
+		<div class="row">
 
-					<strong>INFORMAÇÕES</strong><br>
-					SKU	FI911APF89DDY<br>
-					Modelo	FiveBlu 302814<br>
-					Material	Poliéster<br>
-					Cor	Preto<br>
-					Lavagem	Pode ser lavado na máquina<br>
-					Tipo de frete:	Leve<br>
+			<div class="col-md-12">
+
+				<!-- Opções de guias -->
+				<ul class="nav nav-tabs">
+				   <li><a href="#descricao">Descrição</a></li>
+				   <li><a href="#avaliacao">Avaliações</a></li>
+				</ul>
+
+				<!-- Conteúdo de guias -->
+				<div class="tab-content">
+
+			  	<div class="tab-pane active">
+			  		Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl
+			  		eu elit maximus tempus a quiseros. Suspendisse neque felis, ultrices 
+			  		et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, 
+			  		pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras 
+			  		at massa nec dolor posuere facilisis. Nunc facilisis ante quis 
+			  		consequat ultricies. Fusce finibus varius lacinia.Aliquam consectetur 
+			  		egestas nunc eget aliquam.
+
+			   		<br><br>
+
+			    	<strong>DETALHES DO PRODUTO</strong><br>
+
+						Vestido preto estampado<br>
+						Tipo de Produto: Vestido<br>
+						Modelagem: Evasê<br>
+						Manga: Curta<br>
+						Comprimento: Curto<br>
+						Estampas: Poás<br>
+						Decote: Redondo<br>
+						Composição: 97% Poliéster e 3% Elastano<br>
+						Medidas da peça: Ombro: 6cm/ Ombro a ombro: 36cm/ Manga: 15cm/ Busto: 
+						90cm/ Comprimento: 96cm<br>
+						Medidas da Modelo: Altura: 1,78m/ Busto: 88cm/ Cintura: 60cm/ Quadril: 
+						87cm.<br>
+						Tipo de Tecido: Malha
+
+						<br><br>
+
+						<strong>INFORMAÇÕES</strong><br>
+						SKU	FI911APF89DDY<br>
+						Modelo	FiveBlu 302814<br>
+						Material	Poliéster<br>
+						Cor	Preto<br>
+						Lavagem	Pode ser lavado na máquina<br>
+						Tipo de frete:	Leve<br>
+
+					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
+
 	</section>
+
+	<!-- Carrossel de sugestões (> 992px) -->
 	<div class="row after-item1 hidden-sm hidden-xs">
+
+		<!-- Linhas cruzando título da seção -->
     <div class="limit-heading">
       <h2 class="heading"><span>Talvez você também goste de...</span></h2>
     </div>
+
+    <!-- Esconde o que passa da área do carrossel -->
     <div class="carrossel-overfl">
+
+    	<!-- Serve como container de carrossel 
+    	     e aplica white space nowrap -->
     	<div class="carrossel" style="transform: translateX(0)">
+
+    		<!-- Gera itens -->
     		<% for(var i=0; i<12; i++){ %>
- 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content">
-     	    <div class="thumbnail">
-       			<div class="wrapBtn">
-         			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
-            </div>
-            <a href="/<%= item._id %>">
-             	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
-             	<div class="caption">
-              		<h3><%= item.titulo %></h3>
-              		<span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-              		<span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
-              		<button class="btn comprarBtn">Comprar</button>
-             	</div>
-            </a>
-          </div>
-  			</div>
+
+ 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content">
+
+     	  	  <div class="thumbnail">
+
+     	  	  	<!-- Botão de favorito -->
+       				<div class="wrapBtn">
+        	 			<button onclick="favStatus(this);" class="favBtn">
+        	 				<span style="display: none" class="favText">Salvo</span>
+        	 				<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        	 			</button>
+          	  </div>
+
+          	  <a href="/<%= item._id %>">
+
+          	  	<!-- Detalhes do item -->
+          	   	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
+          	   	<div class="caption">
+
+          	    		<h3><%= item.titulo %></h3>
+          	    		<span class="preco-original">
+          	    			De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+          	    		</span>
+          	    		<span class="preco-desconto">
+          	    			R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+          	    		</span>
+
+          	    		<button class="btn comprarBtn">Comprar</button>
+
+          	   	</div>
+
+          	  </a>
+
+          	</div>
+
+  				</div>
+
         <% } %>
+
     	</div>
+
     </div>
-    <button class="btnCtrlPrev" onclick="previous();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
-    <button class="btnCtrlNext" onclick="next();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+
+    <!-- Botões para navegação no carrossel -->
+    <button class="btnCtrlPrev" onclick="previous();">
+    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </button>
+    <button class="btnCtrlNext" onclick="next();">
+    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+
   </div>
+  
+  <!-- Sugestões (substituindo carrossel 
+       em mobile e tablet) -->                                              
   <div class="row hidden-lg hidden-md">
-        <div class="limit-heading">
-          <h2 class="heading"><span>Sugestões</span></h2>
-        </div>
-        <% for(var i=0; i<2; i++){ %>
-  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-         	    <div class="thumbnail">
-           			<div class="wrapBtn">
-             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
-            		</div>
-            		<a href="/<%= item._id %>">
-            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
-            		  <div class="caption">
-            		    <h3><%= item.titulo %></h3>
-            		    <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-            		    <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
-            		    <button class="btn comprarBtn">Comprar</button>
-            		  </div>
-            		</a>
-          		</div>
-  			</div>
-        <% } %>
-  	</div>
+
+  	<!-- Linhas cruzando título da seção -->
+    <div class="limit-heading">
+     <h2 class="heading"><span>Sugestões</span></h2>
+    </div>
+
+    <!-- Gera itens -->
+    <% for(var i=0; i<2; i++){ %>
+
+  		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content2"></div>
+
+  	<% } %>
+
+  </div>
+
+  <!-- Avaliações de usuários -->
 	<div class="row" id="avaliacao">
+
+		<!-- Linhas cruzando título da seção -->
 		<div class="limit-heading">
       <h2 class="heading"><span>Avaliações</span></h2>
     </div>
-    <% var num = 0; %>
-		<% item.comentarios.forEach(function(comentario){ %>
+
+    <!-- Percorre por e gera 
+         comentários de usuários -->
+		<% for(var i=0; i<item.comentarios.length; i++){ %>
+
 		<div class="col-md-12">
+
 		  <div class="media">
+
 		    <div class="media-left">
-		        <img class="media-object" src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg" alt="girl">
+		      <img class="media-object" alt="usuario"
+		           src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg">
 		    </div>
+
 		    <div class="media-body">
+
 		      <p class="pull-right">Postado há X tempo</p>
 		      <h4 class="media-heading"><strong>Nome do usuário</strong></h4>
-		      <div class="avaliacao-user<%= num %>"></div>
-		      <script> genStars(<%= comentario.avaliacao %>, <%= num %>);</script>
-		      <% num++; %>
-		      <p>Comentário demonstrando satisfação!Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec, suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.</p>
+
+		      <div class="avaliacao-user<%= i %>"></div>
+
+		      <!-- Gera estrelas de acordo com usuário da db-->
+		      <script> genStars(<%= item.comentarios[i].avaliacao %>, <%= i %>);</script>
+
+		      <p>Comentário demonstrando nível de satisfação!Curabitur congue
+		         faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus
+		         tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut,
+		         suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec,
+		         suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor 
+		         posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce 
+		         finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.
+		      </p>
+
 		    </div>
+
 		  </div>
+
 		</div>
-		<% }); %>
+
+		<% } %>
+
 	</div>
-	<div class="row">
+
+	<!-- Avaliação de usuário online -->
+	<div class="row avaliacao-current-user">
+
 		<div class="col-md-12">
-			<h4 style="text-align: center;">Faça <button id="abreLogin" style="border: 0; background: none; text-decoration: underline; outline: none;"><strong><i>login</i></strong></button> e deixe sua avaliação! :)</h4>
-			<form style="width: 95%; margin: 0 auto; text-align: center">
+
+			<!-- Gera estrelas de acordo com usuário da db-->
+			<h4>
+				Faça <button id="abreLogin"><i>login</i></button>
+			  e deixe sua avaliação! :)
+			</h4>
+
+			<!-- Formulário de avaliação -->
+			<form action="#" method="POST">
+
 			<div class="avaliacao-user-online">
+
+				<!-- Estrelas/nota -->
 				<div class="container-stars">
+
 					<span class="estr1 glyphicon glyphicon-star-empty" aria-hidden="true"></span
 					><span class="star1 glyphicon glyphicon-star" aria-hidden="true"></span
 					><span class="estr2 glyphicon glyphicon-star-empty" aria-hidden="true"></span
@@ -240,14 +363,99 @@
 					><span class="estr5 glyphicon glyphicon-star-empty" aria-hidden="true"></span
 					><span class="star5 glyphicon glyphicon-star" aria-hidden="true"></span
 					>
+
 				</div>
+
 			</div>
-			<textarea style="width: 95%; margin: 15px 0; border: none; border-radius: 20px; outline: none; padding: 20px; resize: none; box-shadow: 0 0 20px #bbb; height: 100px" placeholder="Digite seu comentário..."></textarea>
-			<button type="submit" class="botaoStyle">Comentar</button>
+
+			<!-- Área de comentário -->
+			<textarea placeholder="Digite seu comentário..."></textarea>
+
+			<!-- Envia comentário a db (em teoria) -->
+			<button type="submit" class="botao-default">Comentar</button>
+
 		</form>
+
 		</div>
+
 	</div>
-	<script>
+
+	<!-- Mais itens da mesma categoria -->
+	<div class="row">
+
+		<!-- Linhas cruzando título da seção -->
+    <div class="limit-heading">
+      <h2 class="heading"><span>Mais em Vestidos</span></h2>
+    </div>
+
+    <!-- Gera itens -->
+    <% for(var i=0; i<12; i++){ %>
+
+  		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content3"></div>
+
+    <% } %>
+
+  </div>
+
+  <!-- Categorias -->
+  <div class="row">
+
+  	<!-- Linhas cruzando título da seção -->
+  	<% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
+  	              'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
+  	              'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 
+  	              'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
+  	              'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 
+  	              'Salto Alto', 'Sapatos'] %>
+
+  	<!-- Linhas cruzando título da seção -->
+    <div class="limit-heading">
+      <h2 class="heading"><span>Categorias</span></h2>
+    </div>
+
+    <ul id="categorias-bottom">
+
+    	<!-- Gera itens de categorias -->
+    	<% for(var i=0; i<arr.length; i++){ %>
+    	  <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
+    	<% } %>
+
+    </ul>
+
+  </div>
+
+</div>
+
+			<script>
+			$('.after-item1 .content > div').slice(0, 1).clone().appendTo('.content2, .content3');
+				$('.preview img').click(function(){
+					var novaImg = $(this).attr('src');
+					$('.main span img').attr('src', novaImg);
+				});
+				$(document).ready(function(){
+				  	$('.main span').zoom();
+				})
+					var avaliacoes = 0;
+					var users = 0; 
+					<% item.comentarios.forEach(function(comentario){ %>
+					    avaliacoes += <%= comentario.avaliacao %>; 
+						users ++; 
+					<% }); %> 
+					var length = Math.round(avaliacoes/users);
+					genStars(length, -1, users);
+				
+	$('#myTabs a').click(function (e) {
+ 		e.preventDefault()
+  		$(this).tab('show')
+	})
+
+			$(document).on('click', 'a[href^="#avaliacao"]', function (event) {
+			  event.preventDefault();
+		
+		    $('html, body').animate({
+		      scrollTop: $($.attr(this, 'href')).offset().top
+			  }, 800);
+			});
 		var dropUser = $('.dropdown-user > #dropdown-user');
 		$('#abreLogin').click(function(e){
 			e.stopPropagation();
@@ -257,39 +465,4 @@
 			dropUser.slideDown();
 		});
 	</script>
-	<div class="row">
-        <div class="limit-heading">
-          <h2 class="heading"><span>Mais em Vestidos</span></h2>
-        </div>
-        <% for(var i=0; i<12; i++){ %>
-  			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-         	    <div class="thumbnail">
-           			<div class="wrapBtn">
-             			<button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
-            		</div>
-            		<a href="/<%= item._id %>">
-            		  <img src="<%= item.imagem %>" alt="Vestido estampado"/>
-            		  <div class="caption">
-            		    <h3><%= item.titulo %></h3>
-            		    <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-            		    <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
-            		    <button class="btn comprarBtn">Comprar</button>
-            		  </div>
-            		</a>
-          		</div>
-  			</div>
-        <% } %>
-  	</div>
-  	<div class="row">
-        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos', 'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões', 'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos', 'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 'Salto Alto', 'Sapatos'] %>
-        <div class="limit-heading">
-        <h2 class="heading"><span>Categorias</span></h2>
-      </div>
-        <ul id="categorias-bottom">
-        <% for(var i=0; i<arr.length; i++){ %>
-          <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
-        <% } %>
-        </ul>
-      </div>
-</div>
 <% include ./partials/footer.ejs %>

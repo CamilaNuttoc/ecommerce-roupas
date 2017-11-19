@@ -303,3 +303,38 @@ input[type='radio'] {
 .star5 {
   left: 125px;
 }
+
+/* line 245, ../sass/show.scss */
+#abreLogin {
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  outline: none;
+}
+/* line 250, ../sass/show.scss */
+#abreLogin i {
+  font-weight: 800;
+}
+
+/* line 256, ../sass/show.scss */
+.avaliacao-current-user form {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 261, ../sass/show.scss */
+.avaliacao-current-user h4 {
+  text-align: center;
+}
+/* line 264, ../sass/show.scss */
+.avaliacao-current-user textarea {
+  width: 95%;
+  margin: 15px 0;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 20px;
+  resize: none;
+  box-shadow: 0 0 20px #bbb;
+  height: 100px;
+}
