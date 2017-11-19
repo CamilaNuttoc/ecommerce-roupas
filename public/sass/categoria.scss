@@ -1,74 +1,60 @@
-.pagination>li{
-  display: inline-block;
-}
+@import "variaveis";
 
-.categoria-filter{
-  padding: 0;
-  float: left;
-  label{
-    font-weight: 500;
-  }
-  .categoria{
-    list-style-type: none;
-    width: 100%;
-    float: left;
-    .form-check{
-      margin-right: 20px;
-      float: left;
-    }
-  }
-}
-
-.form-check-label{
-  position: relative;
-}
-.ad{
-  margin-bottom: 20px;
-  max-width: 80%;
-}
-
-.path-categoria{
-  color: #aaa;
-  padding-left: 10px;
-  a{
-    color: #aaa;
-    &:hover{
-      color: #000;
-    }
-  }
-}
-
-select{
-  border-radius: 5px 5px 0 0;
-  outline: none;
-  padding-right: 10px;
-  border: 1px solid #aaa;
-  color: #555;
-  option{
-    outline: none;
-  }
-}
+/* ============================== Carrinho ================================= */
 
 .row-categoria{
   margin-top: 20px;
   hr{
-    margin-top: 15px;
+    margin-top: 10px;
+    @media #{$mobile}{
+      margin: 0;
+    }
   }
-  @media (max-width:1200px) and (min-width:992px) {
-      max-height: 320px;
-      min-height: 320px;
+  h3{
+    text-align: left;
+    @media #{$mobile}{
+      text-align: center;
+    } 
   }
 }
 
+.path-categoria{
+  padding-left: 5px;
+  *{
+    color: #aaa;
+  }
+  a:hover{
+    color: #000;
+  }
+}
+
+.filtroBtn{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
 .shown-filtro{
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 5px #ccc;
-    background: #fff;
-    z-index: 3;
-    display: block;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px #ccc;
+  display: block;
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 15px;
+}
+
+.opcoes-filtro{
+  label{
+    font-weight: 500;
+  }
+  .opcao{
+    float: left;
     width: 100%;
-    padding: 0 10%;
-    margin-bottom: 15px;
+    .form-check{
+      margin-right: 25px;
+      float: left;
+    }
+  }
 }
 
 .toggleFiltro{
@@ -79,42 +65,6 @@ select{
   color: #555;
 }
 
-.filtroBtn{ 
-  background: #fff;
-  z-index: 4;
-  left: 0;
-  transition: all .6s;
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-}
-
-.filtrarBtn{
-  width: 100%;
-  button{
-    margin-bottom: 30px;
-    @media only screen and (min-width:768px) {
-      width: 90%;
-    }
-  }
-}
-
-.botaoStyle-small{
-  font-size: 12px;
-  padding: 7px;
-  transition: .5s;
-  &:hover{
-    .glyphicon-remove{
-      color: #ccc;
-    }
-  }
-  .glyphicon-remove, .glyphicon-ok{
-    margin-left: 5px;
-    font-size: 12px;
-    color: #aaa;
-  }
-}
-
 .expand{
   font-size: 30px;
 }
@@ -122,7 +72,6 @@ select{
 .expand-adjust{
   position: absolute;
   top: 13px;
-  white-space: nowrap;
   margin-left: 10px;
 }
 
@@ -130,21 +79,45 @@ select{
   margin-left: 10px;
 }
 
-[type=checkbox]:checked + span:before {/* <-- style its checked state..with a ticked icon */
+.form-check-label{
+  position: relative;
+}
+
+[type=checkbox]:checked + span:before {
   content: '\2714';
   position: absolute;
   top: -3px;
   left: 2px;
 }
 
-.checkboxStyle{
+.checkbox-default{
   position: absolute;
   left: -7px;
-  top: 0;
   padding: 8px;
   border: 2px solid #ccc;
   box-shadow: 2px 2px 4px #ccc;
   border-radius: 50%;
   background: #fff;
   cursor:pointer;
+}
+
+.filtrarBtn{
+  button{
+    margin: 25px 0;
+    @media #{$no-mobile}{
+      width: 90%;
+    }
+  }
+}
+
+.ad{
+  margin-bottom: 20px;
+  max-width: 80%;
+  @media #{$mobile}{
+    display: none;
+  }
+}
+
+.pagination>li{
+  display: inline-block;
 }

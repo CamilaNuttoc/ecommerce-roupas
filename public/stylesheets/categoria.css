@@ -1,96 +1,75 @@
-/* line 1, ../sass/categoria.scss */
-.pagination > li {
-  display: inline-block;
-}
-
+/* ============================== Carrinho ================================= */
 /* line 5, ../sass/categoria.scss */
-.categoria-filter {
-  padding: 0;
-  float: left;
+.row-categoria {
+  margin-top: 20px;
 }
-/* line 8, ../sass/categoria.scss */
-.categoria-filter label {
-  font-weight: 500;
+/* line 7, ../sass/categoria.scss */
+.row-categoria hr {
+  margin-top: 10px;
 }
-/* line 11, ../sass/categoria.scss */
-.categoria-filter .categoria {
-  list-style-type: none;
-  width: 100%;
-  float: left;
+@media only screen and (max-width: 767px) {
+  /* line 7, ../sass/categoria.scss */
+  .row-categoria hr {
+    margin: 0;
+  }
 }
-/* line 15, ../sass/categoria.scss */
-.categoria-filter .categoria .form-check {
-  margin-right: 20px;
-  float: left;
+/* line 13, ../sass/categoria.scss */
+.row-categoria h3 {
+  text-align: left;
 }
-
-/* line 22, ../sass/categoria.scss */
-.form-check-label {
-  position: relative;
-}
-
-/* line 25, ../sass/categoria.scss */
-.ad {
-  margin-bottom: 20px;
-  max-width: 80%;
+@media only screen and (max-width: 767px) {
+  /* line 13, ../sass/categoria.scss */
+  .row-categoria h3 {
+    text-align: center;
+  }
 }
 
-/* line 30, ../sass/categoria.scss */
+/* line 21, ../sass/categoria.scss */
 .path-categoria {
-  color: #aaa;
-  padding-left: 10px;
+  padding-left: 5px;
 }
-/* line 33, ../sass/categoria.scss */
-.path-categoria a {
+/* line 23, ../sass/categoria.scss */
+.path-categoria * {
   color: #aaa;
 }
-/* line 35, ../sass/categoria.scss */
+/* line 26, ../sass/categoria.scss */
 .path-categoria a:hover {
   color: #000;
 }
 
-/* line 41, ../sass/categoria.scss */
-select {
-  border-radius: 5px 5px 0 0;
-  outline: none;
-  padding-right: 10px;
-  border: 1px solid #aaa;
-  color: #555;
-}
-/* line 47, ../sass/categoria.scss */
-select option {
-  outline: none;
+/* line 31, ../sass/categoria.scss */
+.filtroBtn {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 52, ../sass/categoria.scss */
-.row-categoria {
-  margin-top: 20px;
-}
-/* line 54, ../sass/categoria.scss */
-.row-categoria hr {
-  margin-top: 15px;
-}
-@media (max-width: 1200px) and (min-width: 992px) {
-  /* line 52, ../sass/categoria.scss */
-  .row-categoria {
-    max-height: 320px;
-    min-height: 320px;
-  }
-}
-
-/* line 63, ../sass/categoria.scss */
+/* line 37, ../sass/categoria.scss */
 .shown-filtro {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px #ccc;
-  background: #fff;
-  z-index: 3;
   display: block;
   width: 100%;
   padding: 0 10%;
   margin-bottom: 15px;
 }
 
-/* line 74, ../sass/categoria.scss */
+/* line 47, ../sass/categoria.scss */
+.opcoes-filtro label {
+  font-weight: 500;
+}
+/* line 50, ../sass/categoria.scss */
+.opcoes-filtro .opcao {
+  float: left;
+  width: 100%;
+}
+/* line 53, ../sass/categoria.scss */
+.opcoes-filtro .opcao .form-check {
+  margin-right: 25px;
+  float: left;
+}
+
+/* line 60, ../sass/categoria.scss */
 .toggleFiltro {
   background: none;
   border: none;
@@ -99,85 +78,72 @@ select option {
   color: #555;
 }
 
-/* line 82, ../sass/categoria.scss */
-.filtroBtn {
-  background: #fff;
-  z-index: 4;
-  left: 0;
-  transition: all .6s;
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-}
-
-/* line 92, ../sass/categoria.scss */
-.filtrarBtn {
-  width: 100%;
-}
-/* line 94, ../sass/categoria.scss */
-.filtrarBtn button {
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 768px) {
-  /* line 94, ../sass/categoria.scss */
-  .filtrarBtn button {
-    width: 90%;
-  }
-}
-
-/* line 102, ../sass/categoria.scss */
-.botaoStyle-small {
-  font-size: 12px;
-  padding: 7px;
-  transition: .5s;
-}
-/* line 107, ../sass/categoria.scss */
-.botaoStyle-small:hover .glyphicon-remove {
-  color: #ccc;
-}
-/* line 111, ../sass/categoria.scss */
-.botaoStyle-small .glyphicon-remove, .botaoStyle-small .glyphicon-ok {
-  margin-left: 5px;
-  font-size: 12px;
-  color: #aaa;
-}
-
-/* line 118, ../sass/categoria.scss */
+/* line 68, ../sass/categoria.scss */
 .expand {
   font-size: 30px;
 }
 
-/* line 122, ../sass/categoria.scss */
+/* line 72, ../sass/categoria.scss */
 .expand-adjust {
   position: absolute;
   top: 13px;
-  white-space: nowrap;
   margin-left: 10px;
 }
 
-/* line 129, ../sass/categoria.scss */
+/* line 78, ../sass/categoria.scss */
 .openClose {
   margin-left: 10px;
 }
 
-/* line 133, ../sass/categoria.scss */
+/* line 82, ../sass/categoria.scss */
+.form-check-label {
+  position: relative;
+}
+
+/* line 86, ../sass/categoria.scss */
 [type=checkbox]:checked + span:before {
-  /* <-- style its checked state..with a ticked icon */
   content: '\2714';
   position: absolute;
   top: -3px;
   left: 2px;
 }
 
-/* line 140, ../sass/categoria.scss */
-.checkboxStyle {
+/* line 93, ../sass/categoria.scss */
+.checkbox-default {
   position: absolute;
   left: -7px;
-  top: 0;
   padding: 8px;
   border: 2px solid #ccc;
   box-shadow: 2px 2px 4px #ccc;
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
+}
+
+/* line 105, ../sass/categoria.scss */
+.filtrarBtn button {
+  margin: 25px 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 105, ../sass/categoria.scss */
+  .filtrarBtn button {
+    width: 90%;
+  }
+}
+
+/* line 113, ../sass/categoria.scss */
+.ad {
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 113, ../sass/categoria.scss */
+  .ad {
+    display: none;
+  }
+}
+
+/* line 121, ../sass/categoria.scss */
+.pagination > li {
+  display: inline-block;
 }
