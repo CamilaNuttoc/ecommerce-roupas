@@ -1,122 +1,193 @@
 <% include ./partials/header.ejs %>
+
 <div class="container">
+
 	<div class="row row-categoria">
-			<div class="pull-right">
-				<span class="hidden-xs">Ordernar por:</span>
-				<select>
-				  <option value="MelhoresAvaliados">Melhores Avaliados</option>
-				  <option value="Recentes">Recentes</option>
-				  <option value="Maiores Preços">Maiores Preços</option>
-				  <option value="Menores Preços">Menores Preços</option>
-				</select>
-			</div>
-			<p class="path-categoria"><span class="hidden-xs"><a href="#">Feminino</a> > <a href="#">Roupas</a></span> > <a href="#">Vestidos</a></p>
-			<button class="filtroBtn botaoStyle hidden-lg hidden-md hidden-sm">Filtrar</button>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 hidden-filtro" style="display: none">
-			<h3>Filtros</h3><hr>
-			<ul class="categoria-filter">
-				<li class="categoria"><button class="toggleFiltro"><strong><span class="expand">-</span><span class="expand-adjust">Roupas femininas</span></strong></button>
-					<% var arrRoupas = ['Vestidos', 'Calças', 'Blusas', 'Camisas', 'Saias', 'Shorts', 'Pijamas', 'Praia'] %>
-					<div class="openClose">
-						<% arrRoupas.forEach(function(roupa){ %>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" value="30">
-						    <span class="checkboxStyle"></span>
-						    <%= roupa %>
-						  </label>
-						</div>
-						<% }); %>
-					</div>
-				</li>
-				<li class="categoria"><button class="toggleFiltro"><strong><span class="expand">+</span><span class="expand-adjust">Tamanho</span></strong></button>
-					<% var arrTam = ['P', 'M', 'G'] %>
-					<div class="openClose" style="display: none">
-						<% arrTam.forEach(function(tam){ %>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" value="30">
-						    <span class="checkboxStyle"></span>
-						    <%= tam %>
-						  </label>
-						</div>
-						<% }); %>
-					</div>
-				</li>
-				<li class="categoria"><button class="toggleFiltro"><strong><span class="expand">-</span><span class="expand-adjust">Cores</span></strong></button>
-					<% var arrCores = ['Amarelo', 'Azul', 'Verde', 'Vermelho', 'Rosa', 'Branco', 'Preto', 'Roxo', 'Laranja', 'Marrom', 'Bege'] %>
-					<div class="openClose">
-						<% arrCores.forEach(function(cor){ %>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" value="30">
-						    <span class="checkboxStyle"></span>
-						    <%= cor %>
-						  </label>
-						</div>
-						<% }); %>
-					</div>
-				</li>
-				<li class="categoria"><button class="toggleFiltro"><strong><span class="expand">-</span><span class="expand-adjust">Preços</span></strong></button>
-					<% var arrPrecos = ['Até R$30,00', 'Até R$50,00', 'Até R$80,00', 'Até R$110,00', 'Até R$150,00', 'Até R$200,00'] %>
-					<div class="openClose">
-						<% arrPrecos.forEach(function(preco){ %>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" value="30">
-						    <span class="checkboxStyle"></span>
-						    <%= preco %>
-						  </label>
-						</div>
-						<% }); %>
-					</div>
-				</li>
-			</ul>
-			<a class="filtrarBtn hidden-xs-up" href="#"><button class="botaoStyle">Filtrar</button></a>
-			<img class="ad hidden-xs" src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
-			<img class="ad hidden-xs" src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
+
+		<!-- Ordem de aparição de itens -->
+		<div class="pull-right">
+			<span class="hidden-xs">Ordernar por:</span>
+			<select>
+			  <option value="MelhoresAvaliados">Melhores Avaliados</option>
+			  <option value="Recentes">Recentes</option>
+			  <option value="Maiores Preços">Maiores Preços</option>
+			  <option value="Menores Preços">Menores Preços</option>
+			</select>
 		</div>
+
+		<!-- Caminho percorrido até 
+		     categoria atual -->
+		<p class="path-categoria">
+
+			<!-- Mostra apenas última 
+			     sub-categoria caso em mobile -->
+			<span class="hidden-xs">
+				<a href="#">Feminino</a> > 
+				<a href="#">Roupas</a>
+			</span>
+
+			> <a href="#">Vestidos</a>
+
+		</p>
+
+		<!-- Botão que abre filtros em mobile -->
+		<button class="filtroBtn botao-default hidden-lg hidden-md hidden-sm">Filtrar</button>
+
+		<!-- Filtros -->
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-filtro">
+
+			<h3>Filtros</h3>
+
+			<hr>
+
+			<!-- Categorias de filtros -->
+			<ul class="opcoes-filtro">
+
+				<!-- Opções de filtros -->
+				<% var arrTipos = ['Tipos', 'Vestidos', 'Calças', 'Blusas', 'Camisas',
+													 'Saias', 'Shorts', 'Pijamas', 'Praia'];
+					var arrTam = ['Tamanho', 'P', 'M', 'G'];
+					var arrCores = ['Cores', 'Preto', 'Vermelho', 'Verde', 'Azul', 
+													 'Branco', 'Rosa', 'Amarelo', 'Roxo', 'Laranja', 
+													 'Marrom', 'Bege'];
+					var arrPrecos = ['Preços', 'Até R$30,00', 'Até R$50,00', 'Até R$80,00',
+													  'Até R$110,00', 'Até R$150,00', 'Até R$200,00'] %>
+
+				<!-- Reúne todas opções -->
+				<% var arrAll = [arrTipos, arrTam, arrCores, arrPrecos] %>
+				
+				<!-- Percorre por e mostra opções -->
+				<% for(var i=0; i<arrAll.length; i++){ %>
+					<li class="opcao">
+
+						<!-- Botão para mostrar ou 
+						     esconder categoria do filtro -->
+						<button class="toggleFiltro">
+							<strong>
+								<span class="expand">-</span>
+								<span class="expand-adjust"><%= arrAll[i][0] %></span>
+							</strong>
+						</button>
+
+						<!-- Div que é mostrada ou ocultada 
+						     ao clicar em botão "toggleFiltro" -->
+						<div class="openClose">
+
+							<!-- Percorre opções de roupa -->
+							<% for(var j=1; j<arrAll[i].length; j++){ %>
+
+								<label class="form-check form-check-label">
+
+									<!-- Checkbox estilizado -->
+							  	<input type="checkbox" value="<%= arrAll[i][j] %>">
+							  	<span class="checkbox-default"></span>
+							  	<%= arrAll[i][j] %>
+
+								</label>
+
+							<% } %>
+
+						</div>
+
+					</li>
+				<% } %>
+
+			</ul>
+
+			<!-- Botão que realiza filtragem -->
+			<a class="filtrarBtn" href="#"><button class="botao-default">Filtrar</button></a>
+
+			<!-- Anúncios -->
+			<img class="ad hidden-xs" 
+					 src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
+			<img class="ad hidden-xs" 
+		       src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
+
+		</div>
+
+		<!-- Área da sub-categoria -->
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-			<h3 class="hidden-xs">Vestidos</h3><hr class="hidden-xs">
+
+			<!-- Título da sub-categoria -->
+			<h3 class="hidden-xs">Vestidos</h3>
+
+			<hr class="hidden-xs">
+
+			<!-- Percorre itens -->
 			<% itens.forEach(function(item){ %>
+
   			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail">
+
+          	<!-- Botão de favorito -->
             <div class="wrapBtn">
-              <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+              <button onclick="favStatus(this);" class="favBtn">
+              	<span style="display: none" class="favText">Salvo</span>
+              	<span class="glyphicon glyphicon-heart-empty" aria-hidden="true">
+              	</span>
+              </button>
             </div>
+
+            <!-- Item -->
             <a href="/<%= item._id %>">
+
               <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+
               <div class="caption">
+
                 <h3><%= item.titulo %></h3>
-                <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-                <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
+                <span class="preco-original">
+                	De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+                </span>
+                <span class="preco-desconto">
+                	R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+                </span>
+
                 <button class="btn comprarBtn">Comprar</button>
+
               </div>
+
             </a>
+
           </div>
   			</div>
+
       <% }); %>
-      <nav aria-label="Page navigation example" class="text-center">
+
+      <!-- Paginação Bootstrap -->
+      <nav aria-label="Page navigation" class="text-center">
+
 			  <ul class="pagination">
+
+			  	<!-- Página anterior -->
 			    <li class="page-item">
 			      <a class="page-link" href="#" aria-label="Previous">
 			        <span aria-hidden="true">&laquo;</span>
 			        <span class="sr-only">Previous</span>
 			      </a>
 			    </li>
+
+			    <!-- Páginas numeradas -->
 			    <li class="page-item"><a class="page-link" href="#">1</a></li>
 			    <li class="page-item"><a class="page-link" href="#">2</a></li>
 			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+			    <!-- Próxima página -->
 			    <li class="page-item">
 			      <a class="page-link" href="#" aria-label="Next">
 			        <span aria-hidden="true">&raquo;</span>
 			        <span class="sr-only">Next</span>
 			      </a>
 			    </li>
+
 			  </ul>
+
 			</nav>
+
     </div>
-		</div>
+
 	</div>
+
 </div>
+
 <% include ./partials/footer.ejs %>
