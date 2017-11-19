@@ -71,12 +71,22 @@
   margin: 0;
 }
 
-/* line 61, ../sass/show.scss */
+/* line 60, ../sass/show.scss */
+.zoom {
+  display: inline-block;
+  position: relative;
+}
+/* line 63, ../sass/show.scss */
+.zoom img {
+  display: block;
+}
+
+/* line 69, ../sass/show.scss */
 .media-left img {
   width: 64px;
 }
 
-/* line 66, ../sass/show.scss */
+/* line 74, ../sass/show.scss */
 .media {
   margin: 15px;
   background: #eee;
@@ -84,34 +94,34 @@
   border-radius: 10px;
 }
 
-/* line 73, ../sass/show.scss */
+/* line 81, ../sass/show.scss */
 .avaliacao-item span {
   font-size: 20px;
 }
 
-/* line 77, ../sass/show.scss */
+/* line 85, ../sass/show.scss */
 .carrossel-overfl {
   width: 95%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 83, ../sass/show.scss */
+/* line 91, ../sass/show.scss */
 .carrossel {
   white-space: nowrap;
   transition: 1s;
 }
-/* line 86, ../sass/show.scss */
+/* line 94, ../sass/show.scss */
 .carrossel .content {
   display: inline-block;
   float: none;
 }
 
-/* line 91, ../sass/show.scss */
+/* line 99, ../sass/show.scss */
 .after-item1 {
   position: relative;
 }
-/* line 93, ../sass/show.scss */
+/* line 101, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] {
   position: absolute;
   top: 260px;
@@ -121,51 +131,51 @@
   padding: 20px;
   outline: 0;
 }
-/* line 101, ../sass/show.scss */
+/* line 109, ../sass/show.scss */
 .after-item1 [class*='btnCtrl'] span {
   font-size: 20px;
   color: #777;
 }
-/* line 106, ../sass/show.scss */
+/* line 114, ../sass/show.scss */
 .after-item1 .btnCtrlNext {
   right: 0;
 }
-/* line 109, ../sass/show.scss */
+/* line 117, ../sass/show.scss */
 .after-item1 .btnCtrlPrev {
   left: 10px;
 }
 
-/* line 114, ../sass/show.scss */
+/* line 122, ../sass/show.scss */
 .tab-content {
   background: #eee;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }
 
-/* line 120, ../sass/show.scss */
+/* line 128, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a {
   background: #777;
   color: #eee;
 }
-/* line 123, ../sass/show.scss */
+/* line 131, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a:hover {
   background: #777;
   color: #eee;
   border: 1px solid transparent;
 }
 
-/* line 130, ../sass/show.scss */
+/* line 138, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a {
   background: transparent;
   color: #777;
 }
-/* line 133, ../sass/show.scss */
+/* line 141, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a:hover {
   background: #aaa;
   color: #fff;
 }
 
-/* line 139, ../sass/show.scss */
+/* line 147, ../sass/show.scss */
 .botaoStyle {
   border: 3px solid #777;
   background: #fff;
@@ -176,29 +186,29 @@
   margin-bottom: 5px;
   transition: .3s;
 }
-/* line 148, ../sass/show.scss */
+/* line 156, ../sass/show.scss */
 .botaoStyle:hover {
   color: #fff;
   background: #777;
 }
 
-/* line 153, ../sass/show.scss */
+/* line 161, ../sass/show.scss */
 .botaoStyle2 {
   font-size: 13px;
   padding: 5px;
 }
 
-/* line 158, ../sass/show.scss */
+/* line 166, ../sass/show.scss */
 input[type='radio'] {
   outline: none;
 }
 
-/* line 161, ../sass/show.scss */
+/* line 169, ../sass/show.scss */
 .button {
   position: relative;
   cursor: pointer;
 }
-/* line 164, ../sass/show.scss */
+/* line 172, ../sass/show.scss */
 .button > span {
   position: absolute;
   width: 25px;
@@ -212,7 +222,7 @@ input[type='radio'] {
   box-shadow: 0 0 1px #333;
   transition: ease .3s;
 }
-/* line 176, ../sass/show.scss */
+/* line 184, ../sass/show.scss */
 .button > span > span {
   position: absolute;
   width: 10px;
@@ -222,74 +232,74 @@ input[type='radio'] {
   border-radius: 50%;
 }
 
-/* line 186, ../sass/show.scss */
+/* line 194, ../sass/show.scss */
 .azul .button > span {
   background: steelblue;
 }
 
-/* line 189, ../sass/show.scss */
+/* line 197, ../sass/show.scss */
 .preto .button > span {
   background: #000;
 }
 
-/* line 192, ../sass/show.scss */
+/* line 200, ../sass/show.scss */
 .branco .button > span {
   border: 2px solid #ccc;
 }
 
-/* line 196, ../sass/show.scss */
+/* line 204, ../sass/show.scss */
 .tamanho .button > span {
   background: #ddd;
 }
-/* line 198, ../sass/show.scss */
+/* line 206, ../sass/show.scss */
 .tamanho .button > span > span {
   top: 0;
   right: 5px;
   color: #aaa;
 }
 
-/* line 205, ../sass/show.scss */
+/* line 213, ../sass/show.scss */
 .avaliacao-user-online {
   position: relative;
   display: inline-block;
 }
-/* line 208, ../sass/show.scss */
+/* line 216, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star {
   position: absolute;
   top: 0;
   opacity: 0;
 }
-/* line 212, ../sass/show.scss */
+/* line 220, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
-/* line 217, ../sass/show.scss */
+/* line 225, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star-empty {
   width: 30px;
 }
 
-/* line 221, ../sass/show.scss */
+/* line 229, ../sass/show.scss */
 .star1 {
   left: 5px;
 }
 
-/* line 224, ../sass/show.scss */
+/* line 232, ../sass/show.scss */
 .star2 {
   left: 35px;
 }
 
-/* line 227, ../sass/show.scss */
+/* line 235, ../sass/show.scss */
 .star3 {
   left: 65px;
 }
 
-/* line 230, ../sass/show.scss */
+/* line 238, ../sass/show.scss */
 .star4 {
   left: 95px;
 }
 
-/* line 233, ../sass/show.scss */
+/* line 241, ../sass/show.scss */
 .star5 {
   left: 125px;
 }

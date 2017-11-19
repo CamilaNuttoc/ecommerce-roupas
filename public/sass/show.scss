@@ -57,6 +57,14 @@
   }
 }
 
+.zoom {
+  display:inline-block;
+  position: relative;
+  img{
+    display: block;
+  }
+}
+
 .media-left{
   img{
     width: 64px;
