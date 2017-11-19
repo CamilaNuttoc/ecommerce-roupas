@@ -391,7 +391,41 @@
     <!-- Gera itens -->
     <% for(var i=0; i<12; i++){ %>
 
-  		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content3"></div>
+  		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+  			<div class="thumbnail">
+
+     	  	<!-- Botão de favorito -->
+       	  <div class="wrapBtn">
+        		<button onclick="favStatus(this);" class="favBtn">
+        			<span style="display: none" class="favText">Salvo</span>
+        			<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        		</button>
+          </div>
+
+          <a href="/<%= item._id %>">
+
+          	<!-- Detalhes do item -->
+          	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
+          	<div class="caption">
+
+          	  <h3><%= item.titulo %></h3>
+          	  <span class="preco-original">
+          	  	De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+          	  </span>
+          	  <span class="preco-desconto">
+          	  	R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+          	  </span>
+
+          	  <button class="btn comprarBtn">Comprar</button>
+
+          	</div>
+
+          </a>
+
+        </div>
+
+  		</div>
 
     <% } %>
 
@@ -426,43 +460,4 @@
 
 </div>
 
-			<script>
-			$('.after-item1 .content > div').slice(0, 1).clone().appendTo('.content2, .content3');
-				$('.preview img').click(function(){
-					var novaImg = $(this).attr('src');
-					$('.main span img').attr('src', novaImg);
-				});
-				$(document).ready(function(){
-				  	$('.main span').zoom();
-				})
-					var avaliacoes = 0;
-					var users = 0; 
-					<% item.comentarios.forEach(function(comentario){ %>
-					    avaliacoes += <%= comentario.avaliacao %>; 
-						users ++; 
-					<% }); %> 
-					var length = Math.round(avaliacoes/users);
-					genStars(length, -1, users);
-				
-	$('#myTabs a').click(function (e) {
- 		e.preventDefault()
-  		$(this).tab('show')
-	})
-
-			$(document).on('click', 'a[href^="#avaliacao"]', function (event) {
-			  event.preventDefault();
-		
-		    $('html, body').animate({
-		      scrollTop: $($.attr(this, 'href')).offset().top
-			  }, 800);
-			});
-		var dropUser = $('.dropdown-user > #dropdown-user');
-		$('#abreLogin').click(function(e){
-			e.stopPropagation();
-			$('.dropdown-user > a').attr('aria-expanded', true);
-			$('.dropdown-user').addClass('open');
-			dropUser.hide();
-			dropUser.slideDown();
-		});
-	</script>
 <% include ./partials/footer.ejs %>
