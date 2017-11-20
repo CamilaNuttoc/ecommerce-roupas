@@ -173,7 +173,7 @@
                   <% for(var j=0; j<arrSubmenus.length; j++){ %>
                     <!-- <%= arrSubmenus[j] %> / Sub-menu nível 1 -->
                     <li class="dropdown sub-menu-1">
-                      <a href="#" class="dropdown-toggle padd" data-toggle="dropdown"
+                      <a href="#<%= arrSubmenus[j] %>" id="<%= arrSubmenus[j] %>" class="dropdown-toggle padd" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false">
                          <%= arrSubmenus[j] %><span class="caret"></span>
                       </a>
