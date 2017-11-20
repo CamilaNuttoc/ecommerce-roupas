@@ -1,241 +1,80 @@
-/* line 9, ../sass/home.scss */
-.home img {
+/* ============================== Home ================================= */
+/* line 5, ../sass/home.scss */
+.container-full {
+  max-width: 1330px;
+  margin: 0 auto;
+}
+/* line 8, ../sass/home.scss */
+.container-full img {
   width: 100%;
 }
 
-/* line 15, ../sass/home.scss */
+/* line 13, ../sass/home.scss */
 .row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 17, ../sass/home.scss */
+[class*='col-'] {
+  padding: 0 5px;
 }
 
 /* line 21, ../sass/home.scss */
 #myCarousel img {
-  max-height: 400px;
-  min-height: 400px;
-  width: 100%;
+  max-height: 500px;
+  min-height: 500px;
 }
-@media only screen and (max-width: 576px) {
-  /* line 21, ../sass/home.scss */
-  #myCarousel img {
-    max-height: 150px;
-    min-height: 150px;
-  }
-}
-@media only screen and (min-width: 576px) {
-  /* line 21, ../sass/home.scss */
-  #myCarousel img {
-    max-height: 250px;
-    min-height: 250px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  /* line 21, ../sass/home.scss */
-  #myCarousel img {
-    max-height: 280px;
-    min-height: 280px;
-  }
-}
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   /* line 21, ../sass/home.scss */
   #myCarousel img {
     max-height: 400px;
     min-height: 400px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  /* line 21, ../sass/home.scss */
+  #myCarousel img {
+    max-height: 330px;
+    min-height: 330px;
+  }
+}
 
-/* line 44, ../sass/home.scss */
-.limit-heading {
-  width: 60%;
-  margin: 50px auto 0 auto;
-}
-/* line 47, ../sass/home.scss */
-.limit-heading .heading {
-  position: relative;
-  text-align: center;
-}
-/* line 50, ../sass/home.scss */
-.limit-heading .heading:before {
-  content: "";
-  display: block;
-  border-top: 7px solid #555;
+/* line 34, ../sass/home.scss */
+.home img {
   width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
-/* line 60, ../sass/home.scss */
-.limit-heading .heading span {
-  background: #fff;
-  padding: 0 20px;
-  position: relative;
-  z-index: 2;
 }
 
-/* line 69, ../sass/home.scss */
-.thumbnail {
-  border-color: #fff;
-  text-align: center;
-  position: relative;
-  display: table;
-  margin: 0 auto 10px auto;
-  transition: 1s;
+/* line 39, ../sass/home.scss */
+.banners2 img:first-of-type {
+  padding-bottom: 10px;
 }
-/* line 76, ../sass/home.scss */
-.thumbnail:hover {
-  filter: brightness(110%);
+/* line 42, ../sass/home.scss */
+.banners2 .imgChange {
+  max-height: 177px;
 }
-/* line 80, ../sass/home.scss */
-.thumbnail:hover .comprarBtn {
-  color: #fff;
-  background: #665;
-}
-/* line 85, ../sass/home.scss */
-.thumbnail img {
-  min-height: 400px;
-  max-height: 400px;
-  width: auto;
-  border-radius: 5px;
-}
-/* line 91, ../sass/home.scss */
-.thumbnail h3 {
-  font-size: 15px;
-  font-weight: 800;
-  margin: 5px 0 10px;
-  min-height: 32px;
-  max-width: 270px;
-}
-/* line 98, ../sass/home.scss */
-.thumbnail button {
-  font-size: 20px;
-  margin-top: 8px;
-  min-height: 18px;
-}
-/* line 103, ../sass/home.scss */
-.thumbnail .wrapBtn {
-  position: absolute;
-  top: 11px;
-  right: 14px;
-}
-/* line 108, ../sass/home.scss */
-.thumbnail .favBtn {
-  background: none;
-  color: #555;
-  border: none;
-  outline: none;
-  opacity: .2;
-}
-/* line 114, ../sass/home.scss */
-.thumbnail .favBtn:hover {
-  opacity: 1;
-}
-/* line 118, ../sass/home.scss */
-.thumbnail .favText {
-  position: absolute;
-  font-size: 17px;
-  bottom: 25px;
-  right: 0;
-  font-weight: 800;
-}
-/* line 125, ../sass/home.scss */
-.thumbnail .comprarBtn {
-  border: 4px solid #665;
-  background: none;
-  font-size: 15px;
-  border-radius: 10px;
-  transition: .3s;
-}
-
-/* line 134, ../sass/home.scss */
-[class*='preco-'] {
-  display: block;
-}
-
-/* line 137, ../sass/home.scss */
-.preco-original {
-  text-decoration: line-through;
-  font-size: 13px;
-  min-height: 18px;
-}
-
-/* line 142, ../sass/home.scss */
-.preco-desconto {
-  font-size: 20px;
-  margin-top: 8px;
-  min-height: 18px;
-}
-
-/* line 147, ../sass/home.scss */
-#categorias-bottom {
-  padding: 10px;
-  text-align: center;
-}
-/* line 150, ../sass/home.scss */
-#categorias-bottom .titulo-categoria {
-  display: inline-block;
-  color: #333;
-  font-size: 12px;
-  font-weight: 800;
-  background: none;
-  border: 4px solid #555;
-  border-radius: 10px;
-  outline: none;
-  margin-bottom: 10px;
-}
-/* line 160, ../sass/home.scss */
-#categorias-bottom .titulo-categoria a:hover {
-  color: white;
-  background: #555;
-}
-/* line 164, ../sass/home.scss */
-#categorias-bottom .titulo-categoria a {
-  color: #555;
-  padding: 10px;
-  display: block;
-  transition: .3s;
-}
-
-/* line 174, ../sass/home.scss */
-a:hover, a:active, a:visited, a:focus {
-  text-decoration: none;
-  outline: none;
-}
-
-/* line 180, ../sass/home.scss */
-[class*='col-'] {
-  padding: 0 5px;
-}
-
-/* line 184, ../sass/home.scss */
-[class*='glyphicon-heart'] {
-  font-size: 30px;
-}
-
-/* line 188, ../sass/home.scss */
-.container-full {
-  max-width: 1330px;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 768px) {
-  /* line 57, ../sass/home.scss */
-  /* line 195, ../sass/home.scss */
-  .anuncio img:nth-of-type(2) {
-    display: block;
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 42, ../sass/home.scss */
+  .banners2 .imgChange {
+    max-height: 146px;
   }
+}
 
-  /* line 198, ../sass/home.scss */
-  .anuncio img:nth-of-type(1) {
-    display: none;
-  }
+/* line 51, ../sass/home.scss */
+.anuncio img:nth-of-type(1) {
+  display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 204, ../sass/home.scss */
+  /* line 51, ../sass/home.scss */
   .anuncio img:nth-of-type(1) {
     display: block;
   }
-
-  /* line 207, ../sass/home.scss */
+}
+/* line 57, ../sass/home.scss */
+.anuncio img:nth-of-type(2) {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  /* line 57, ../sass/home.scss */
   .anuncio img:nth-of-type(2) {
     display: none;
   }
