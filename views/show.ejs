@@ -212,39 +212,39 @@
     		<!-- Gera itens -->
     		<% for(var i=0; i<12; i++){ %>
 
- 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content">
+ 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 content">
 
-     	  	  <div class="thumbnail">
+     	  	  		<div class="thumbnail">
 
-     	  	  	<!-- Botão de favorito -->
-       				<div class="wrapBtn">
-        	 			<button onclick="favStatus(this);" class="favBtn">
-        	 				<span style="display: none" class="favText">Salvo</span>
-        	 				<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-        	 			</button>
-          	  </div>
+     	  	  			<!-- Botão de favorito -->
+       					<div class="wrapBtn">
+        	 				<button onclick="favStatus(this);" class="favBtn">
+        	 					<span style="display: none" class="favText">Salvo</span>
+        	 					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        	 				</button>
+          	  			</div>
 
-          	  <a href="/<%= item._id %>">
+          	  			<a href="/<%= item._id %>">
 
-          	  	<!-- Detalhes do item -->
-          	   	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
-          	   	<div class="caption">
+          	  			<!-- Detalhes do item -->
+          	   			<img src="<%= item.imagem %>" alt="Vestido estampado"/>
+          	   				<div class="caption">
 
-          	    		<h3><%= item.titulo %></h3>
-          	    		<span class="preco-original">
-          	    			De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
-          	    		</span>
-          	    		<span class="preco-desconto">
-          	    			R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
-          	    		</span>
+          	    				<h3><%= item.titulo %></h3>
+          	    				<span class="preco-original">
+          	    					De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+          	    				</span>
+          	    				<span class="preco-desconto">
+          	    					R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+          	    				</span>
 
-          	    		<button class="btn comprarBtn">Comprar</button>
+          	    				<button class="btn comprarBtn">Comprar</button>
 
-          	   	</div>
+          	   				</div>
 
-          	  </a>
+          	  			</a>
 
-          	</div>
+          			</div>
 
   				</div>
 
