@@ -1,36 +1,41 @@
 <% include ./partials/header.ejs %>
-    <div class="container-full">
-      <div class="row">
-        <div class="col-xs-12">
 
-          <!-- CARROSSEL BOOTSTRAP DE BANNERS -->
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicadores -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+  <!-- Container de 1330px -->
+  <div class="container-full">
+
+    <div class="row">
+
+      <div class="col-xs-12">
+
+        <!-- CARROSSEL BOOTSTRAP DE BANNERS -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicadores -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
         
-            <!-- Envolve os slides -->
-            <div class="carousel-inner" role="listbox">
-        
-            <!-- Slides -->
-              <div class="item">
-                <img src="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg" alt="Vestidos de renda">
-              </div>
-
-              <div class="item">
-                <img src="https://dlp2gfjvaz867.cloudfront.net/collections/1028832/banner_original.jpg" 
-                alt="Vestidos de casamento">
-              </div>
-
-              <div class="item active">
-                <img src="http://www.htinha.com.br/styles/banner.jpg" 
-                alt="Moda infantil">
-              </div>
-          
+          <!-- Envolve os slides -->
+          <div class="carousel-inner" role="listbox">
+            
+            <div class="item active">
+              <img src="http://www.htinha.com.br/styles/banner.jpg" 
+                   alt="Moda infantil">
             </div>
+            <!-- Slides -->
+            <div class="item">
+              <img src="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg" 
+                   alt="Vestidos de renda">
+            </div>
+
+            <div class="item">
+              <img src="https://dlp2gfjvaz867.cloudfront.net/collections/1028832/banner_original.jpg" 
+                   alt="Vestidos de casamento">
+            </div>
+
+          </div>
         
             <!-- Controle de direita e esquerda -->
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -41,95 +46,171 @@
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Próximo</span>
             </a>
-          </div>
+
         </div>
+
       </div>
+
     </div>
-  	<div class="container home">
-  		
+
+  </div>
+
+  <!-- Conteúdo após carrossel -->
+  <div class="container home">
   		
   		<div class="row">
+
+        <!-- Linhas cruzando título da seção -->
         <div class="limit-heading">
           <h2 class="heading"><span>Destaque</span></h2>
         </div>
-        <% if(itens){ itens.forEach(function(item){ %>
+
+        <!-- Gera itens -->
+        <% if(itens){ for(var i=0; i<4; i++){ %>
+
+        <% if(i !== 3){ %>
   			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <% }else{ %>
+        <div class="col-lg-3 hidden-md col-sm-6 col-xs-12">
+        <% } %>
+
           <div class="thumbnail thumbs1">
+
+            <!-- Botão de favorito -->
             <div class="wrapBtn">
-              <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+              <button onclick="favStatus(this);" class="favBtn">
+                <span style="display: none" class="favText">Salvo</span>
+                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+              </button>
             </div>
-            <a href="/<%= item._id %>">
-              <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+
+            <a href="/<%= itens[i]._id %>">
+
+              <!-- Detalhes do item -->
+              <img src="<%= itens[i].imagem %>" alt="Vestido estampado"/>
               <div class="caption">
-                <h3><%= item.titulo %></h3>
-                <span class="preco-original">De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
-                <span class="preco-desconto">R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %></span>
+
+                <h3><%= itens[i].titulo %></h3>
+                <span class="preco-original">
+                  De: R$<%= itens[i].precoOriginal.toFixed(2).replace(".", ",") %>
+                </span>
+                <span class="preco-desconto">
+                  R$<%= itens[i].precoPromocao.toFixed(2).replace(".", ",") %>
+                </span>
+
                 <button class="btn comprarBtn">Comprar</button>
+
               </div>
+
             </a>
+
           </div>
+
   			</div>
-        <% }); } %>
-  		</div>
-  		<div class="row">
-        <div class="limit-heading">
-          <h2 class="heading"><span>Novos</span></h2>
-        </div>
-  			<% if(itens){ itens.forEach(function(item){ %>
+
+        <% } } %>
+
+  	</div>
+
+    <!-- Banners secundários -->
+    <div class="row">
+
+      <div class="col-md-5" style="padding-right: 10px">
+        <a href="/categoria"><img src="http://www.pksgirl.com.br/wp-content/uploads/2017/03/desconto-progressivo-4.jpg"></a>
+      </div>
+
+      <div class="col-md-7">
+        <a href="/categoria"><img  src="http://ruateresaonline.com.br/media/wysiwyg/infortis/ultimo/slideshow/02.jpg"></a>
+        <a href="/categoria"><img style="padding-top: 10px; max-height: 173px"src="http://www.lojasmoco.com.br/media/catalog/category/BANNER_MOCOok.png"></a>
+      </div>
+
+    </div>
+
+    <!-- Itens novos -->
+  	<div class="row">
+
+      <!-- Linhas cruzando título da seção -->
+      <div class="limit-heading">
+        <h2 class="heading"><span>Novos</span></h2>
+      </div>
+
+      <!-- Gera itens -->
+  	  <% if(itens){ itens.forEach(function(item){ %>
+
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
           <div class="thumbnail">
+
+            <!-- Botão de favorito -->
             <div class="wrapBtn">
-              <button onclick="favStatus(this);" class="favBtn"><span style="display: none" class="favText">Salvo</span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+              <button onclick="favStatus(this);" class="favBtn">
+                <span style="display: none" class="favText">Salvo</span>
+                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+              </button>
             </div>
+
             <a href="/<%= item._id %>">
+
+              <!-- Detalhes do item -->
               <img src="<%= item.imagem %>" alt="Vestido estampado"/>
               <div class="caption">
+
                 <h3><%= item.titulo %></h3>
-                <span class="preco-desconto">R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %></span>
+                <span class="preco-desconto">
+                  R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+                </span>
+
                 <button class="btn comprarBtn">Comprar</button> 
+
               </div>
+
             </a>
+
           </div>
-        </div>
-        <% }); }%>
-  		</div>
-      <style>
-        @media only screen and (max-width: 768px) {
-          /* line 57, ../sass/home.scss */
-          .anuncio img:nth-of-type(2){
-            display: block;
-          }
-          .anuncio img:nth-of-type(1){
-            display: none;
-          }
 
-        }
-        @media only screen and (min-width: 768px) {
-          .anuncio img:nth-of-type(1){
-            display: block;
-          }
-          .anuncio img:nth-of-type(2){
-            display: none;
-          }
-        }
-
-      </style>
-      <div class="row">
-        <div class="col-xs-12 anuncio">
-          <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg"/>
-          <img src="http://www.evef.com.br/images/logotipo/anuncio_publicitario_marca_moda_roupa_missguided.jpg"/>
         </div>
+
+      <% }); }%>
+
+  	</div>
+
+    <div class="row">
+
+      <!-- Anúncios -->
+      <div class="col-xs-12 anuncio">
+        <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg"/>
+        <img src="http://www.evef.com.br/images/logotipo/anuncio_publicitario_marca_moda_roupa_missguided.jpg"/>
       </div>
-  		<div class="row">
-        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos', 'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões', 'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos', 'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 'Salto Alto', 'Sapatos'] %>
-        <div class="limit-heading">
+
+    </div>
+
+    <!-- Categorias -->
+  	<div class="row">
+      <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
+                    'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
+                    'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos',
+                    'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
+                    'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas',
+                    'Salto Alto', 'Sapatos'] %>
+
+      <!-- Linhas cruzando título da seção -->
+      <div class="limit-heading">
         <h2 class="heading"><span>Categorias</span></h2>
       </div>
-        <ul id="categorias-bottom">
+
+      <ul id="categorias-bottom">
+
+        <!-- Gera opções de categoria -->
         <% for(var i=0; i<arr.length; i++){ %>
+
           <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
+
         <% } %>
-        </ul>
-      </div>
-  	</div>
+
+      </ul>
+
+    </div>
+
+  </div>
+
 <% include ./partials/footer.ejs %>

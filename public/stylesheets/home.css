@@ -216,3 +216,27 @@ a:hover, a:active, a:visited, a:focus {
   max-width: 1330px;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 768px) {
+  /* line 57, ../sass/home.scss */
+  /* line 195, ../sass/home.scss */
+  .anuncio img:nth-of-type(2) {
+    display: block;
+  }
+
+  /* line 198, ../sass/home.scss */
+  .anuncio img:nth-of-type(1) {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 204, ../sass/home.scss */
+  .anuncio img:nth-of-type(1) {
+    display: block;
+  }
+
+  /* line 207, ../sass/home.scss */
+  .anuncio img:nth-of-type(2) {
+    display: none;
+  }
+}
