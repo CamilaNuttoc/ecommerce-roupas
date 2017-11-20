@@ -2,57 +2,60 @@
 .item-area {
   width: 90%;
   margin: 0 auto;
+  margin-top: 20px;
 }
-/* line 8, ../sass/show.scss */
+/* line 9, ../sass/show.scss */
 .item-area img {
   width: 100%;
 }
-/* line 11, ../sass/show.scss */
+/* line 12, ../sass/show.scss */
 .item-area .info {
   padding: 0 15px;
 }
-/* line 14, ../sass/show.scss */
+/* line 15, ../sass/show.scss */
 .item-area .preco-desconto {
   font-size: 30px;
   margin: 0;
 }
-/* line 18, ../sass/show.scss */
+/* line 19, ../sass/show.scss */
 .item-area form {
   width: 100%;
 }
 
-/* line 24, ../sass/show.scss */
+/* line 25, ../sass/show.scss */
 .preview img {
+  width: 90%;
+  margin: 5px 0;
   border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
   transition: .2s;
 }
-/* line 29, ../sass/show.scss */
+/* line 32, ../sass/show.scss */
 .preview img:hover {
   border-color: #ccc;
 }
-/* line 32, ../sass/show.scss */
+/* line 35, ../sass/show.scss */
 .preview img:first-of-type {
   margin-top: 0;
 }
 
-/* line 38, ../sass/show.scss */
+/* line 41, ../sass/show.scss */
 .zoom {
   display: inline-block;
   position: relative;
 }
-/* line 41, ../sass/show.scss */
+/* line 44, ../sass/show.scss */
 .zoom img {
   display: block;
 }
 
-/* line 46, ../sass/show.scss */
+/* line 49, ../sass/show.scss */
 .button {
   position: relative;
   cursor: pointer;
 }
-/* line 49, ../sass/show.scss */
+/* line 52, ../sass/show.scss */
 .button > span {
   position: absolute;
   width: 25px;
@@ -66,70 +69,70 @@
   box-shadow: 0 0 1px #333;
   transition: ease .3s;
 }
-/* line 61, ../sass/show.scss */
+/* line 64, ../sass/show.scss */
 .button > span > span {
   position: absolute;
   top: 2px;
   right: 3px;
 }
 
-/* line 69, ../sass/show.scss */
+/* line 72, ../sass/show.scss */
 .azul .button > span {
   background: steelblue;
 }
 
-/* line 73, ../sass/show.scss */
+/* line 76, ../sass/show.scss */
 .preto .button > span {
   background: #000;
 }
 
-/* line 77, ../sass/show.scss */
+/* line 80, ../sass/show.scss */
 .branco .button > span {
   border: 2px solid #ccc;
 }
 
-/* line 81, ../sass/show.scss */
+/* line 84, ../sass/show.scss */
 .tamanho .button > span {
   background: #ddd;
 }
-/* line 83, ../sass/show.scss */
+/* line 86, ../sass/show.scss */
 .tamanho .button > span > span {
   top: 0;
   right: 5px;
   color: #aaa;
 }
 
-/* line 91, ../sass/show.scss */
+/* line 94, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a {
   background: #777;
   color: #eee;
 }
-/* line 94, ../sass/show.scss */
+/* line 97, ../sass/show.scss */
 .nav-tabs > li:first-of-type > a:hover {
   border: 1px solid transparent;
 }
-/* line 98, ../sass/show.scss */
+/* line 101, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a {
   color: #777;
 }
-/* line 100, ../sass/show.scss */
+/* line 103, ../sass/show.scss */
 .nav-tabs > li:last-of-type > a:hover {
   background: #aaa;
   color: #fff;
 }
 
-/* line 107, ../sass/show.scss */
+/* line 110, ../sass/show.scss */
 .tab-content {
   background: #eee;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }
 
-/* line 113, ../sass/show.scss */
+/* line 116, ../sass/show.scss */
 .carrossel-container {
   position: relative;
 }
-/* line 115, ../sass/show.scss */
+/* line 118, ../sass/show.scss */
 .carrossel-container [class*='btnCtrl'] {
   position: absolute;
   top: 260px;
@@ -139,59 +142,59 @@
   padding: 20px;
   outline: 0;
 }
-/* line 123, ../sass/show.scss */
+/* line 126, ../sass/show.scss */
 .carrossel-container [class*='btnCtrl'] span {
   color: #777;
 }
-/* line 127, ../sass/show.scss */
+/* line 130, ../sass/show.scss */
 .carrossel-container .btnCtrlNext {
   right: 0;
 }
-/* line 130, ../sass/show.scss */
+/* line 133, ../sass/show.scss */
 .carrossel-container .btnCtrlPrev {
   left: 10px;
 }
 
-/* line 135, ../sass/show.scss */
+/* line 138, ../sass/show.scss */
 .carrossel-overfl {
   width: 95%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 141, ../sass/show.scss */
+/* line 144, ../sass/show.scss */
 .carrossel {
   white-space: nowrap;
   transition: 1s;
 }
-/* line 144, ../sass/show.scss */
+/* line 147, ../sass/show.scss */
 .carrossel .content {
   display: inline-block;
   float: none;
 }
 
-/* line 150, ../sass/show.scss */
+/* line 153, ../sass/show.scss */
 .media {
   margin: 15px;
   background: #eee;
   padding: 15px;
   border-radius: 10px;
 }
-/* line 155, ../sass/show.scss */
+/* line 158, ../sass/show.scss */
 .media img {
   width: 64px;
 }
 
-/* line 160, ../sass/show.scss */
+/* line 163, ../sass/show.scss */
 .avaliacao-current-user {
   text-align: center;
 }
-/* line 162, ../sass/show.scss */
+/* line 165, ../sass/show.scss */
 .avaliacao-current-user form {
   width: 95%;
   margin: 0 auto;
 }
-/* line 166, ../sass/show.scss */
+/* line 169, ../sass/show.scss */
 .avaliacao-current-user textarea {
   width: 95%;
   margin: 15px 0;
@@ -204,60 +207,60 @@
   height: 100px;
 }
 
-/* line 179, ../sass/show.scss */
+/* line 182, ../sass/show.scss */
 #abreLogin {
   border: 0;
   background: none;
   text-decoration: underline;
   outline: none;
 }
-/* line 184, ../sass/show.scss */
+/* line 187, ../sass/show.scss */
 #abreLogin i {
   font-weight: 800;
 }
 
-/* line 189, ../sass/show.scss */
+/* line 192, ../sass/show.scss */
 .avaliacao-user-online {
   position: relative;
   display: inline-block;
 }
-/* line 192, ../sass/show.scss */
+/* line 195, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star {
   position: absolute;
   top: 0;
   opacity: 0;
 }
-/* line 196, ../sass/show.scss */
+/* line 199, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
-/* line 201, ../sass/show.scss */
+/* line 204, ../sass/show.scss */
 .avaliacao-user-online .glyphicon-star-empty {
   width: 30px;
 }
 
-/* line 207, ../sass/show.scss */
+/* line 210, ../sass/show.scss */
 .star1 {
   left: 5px;
 }
 
-/* line 207, ../sass/show.scss */
+/* line 210, ../sass/show.scss */
 .star2 {
   left: 35px;
 }
 
-/* line 207, ../sass/show.scss */
+/* line 210, ../sass/show.scss */
 .star3 {
   left: 65px;
 }
 
-/* line 207, ../sass/show.scss */
+/* line 210, ../sass/show.scss */
 .star4 {
   left: 95px;
 }
 
-/* line 207, ../sass/show.scss */
+/* line 210, ../sass/show.scss */
 .star5 {
   left: 125px;
 }
