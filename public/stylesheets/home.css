@@ -1,7 +1,7 @@
 /* ============================== Home ================================= */
 /* line 5, ../sass/home.scss */
 .container-full {
-  max-width: 1330px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 /* line 8, ../sass/home.scss */
@@ -11,70 +11,67 @@
 
 /* line 13, ../sass/home.scss */
 .row {
+  margin: 0;
   margin-bottom: 10px;
 }
 
-/* line 17, ../sass/home.scss */
+/* line 18, ../sass/home.scss */
 [class*='col-'] {
-  padding: 0 5px;
+  padding: 0;
 }
 
-/* line 21, ../sass/home.scss */
+/* line 22, ../sass/home.scss */
 #myCarousel img {
   max-height: 500px;
   min-height: 500px;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 21, ../sass/home.scss */
+  /* line 22, ../sass/home.scss */
   #myCarousel img {
     max-height: 400px;
     min-height: 400px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 21, ../sass/home.scss */
+  /* line 22, ../sass/home.scss */
   #myCarousel img {
     max-height: 330px;
     min-height: 330px;
   }
 }
 
-/* line 34, ../sass/home.scss */
+/* line 35, ../sass/home.scss */
 .home img {
   width: 100%;
 }
 
-/* line 39, ../sass/home.scss */
-.banners2 img:first-of-type {
-  padding-bottom: 10px;
-}
-/* line 42, ../sass/home.scss */
+/* line 40, ../sass/home.scss */
 .banners2 .imgChange {
-  max-height: 177px;
+  min-height: 178px;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 42, ../sass/home.scss */
+  /* line 40, ../sass/home.scss */
   .banners2 .imgChange {
-    max-height: 146px;
+    min-height: 147px;
   }
 }
 
-/* line 51, ../sass/home.scss */
+/* line 49, ../sass/home.scss */
 .anuncio img:nth-of-type(1) {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 51, ../sass/home.scss */
+  /* line 49, ../sass/home.scss */
   .anuncio img:nth-of-type(1) {
     display: block;
   }
 }
-/* line 57, ../sass/home.scss */
+/* line 55, ../sass/home.scss */
 .anuncio img:nth-of-type(2) {
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  /* line 57, ../sass/home.scss */
+  /* line 55, ../sass/home.scss */
   .anuncio img:nth-of-type(2) {
     display: none;
   }

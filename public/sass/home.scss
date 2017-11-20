@@ -3,7 +3,7 @@
 /* ============================== Home ================================= */
 
 .container-full{
-	max-width: 1330px;
+	max-width: 1360px;
 	margin: 0 auto;
 	img{
 		width: 100%;
@@ -11,11 +11,12 @@
 }
 
 .row{
+	margin: 0;
 	margin-bottom: 10px;
 }
 
 [class*='col-']{
-  padding: 0 5px;
+  padding: 0;
 }
 
 #myCarousel img{
@@ -36,13 +37,10 @@
 }
 
 .banners2{
-  img:first-of-type{
-  	padding-bottom: 10px;
-  }
   .imgChange{
-    max-height: 177px;
+    min-height: 178px;
     @media #{$desktop}{
-    	max-height: 146px;
+    	min-height: 147px;
     }
   }
 }

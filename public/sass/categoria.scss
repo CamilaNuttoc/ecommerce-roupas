@@ -10,12 +10,6 @@
       margin: 0;
     }
   }
-  h3{
-    text-align: left;
-    @media #{$mobile}{
-      text-align: center;
-    } 
-  }
 }
 
 .path-categoria{
@@ -29,6 +23,12 @@
 }
 
 .hidden-filtro{
+  h3{
+    text-align: left;
+    @media #{$mobile}{
+      text-align: center;
+    } 
+  }
   @media #{$mobile}{
     display: none;
     padding: 0 10%;

@@ -13,32 +13,32 @@
     margin: 0;
   }
 }
-/* line 13, ../sass/categoria.scss */
-.row-categoria h3 {
-  text-align: left;
-}
-@media only screen and (max-width: 767px) {
-  /* line 13, ../sass/categoria.scss */
-  .row-categoria h3 {
-    text-align: center;
-  }
-}
 
-/* line 21, ../sass/categoria.scss */
+/* line 15, ../sass/categoria.scss */
 .path-categoria {
   padding-left: 5px;
 }
-/* line 23, ../sass/categoria.scss */
+/* line 17, ../sass/categoria.scss */
 .path-categoria * {
   color: #aaa;
 }
-/* line 26, ../sass/categoria.scss */
+/* line 20, ../sass/categoria.scss */
 .path-categoria a:hover {
   color: #000;
 }
 
+/* line 26, ../sass/categoria.scss */
+.hidden-filtro h3 {
+  text-align: left;
+}
 @media only screen and (max-width: 767px) {
-  /* line 31, ../sass/categoria.scss */
+  /* line 26, ../sass/categoria.scss */
+  .hidden-filtro h3 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 25, ../sass/categoria.scss */
   .hidden-filtro {
     display: none;
     padding: 0 10%;
