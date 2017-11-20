@@ -26,9 +26,14 @@ function mudaTotal(){
   var totalOrig = 0;
   var totalParcl = 0;
 
+  //Percorre arr de valores
   for(var i=0; i<originalVal.length; i++){
-    totalPromo += promocaoVal[i];
-    totalOrig += originalVal[i];
+
+    //Se valor não estiver vazio...
+    if(originalVal[i] !== ''){
+      totalPromo += promocaoVal[i];
+      totalOrig += originalVal[i];
+    }
   }
 
   economia = totalOrig - totalPromo;
@@ -54,19 +59,19 @@ function reset(num){
 //Quando jQuery estiver pronto
 $(document).ready(function(){
 
+  var length = $('[class*="item-"]').length;
+
   //Caso quantidade mude
   $("select").change( function(){
 
     //Seleciona item para ser alterado
     var selElem = $(this).attr('name');
 
-    length = $('[class*="item-"]').length;
     for(var i=0; i<length; i++){
-
-      //Se for o item de quantidade alterada, então...
+        //Se for o item de quantidade alterada, então...
       if(selElem == ('quantidade'+i)){
         var quantidade =  Number($('[name="'+selElem+'"] option:selected').val());
-
+        
         //Reinicializa valores
         var valores = reset(i);
 
@@ -80,14 +85,15 @@ $(document).ready(function(){
         promocaoVal[i] = promocaoElem;
 
         //Mostra mudanças ao usuário
-        $('.original-temp'+i).text('De: R$'+originalElem.toFixed(2).toString().replace(".", ","));
+        $('.original-temp'+i).text('R$'+originalElem.toFixed(2).toString().replace(".", ","));
         $('.promocao-temp'+i).text('R$'+promocaoElem.toFixed(2).toString().replace(".", ","));
         mudaTotal();
       }
-
     }
 
   });
+
+  var storedvalue;
 
   //Deleta item
   $('.trash').click(function(){
@@ -95,10 +101,11 @@ $(document).ready(function(){
     //Determina item a ser deletado
     var index = $(this).val();
 
-    //Retira item dos arrays
-    originalVal.splice(index, 1);
-    promocaoVal.splice(index, 1);
+    //Retira item dos arrays e mantém espaço
+    originalVal.splice(index, 1, '');
+    promocaoVal.splice(index, 1, '');
 
+    
     //Remove item
     var item = $('[class*="item-'+index+'"]');
      $(item).slideUp(500, function() {

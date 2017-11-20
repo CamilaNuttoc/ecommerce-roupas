@@ -25,7 +25,7 @@
   </div>
 
   <!-- Itens do carrinho -->
-	<% for(var i=0; i<2; i++){ %>
+	<% for(var i=0; i<3; i++){ %>
 		<div class="row row-carrinho item-<%= i %>">
 	
 			<!-- Produto -->
@@ -107,15 +107,23 @@
 
 			<!-- Preço unitário -->
 			<div class="col-md-2 hidden-sm hidden-xs">
-				<span class="preco-original original-cons<%= i %>">R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
-	  			<span class="preco-desconto promocao-cons<%= i %>">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+				<span class="preco-original original-cons<%= i %>">
+					R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %>
+				</span>
+	  			<span class="preco-desconto promocao-cons<%= i %>">
+	  				R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %>
+	  			</span>
 			</div>
 		
 			<!-- Preço total -->
 			<div class="col-md-2 col-sm-2 col-xs-1 valores-xs">
 
-				<span class="preco-original original-temp<%= i %>">R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %></span>
-				<span class="preco-desconto promocao-temp<%= i %>">R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %></span>
+				<span class="preco-original original-temp<%= i %>">
+					R$<%= itens[0].precoOriginal.toFixed(2).replace(".", ",") %>
+				</span>
+				<span class="preco-desconto promocao-temp<%= i %>">
+					R$<%= itens[0].precoPromocao.toFixed(2).replace(".", ",") %>
+				</span>
 
 			</div>
 	
@@ -127,7 +135,7 @@
 			<!-- Botão que deleta item (mobile) -->
 			<button class="trash hidden-lg hidden-md hidden-sm" value="<%= i %>">
 				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-			</button>
+			</button> 
 	
 		</div>
 	<% } %>
