@@ -53,15 +53,17 @@ $(document).ready(function(){
   //Caso width da janela seja alterada
   $(window).resize(function() {
 
+    //Remove shown-filtro
+    $('.hidden-filtro').removeClass('shown-filtro');
+
     //Caso não seja mobile
     if($(document).width() >= 768){
-      $('.hidden-filtro').removeClass('shown-filtro');
       $('.hidden-filtro').css('display', 'block');
       return;
     }
     //Caso seja mobile
     $('.filtroBtn').text('Filtrar');
-    $('.hidden-filtro').toggleClass('shown-filtro');
+    
     $('.hidden-filtro').css('display', 'none');
 
   });
