@@ -1,6 +1,6 @@
 # Ecommerce de roupas
 Em produção.
-Utilizando: HTML, CSS, SASS, JAVASCRIPT, JQUERY, NODE.JS, MONGODB, SUBLIME TEXT 2, GIT BASH, HEROKU.
+Utilizando: HTML, CSS, SASS, BOOTSTRAP, JAVASCRIPT, JQUERY, NODE.JS, MONGODB, SUBLIME TEXT 2, GIT BASH, HEROKU.
 
 # Features atuais
 **Header**
