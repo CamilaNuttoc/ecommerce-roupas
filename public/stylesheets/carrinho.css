@@ -15,7 +15,7 @@
   background: #eee;
   padding: 10px;
   border-radius: 5px;
-  margin: 0;
+  margin: 0 8px 0 0;
 }
 
 /* line 21, ../sass/carrinho.scss */
@@ -35,44 +35,52 @@
 .row-carrinho .info {
   margin-left: 110px;
 }
+/* line 34, ../sass/carrinho.scss */
+.row-carrinho form {
+  width: 210px;
+}
 @media only screen and (max-width: 767px) {
   /* line 34, ../sass/carrinho.scss */
   .row-carrinho form {
     margin-left: 10px;
   }
 }
+/* line 40, ../sass/carrinho.scss */
+.row-carrinho select {
+  width: 25%;
+}
 
-/* line 41, ../sass/carrinho.scss */
+/* line 45, ../sass/carrinho.scss */
 [class*='tamanhos'] {
   margin-left: 0;
 }
 
-/* line 45, ../sass/carrinho.scss */
+/* line 49, ../sass/carrinho.scss */
 [class*='cores'] {
   margin: 10px 0;
 }
 
 @media only screen and (max-width: 370px) {
-  /* line 49, ../sass/carrinho.scss */
+  /* line 53, ../sass/carrinho.scss */
   .labelBreak {
     display: block;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 55, ../sass/carrinho.scss */
+  /* line 59, ../sass/carrinho.scss */
   .valores-xs {
     margin-left: 5px;
   }
 }
 @media only screen and (max-width: 370px) {
-  /* line 55, ../sass/carrinho.scss */
+  /* line 59, ../sass/carrinho.scss */
   .valores-xs {
     margin-left: 110px;
   }
 }
 
-/* line 64, ../sass/carrinho.scss */
+/* line 68, ../sass/carrinho.scss */
 .trash {
   position: absolute;
   background: none;
@@ -82,93 +90,93 @@
   right: 20px;
   transition: .2s;
 }
-/* line 72, ../sass/carrinho.scss */
+/* line 76, ../sass/carrinho.scss */
 .trash span {
   color: #ccc;
   font-size: 15px;
   transition: .4s;
 }
-/* line 77, ../sass/carrinho.scss */
+/* line 81, ../sass/carrinho.scss */
 .trash:hover {
   right: 15px;
 }
-/* line 79, ../sass/carrinho.scss */
+/* line 83, ../sass/carrinho.scss */
 .trash:hover span {
   cursor: pointer;
   color: #777;
   font-size: 25px;
   transition: .8s;
 }
-/* line 86, ../sass/carrinho.scss */
+/* line 90, ../sass/carrinho.scss */
 .trash:first-child {
   top: 150px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 64, ../sass/carrinho.scss */
+  /* line 68, ../sass/carrinho.scss */
   .trash {
     right: 5px;
     top: 200px;
   }
 }
 @media only screen and (max-width: 370px) {
-  /* line 64, ../sass/carrinho.scss */
+  /* line 68, ../sass/carrinho.scss */
   .trash {
     right: 5px;
     top: 256px;
   }
 }
 
-/* line 99, ../sass/carrinho.scss */
+/* line 103, ../sass/carrinho.scss */
 .row-carrinho-bottom {
   padding: 20px;
   text-align: center;
 }
-/* line 102, ../sass/carrinho.scss */
+/* line 106, ../sass/carrinho.scss */
 .row-carrinho-bottom form {
   padding: 5px;
 }
-/* line 105, ../sass/carrinho.scss */
+/* line 109, ../sass/carrinho.scss */
 .row-carrinho-bottom input[type="submit"] {
   width: auto;
   padding: 4px;
   font-size: 12px;
 }
-/* line 110, ../sass/carrinho.scss */
+/* line 114, ../sass/carrinho.scss */
 .row-carrinho-bottom a {
   text-decoration: underline;
   color: #aaa;
   font-size: 12px;
 }
-/* line 115, ../sass/carrinho.scss */
+/* line 119, ../sass/carrinho.scss */
 .row-carrinho-bottom h3 {
   text-align: left;
 }
 
-/* line 120, ../sass/carrinho.scss */
+/* line 124, ../sass/carrinho.scss */
 .cupom {
   width: 50%;
 }
 
-/* line 124, ../sass/carrinho.scss */
+/* line 128, ../sass/carrinho.scss */
 .economia {
   float: right;
 }
 
-/* line 128, ../sass/carrinho.scss */
+/* line 132, ../sass/carrinho.scss */
 .preco-total {
   margin: 0;
   text-align: right;
 }
 
-/* line 133, ../sass/carrinho.scss */
+/* line 137, ../sass/carrinho.scss */
 .row-carrinho-vazio {
   display: none;
 }
-/* line 135, ../sass/carrinho.scss */
+/* line 139, ../sass/carrinho.scss */
 .row-carrinho-vazio div {
   text-align: center;
 }
-/* line 138, ../sass/carrinho.scss */
+/* line 142, ../sass/carrinho.scss */
 .row-carrinho-vazio a {
   width: auto;
 }

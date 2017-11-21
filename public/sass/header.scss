@@ -40,6 +40,10 @@ select{
   }
 }
 
+input[type="radio"], input[type="checkbox"]{
+  opacity: 0;
+}
+
 .form-sec{
   border-left: 5px solid #aaa;
   *{
