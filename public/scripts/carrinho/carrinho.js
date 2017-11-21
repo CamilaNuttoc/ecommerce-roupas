@@ -9,8 +9,8 @@ function init(){
    número de itens no carrinho */
   var length = $('[class*="item-"]').length;
   for(var i=0; i<length; i++){
-    originalVal.push(Number($('.original-cons'+i).text().substring(2).replace(",", ".")));
-    promocaoVal.push(Number($('.promocao-cons'+i).text().substring(2).replace(",", ".")));
+    originalVal.push(Number($('.original-cons'+i).text().substring(2).replace("R$", '').replace(",", ".")));
+    promocaoVal.push(Number($('.promocao-cons'+i).text().substring(2).replace("R$", '').replace(",", ".")));
   }
 
   //Gera total de acordo com arrays
@@ -25,6 +25,7 @@ function mudaTotal(){
   var economia = 0;
   var totalOrig = 0;
   var totalParcl = 0;
+
 
   //Percorre arr de valores
   for(var i=0; i<originalVal.length; i++){
@@ -50,8 +51,8 @@ function mudaTotal(){
    para impedir acúmulo */
 function reset(num){
 
-    originalVal[num] = Number($('.original-cons'+num).text().substring(2).replace(",", "."));
-    promocaoVal[num] = Number($('.promocao-cons'+num).text().substring(2).replace(",", "."));
+    originalVal[num] = Number($('.original-cons'+num).text().substring(2).replace("R$", '').replace(",", "."));
+    promocaoVal[num] = Number($('.promocao-cons'+num).text().substring(2).replace("R$", '').replace(",", "."));
     return [originalVal[num], promocaoVal[num]];
 
 }
