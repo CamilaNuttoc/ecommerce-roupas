@@ -2,6 +2,10 @@
 Em produção.
 Utilizando: HTML, CSS, SASS, BOOTSTRAP, JAVASCRIPT, JQUERY, NODE.JS, MONGODB, SUBLIME TEXT 2, GIT BASH, HEROKU.
 
+**Disponível em:** https://polar-ocean-20788.herokuapp.com/
+
+Obs.: Este site utiliza o plano gratuito do Heroku, que dorme após 30 minutos de inatividade e é acordado novamente ao ser acessado. É possível que o carregamento inicial demore.
+
 # Features atuais
 **Header**
 * Menus dropdown com sub-níveis
