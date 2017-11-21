@@ -1,9 +1,9 @@
 var mongoose   = require("mongoose"),
-	  Item       = require("./models/item.js"),
-	  Comentario = require("./models/comentario.js"),
-	  bodyParser = require("body-parser"),
-	  express    = require("express"),
-	  app        = express();
+	Item       = require("./models/item.js"),
+	Comentario = require("./models/comentario.js"),
+	bodyParser = require("body-parser"),
+	express    = require("express"),
+	app        = express();
 
 mongoose.connect(process.env.DATABASEURL);
 
