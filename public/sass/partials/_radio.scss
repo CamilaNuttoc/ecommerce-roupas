@@ -1,0 +1,51 @@
+.button {
+  position: relative;
+  cursor: pointer;
+  > span{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: -7px;
+    right: 5px;
+    z-index: 4;
+    border-radius: 100%;
+    background: #fff;
+    border: 2px solid #eee;
+    box-shadow: 0 0 3px #333;
+    transition: ease .3s;
+    > span{
+      position: absolute;
+      top: 2px;
+      right: 3px;
+    }
+  }
+}
+
+.azul .button > span{
+  background: steelblue;
+}
+
+.preto .button > span{
+  background: #000;
+}
+
+.branco .button > span{
+  border: 2px solid #ccc;
+}
+
+.tamanho .button > span{
+    background: #ddd;
+    > span{
+      top: 0;
+      right: 5px;
+      color: #aaa;
+    }
+}
+
+[class*='tamanhos']{
+  margin-left: 0;
+}
+
+[class*='cores']{
+  margin: 10px 0;
+}

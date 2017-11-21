@@ -1,0 +1,21 @@
+/* Modules e variáveis */
+@import "partials/base";
+
+/* Partials */
+/* Cross-page */
+@import "partials/gerais";
+@import "partials/thumbnail";
+@import "partials/categorias";
+@import "partials/tituloLineAround";
+@import "partials/precos";
+@import "partials/form";
+@import "partials/radio";
+@import "partials/botao";
+
+/* Específico */
+@import "partials/header/header";
+@import "partials/home/home";
+@import "partials/carrinho/carrinho";
+@import "partials/show/show";
+@import "partials/categoria/categoria";
+@import "partials/footer/footer";

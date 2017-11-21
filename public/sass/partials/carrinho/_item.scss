@@ -1,0 +1,23 @@
+.row-carrinho{
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 20px 10px;
+	position: relative;
+	img{
+		width: 100px;
+		float: left;
+		border-radius: 5px;
+	}
+	.info{
+		margin-left: 110px;
+	}
+	form{
+	  width: 210px;
+	  @media #{$mobile}{
+      	margin-left: 10px;
+      }
+	}
+	select{
+  		width: 25%;
+	}
+}

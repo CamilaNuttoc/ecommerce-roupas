@@ -1,0 +1,45 @@
+// Container maior
+.container-full{
+	max-width: 1360px;
+	margin: 0 auto;
+}
+
+// Carrossel Bootstrap
+#myCarousel img{
+  max-height: 500px;
+  min-height: 500px;
+  @media #{$desktop}{
+    max-height: 400px;
+	min-height: 400px;
+  }
+  @media #{$tablet}{
+    max-height: 330px;
+	min-height: 330px;
+  }
+}
+
+// Banners secundários
+.banners2{
+  .imgChange{
+    min-height: 178px;
+    @media #{$desktop}{
+    	min-height: 147px;
+    }
+  }
+}
+
+// Anúncio no fim da página
+.anuncio img{
+	&:nth-of-type(1){
+		display: none;
+		@media #{$no-mobile}{
+			display: block;
+		}
+	}
+	&:nth-of-type(2){
+		display: block;
+		@media #{$no-mobile}{
+			display: none;
+		}
+	}
+}

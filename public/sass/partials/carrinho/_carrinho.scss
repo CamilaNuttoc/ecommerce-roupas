@@ -1,0 +1,68 @@
+@import "item";
+@import "lixo";
+@import "resumo";
+
+// Título principal
+#meuCarrinho{
+	border-left: 8px solid #aaa;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 20px 15px;
+}
+
+// Títulos de cada seção 
+// (Produto / detalhes / preço)
+.row-titulos{
+	margin: 0 10px;
+	h4{
+		background: #eee;
+		padding: 10px;
+		border-radius: 5px;
+		margin: 0 8px 0 0;
+	}
+}
+
+// Label assume 100% da width 
+// do pai em mobile pequeno
+.labelBreak{
+	@media #{$mobile-sm}{
+    display: block;
+  }
+}
+
+// Muda posicionamento de preço 
+// total de item em mobile
+.valores-xs{
+  @media #{$mobile}{
+    margin-left: 5px;
+  }
+  @media #{$mobile-sm}{
+    margin-left: 110px;
+  }
+}
+
+// Botão para inserir cupom
+.cupom{
+	width: 50%;
+}
+
+// Valor sendo economizado
+.economia{
+	float: right;
+}
+
+// Total da compra
+.preco-total{
+	margin: 0; 
+	text-align: right;
+}
+
+// Carrinho vazio
+.row-carrinho-vazio{
+	display: none;
+	div{
+		text-align: center;
+	}
+	a{
+		width: auto;
+	}
+}

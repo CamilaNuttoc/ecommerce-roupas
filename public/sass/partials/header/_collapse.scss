@@ -1,0 +1,42 @@
+.collapse{
+  text-align: center;
+  .categorias{
+    margin-left: 5%;
+    transition: .5s;
+    @media #{$mobile}{
+      margin: 0;
+    }
+    .dropdown-menu li{
+      border-top: 1px solid #eeefff;
+      @media #{$mobile}{
+        border-top: 1px solid #333;
+      }
+      &:first-of-type{
+        border-top: 0;
+      }
+    }
+    .open .dropdown-menu> li > a{
+      padding: 6px 15px;
+    }
+  }
+  .navbar-right{
+    margin-right: 90px;
+    width: 50%;
+    overflow: hidden;
+    @media #{$desktop}{
+      width: 40%;
+    }
+    @media #{$tablet}{
+      margin: 0;
+      width: 100%;
+    }
+    @media #{$mobile}{
+      margin: 2.5%;
+      width: 95%;
+    }
+  }
+}
+
+.collapsing{
+  text-align: center;
+}

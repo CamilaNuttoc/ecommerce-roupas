@@ -1,0 +1,13 @@
+[class*='preco-']{
+  display: block;
+}
+.preco-original{
+    text-decoration: line-through;
+    font-size: 15px; 
+    min-height: 18px;
+}
+.preco-desconto{
+   font-size: 20px;
+   margin-top: 8px;
+   min-height: 18px;
+}

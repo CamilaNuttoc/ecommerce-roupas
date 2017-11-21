@@ -1,0 +1,22 @@
+@import "collapse";
+@import "menus";
+@import "search";
+
+// Header
+header{
+  .container{
+    position: relative;
+  }
+  .pull-right{
+    margin: 2.5px 7px;
+  }
+}
+
+// Logo
+.navbar-brand{
+  padding: 0;
+  img{
+    max-height: 100%;
+    width: auto;
+  }
+}

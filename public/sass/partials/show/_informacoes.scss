@@ -1,0 +1,22 @@
+.nav-tabs > li{
+  &:first-of-type > a{
+    background: #777;
+    color: #eee;
+    &:hover{
+      border: 1px solid transparent;
+    }
+  }
+  &:last-of-type > a{
+    color: #777;
+    &:hover{
+      background: #aaa;
+      color: #fff;
+    }
+  } 
+}
+
+.tab-content{
+  background: #eee;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+}

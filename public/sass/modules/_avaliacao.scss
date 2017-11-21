@@ -1,0 +1,10 @@
+$star: star;
+$left: 0;
+$ctrlVal: 5px;
+
+@for $i from 1 through 5{
+  .#{$star}#{$i}{
+    left: #{$ctrlVal + $left};
+  }
+  $left: $left + 30;
+}

@@ -1,0 +1,14 @@
+.botao-default{
+  border: 3px solid #777; 
+  background: #fff; 
+  padding: 10px; 
+  border-radius: 10px; 
+  outline: none; 
+  width: 100%;
+  margin-bottom: 5px;
+  transition: .3s;
+  &:hover{
+    color: #fff;
+    background: #777;
+  }
+}

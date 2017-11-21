@@ -1,0 +1,38 @@
+#search-form{
+  position: relative;
+  width: 100%;
+  button{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .glyphicon-search{
+    font-size: 15px;
+  }
+  input[type="text"]{
+    width: 300px;
+    float: right;
+    transition: .5s;
+    &:focus{
+      width: 100%;
+    }
+    @media #{$tablet}{
+      width: 100%;
+    }
+    @media #{$mobile}{
+      width: 100%;
+    }
+  }
+}
+
+#cancelBtn{
+  z-index: 1;
+  display: none;
+}
+
+#searchBtn{
+  display: none;
+  > a{
+    padding: 5px 10px;
+  }
+}

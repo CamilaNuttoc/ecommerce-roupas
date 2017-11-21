@@ -1,0 +1,71 @@
+.hidden-filtro{
+  h3{
+    text-align: left;
+    @media #{$mobile}{
+      text-align: center;
+    } 
+  }
+  @media #{$mobile}{
+    display: none;
+    padding: 0 10%;
+  }
+}
+
+.filtroBtn{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.shown-filtro{
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px #ccc;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.opcoes-filtro{
+  label{
+    font-weight: 500;
+  }
+  .opcao{
+    float: left;
+    width: 100%;
+    .form-check{
+      margin-right: 25px;
+      float: left;
+    }
+  }
+}
+
+.toggleFiltro{
+  background: none;
+  border: none;
+  outline: none;
+  position: relative;
+  color: #555;
+}
+
+.expand{
+  font-size: 30px;
+}
+
+.expand-adjust{
+  position: absolute;
+  top: 13px;
+  margin-left: 10px;
+}
+
+.openClose{
+  margin-left: 10px;
+}
+
+.filtrarBtn{
+  button{
+    margin: 25px 0;
+    @media #{$no-mobile}{
+      width: 90%;
+    }
+  }
+}

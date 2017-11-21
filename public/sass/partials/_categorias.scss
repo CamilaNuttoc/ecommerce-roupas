@@ -1,0 +1,26 @@
+#categorias-bottom{
+  padding: 10px;
+  text-align: center;
+}
+
+.titulo-categoria{
+  display: inline-block;
+  color: #333;
+  font-size: 12px;
+  font-weight: 800;
+  background: none;
+  border: 4px solid #555;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 10px;
+  a{
+    color: #555;
+    padding: 10px;
+    display: block;
+    transition: .3s;
+    &:hover{
+      color: white;
+      background: #555;
+    }
+  }
+}
