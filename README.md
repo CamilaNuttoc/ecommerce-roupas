@@ -1,5 +1,6 @@
 # Ecommerce de roupas
 Em produção.
+Utilizando: HTML, CSS, SASS, JAVASCRIPT, JQUERY, NODE.JS, MONGODB, SUBLIME TEXT 2, GIT BASH, HEROKU.
 
 # Features atuais
 **Header**
@@ -24,12 +25,14 @@ Em produção.
 
 *Acessível clicando-se no ícone de carrinho, no botão "adicionar ao carrinho" de /show ou diretamente em "/carrinho".*
 
+
 **Categoria**
 * Filtros que podem ser escondidos ou mostrados (clicando-se em "-" ou "+")
 * Checkbox inputs personalizados
 * Adaptado para mobile (com destaque ao filtro)
 
 *Acessível clicando-se em uma das categorias do dropdown do header, clicando-se nas categorias que ficam ao fim de algumas páginas ou diretamente em "/categoria".*
+
 
 **Show**
 * Zoom em imagem principal em hover
@@ -39,6 +42,7 @@ Em produção.
 * Carrossel (Não-Bootstrap) responsivo
 * Estrelas de avaliação que mudam em hover e salvam avaliação ao clicar
 * Nota média de item de acordo com quantidade de usuários que avaliaram
+* Formulário de login abre em slide ao clicar em "login"
 * Adaptado para mobile
 
 *Acessível clicando-se em algum dos itens a venda.*
@@ -48,3 +52,9 @@ Em produção.
 
 *Acessível em todas as páginas com exceção ao /carrinho.*
 
+**Gerais**
+* Item muda brilho em hover
+* Ao dar hover em ícone de coração em item, este ganha opacidade máxima e, ao clicar no mesmo, o coração é preenchido e um texto "salvo" é mostrado de forma animada.
+* Itens gerados e armazenados em database.
+
+### Contato: camila.canuto@outlook.com
