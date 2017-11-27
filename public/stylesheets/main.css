@@ -114,53 +114,59 @@ img {
   position: relative;
   display: table;
   margin: 0 auto 10px auto;
-  transition: 1s;
 }
-/* line 8, ../sass/partials/_thumbnail.scss */
+/* line 7, ../sass/partials/_thumbnail.scss */
 .thumbnail:hover {
   filter: brightness(110%);
 }
-/* line 10, ../sass/partials/_thumbnail.scss */
+/* line 9, ../sass/partials/_thumbnail.scss */
 .thumbnail:hover .comprarBtn {
   color: #fff;
   background: #665;
 }
-/* line 15, ../sass/partials/_thumbnail.scss */
+/* line 14, ../sass/partials/_thumbnail.scss */
 .thumbnail img {
   width: auto;
   border-radius: 5px;
 }
-/* line 19, ../sass/partials/_thumbnail.scss */
+/* line 18, ../sass/partials/_thumbnail.scss */
 .thumbnail h3 {
   font-size: 15px;
   font-weight: 800;
   margin: 5px 0 10px;
   min-height: 32px;
 }
-/* line 25, ../sass/partials/_thumbnail.scss */
+/* line 24, ../sass/partials/_thumbnail.scss */
 .thumbnail button {
   font-size: 20px;
   margin-top: 8px;
   min-height: 18px;
 }
 
-/* line 32, ../sass/partials/_thumbnail.scss */
+/* line 31, ../sass/partials/_thumbnail.scss */
 .comprarBtn {
   border: 4px solid #665;
   background: none;
   font-size: 15px;
   border-radius: 10px;
-  transition: .3s;
+  transition: .4s;
 }
 
-/* line 40, ../sass/partials/_thumbnail.scss */
+/* line 39, ../sass/partials/_thumbnail.scss */
 .wrapBtn {
   position: absolute;
   top: 11px;
   right: 14px;
 }
+@media only screen and (max-width: 767px) {
+  /* line 39, ../sass/partials/_thumbnail.scss */
+  .wrapBtn {
+    top: 3px;
+    right: 7px;
+  }
+}
 
-/* line 46, ../sass/partials/_thumbnail.scss */
+/* line 49, ../sass/partials/_thumbnail.scss */
 .favBtn {
   background: none;
   color: #555;
@@ -168,12 +174,12 @@ img {
   outline: none;
   opacity: .2;
 }
-/* line 52, ../sass/partials/_thumbnail.scss */
+/* line 55, ../sass/partials/_thumbnail.scss */
 .favBtn:hover {
   opacity: 1;
 }
 
-/* line 57, ../sass/partials/_thumbnail.scss */
+/* line 60, ../sass/partials/_thumbnail.scss */
 .favText {
   position: absolute;
   font-size: 17px;
@@ -630,24 +636,28 @@ header .pull-right {
     min-height: 147px;
   }
 }
+/* line 29, ../sass/partials/home/_home.scss */
+.banners2 img:hover {
+  filter: brightness(105%);
+}
 
-/* line 33, ../sass/partials/home/_home.scss */
-.anuncio img:nth-of-type(1) {
+/* line 36, ../sass/partials/home/_home.scss */
+.anuncio a:nth-of-type(1) {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 33, ../sass/partials/home/_home.scss */
-  .anuncio img:nth-of-type(1) {
+  /* line 36, ../sass/partials/home/_home.scss */
+  .anuncio a:nth-of-type(1) {
     display: block;
   }
 }
-/* line 39, ../sass/partials/home/_home.scss */
-.anuncio img:nth-of-type(2) {
+/* line 42, ../sass/partials/home/_home.scss */
+.anuncio a:nth-of-type(2) {
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  /* line 39, ../sass/partials/home/_home.scss */
-  .anuncio img:nth-of-type(2) {
+  /* line 42, ../sass/partials/home/_home.scss */
+  .anuncio a:nth-of-type(2) {
     display: none;
   }
 }

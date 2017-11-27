@@ -1,222 +1,226 @@
 <% include ./partials/header.ejs %>
 
-  <!-- Container de 1330px -->
-  <div class="container-full">
+    <!-- Container de 1330px -->
+    <div class="container-full">
 
-    <div class="row">
+        <div class="row">
 
-      <div class="col-sm-12 hidden-xs">
+            <div class="col-sm-12 hidden-xs">
 
-        <!-- CARROSSEL BOOTSTRAP DE BANNERS -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- CARROSSEL BOOTSTRAP DE BANNERS -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-          <!-- Indicadores -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+                    <!-- Indicadores -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
         
-          <!-- Envolve os slides -->
-          <div class="carousel-inner" role="listbox">
+                    <!-- Envolve os slides -->
+                    <div class="carousel-inner" role="listbox">
             
-            <div class="item active">
-              <a href="/categoria"><img src="http://www.htinha.com.br/styles/banner.jpg" 
-                   alt="Moda infantil"></a>
-            </div>
-            <!-- Slides -->
-            <div class="item">
-              <a href="/categoria"><img src="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg" 
-                   alt="Vestidos de renda"></a>
-            </div>
+                        <div class="item active">
+                          <a href="/categoria"><img src="http://www.htinha.com.br/styles/banner.jpg" 
+                             alt="Moda infantil"></a>
+                        </div>
+                        <!-- Slides -->
+                        <div class="item">
+                          <a href="/categoria"><img src="https://www.terijon.com/homeimages/1470247502_Homepage_banner.jpg" 
+                             alt="Vestidos de renda"></a>
+                        </div>
 
-            <div class="item">
-              <a href="/categoria"><img src="https://dlp2gfjvaz867.cloudfront.net/collections/1028832/banner_original.jpg" 
-                   alt="Vestidos de casamento"></a>
-            </div>
+                        <div class="item">
+                          <a href="/categoria"><img src="https://dlp2gfjvaz867.cloudfront.net/collections/1028832/banner_original.jpg" 
+                             alt="Vestidos de casamento"></a>
+                        </div>
 
-          </div>
+                    </div>
         
-          <!-- Controle de direita e esquerda -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-          </a>
-
-        </div>
-
-      </div>
-      <div class="hidden-lg hidden-md hidden-sm col-xs-12 test">
-        <img src="http://platinumrye.com.br/licenciamentos/Stella3.jpg" 
-             alt="Vestidos de renda">
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Conteúdo após carrossel -->
-  <div class="container home">
-  		
-  	<div class="row">
-
-      <!-- Linhas cruzando título da seção -->
-      <div class="limit-heading">
-        <h2><span>Destaque</span></h2>
-      </div>
-
-      <!-- Gera itens -->
-      <% if(itens){ for(var i=0; i<4; i++){ %>
-
-      <% if(i !== 3){ %>
-  		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <% }else{ %>
-      <div class="col-lg-3 hidden-md col-sm-6 col-xs-12">
-      <% } %>
-
-        <div class="thumbnail thumbs1">
-
-          <!-- Botão de favorito -->
-          <div class="wrapBtn">
-            <button onclick="favStatus(this);" class="favBtn">
-              <span style="display: none" class="favText">Salvo</span>
-              <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-            </button>
-          </div>
-
-          <a href="/<%= itens[i]._id %>">
-
-            <!-- Detalhes do item -->
-            <img src="<%= itens[i].imagem %>" alt="Vestido estampado"/>
-            <div class="caption">
-
-              <h3><%= itens[i].titulo %></h3>
-              <span class="preco-original">
-                De: R$<%= itens[i].precoOriginal.toFixed(2).replace(".", ",") %>
-              </span>
-              <span class="preco-desconto">
-                R$<%= itens[i].precoPromocao.toFixed(2).replace(".", ",") %>
-              </span>
-
-              <button class="btn comprarBtn">Comprar</button>
-
-            </div>
-
-          </a>
-
-        </div>
-
-  		</div>
-
-      <% } } %>
-
-  	  </div>
-
-      <!-- Banners secundários -->
-      <div class="row banners2">
-
-        <div class="col-md-5 col-sm-12">
-          <a href="/categoria"><img src="http://www.pksgirl.com.br/wp-content/uploads/2017/03/desconto-progressivo-4.jpg"></a>
-        </div>
-
-        <div class="col-md-7 col-sm-12">
-          <a href="/categoria"><img src="http://ruateresaonline.com.br/media/wysiwyg/infortis/ultimo/slideshow/02.jpg"></a>
-          <a href="/categoria"><img class="imgChange" src="http://www.lojasmoco.com.br/media/catalog/category/BANNER_MOCOok.png"></a>
-        </div>
-
-      </div>
-
-      <!-- Itens novos -->
-  	  <div class="row">
-
-        <!-- Linhas cruzando título da seção -->
-        <div class="limit-heading">
-          <h2 class="heading"><span>Novos</span></h2>
-        </div>
-
-        <!-- Gera itens -->
-  	    <% if(itens){ itens.forEach(function(item){ %>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-
-            <div class="thumbnail">
-
-              <!-- Botão de favorito -->
-              <div class="wrapBtn">
-                <button onclick="favStatus(this);" class="favBtn">
-                  <span style="display: none" class="favText">Salvo</span>
-                  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-                </button>
-              </div>
-
-              <a href="/<%= item._id %>">
-
-                <!-- Detalhes do item -->
-                <img src="<%= item.imagem %>" alt="Vestido estampado"/>
-                <div class="caption">
-
-                  <h3><%= item.titulo %></h3>
-                  <span class="preco-desconto">
-                    R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
-                  </span>
-
-                  <button class="btn comprarBtn">Comprar</button> 
+                    <!-- Controle de direita e esquerda -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
 
                 </div>
 
-              </a>
+            </div>
+
+            <div class="hidden-lg hidden-md hidden-sm col-xs-12 test">
+              <img src="http://platinumrye.com.br/licenciamentos/Stella3.jpg" 
+                   alt="Vestidos de renda">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Conteúdo após carrossel -->
+    <div class="container home">
+  		
+  	    <div class="row">
+
+            <!-- Linhas cruzando título da seção -->
+            <div class="limit-heading">
+                <h2><span>Destaque</span></h2>
+            </div>
+
+            <!-- Gera itens -->
+            <% if(itens){ for(var i=0; i<4; i++){ %>
+
+                <% if(i !== 3){ %>
+  		        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <% }else{ %>
+                <div class="col-lg-3 hidden-md hidden-sm col-xs-6">
+                <% } %>
+
+                    <div class="thumbnail thumbs1">
+
+                        <!-- Botão de favorito -->
+                        <div class="wrapBtn">
+                            <button onclick="favStatus(this);" class="favBtn">
+                                <span style="display: none" class="favText">Salvo</span>
+                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                            </button>
+                        </div>
+
+                        <a href="/<%= itens[i]._id %>">
+
+                            <!-- Detalhes do item -->
+                            <img src="<%= itens[i].imagem %>" alt="Vestido estampado"/>
+                            <div class="caption">
+
+                                <h3><%= itens[i].titulo %></h3>
+                                <span class="preco-original">
+                                    De: R$<%= itens[i].precoOriginal.toFixed(2).replace(".", ",") %>
+                                </span>
+                                <span class="preco-desconto">
+                                    R$<%= itens[i].precoPromocao.toFixed(2).replace(".", ",") %>
+                                </span>
+
+                                <button class="btn comprarBtn">Comprar</button>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+  		            </div>
+
+                <% } } %>
+
+  	        </div>
+
+            <!-- Banners secundários -->
+            <div class="row banners2">
+
+                <div class="col-md-5 col-sm-12">
+                    <a href="/categoria"><img src="http://www.pksgirl.com.br/wp-content/uploads/2017/03/desconto-progressivo-4.jpg"></a>
+                </div>
+
+                <div class="col-md-7 col-sm-12">
+                    <a href="/categoria"><img src="http://ruateresaonline.com.br/media/wysiwyg/infortis/ultimo/slideshow/02.jpg"></a>
+                    <a href="/categoria"><img class="imgChange" src="http://www.lojasmoco.com.br/media/catalog/category/BANNER_MOCOok.png"></a>
+                </div>
 
             </div>
 
-          </div>
+            <!-- Itens novos -->
+  	        <div class="row">
 
-        <% }); }%>
+            <!-- Linhas cruzando título da seção -->
+            <div class="limit-heading">
+                <h2 class="heading"><span>Novos</span></h2>
+            </div>
 
-  	  </div>
+            <!-- Gera itens -->
+  	        <% if(itens){ itens.forEach(function(item){ %>
 
-      <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
 
-        <!-- Anúncios -->
-        <div class="col-xs-12 anuncio">
-          <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg"/>
-          <img src="http://www.evef.com.br/images/logotipo/anuncio_publicitario_marca_moda_roupa_missguided.jpg"/>
+                    <div class="thumbnail">
+
+                        <!-- Botão de favorito -->
+                        <div class="wrapBtn">
+                          <button onclick="favStatus(this);" class="favBtn">
+                            <span style="display: none" class="favText">Salvo</span>
+                            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                          </button>
+                        </div>
+
+                        <a href="/<%= item._id %>">
+
+                            <!-- Detalhes do item -->
+                            <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+                            <div class="caption">
+
+                                <h3><%= item.titulo %></h3>
+                                <span class="preco-desconto">
+                                  R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+                                </span>
+
+                                <button class="btn comprarBtn">Comprar</button> 
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            <% }); }%>
+
+  	    </div>
+
+        <div class="row">
+
+            <!-- Anúncios -->
+            <div class="col-xs-12 anuncio">
+                <a href="/categoria">
+                    <img src="https://static.kanui.com.br/cms/banner-marca-mandi-kanui.jpg" />
+                </a>
+                <a href="/categoria">
+                    <img src="http://www.evef.com.br/images/logotipo/anuncio_publicitario_marca_moda_roupa_missguided.jpg" />
+                </a>
+            </div>
+
         </div>
 
-      </div>
+        <!-- Categorias -->
+  	    <div class="row">
+            <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
+                          'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
+                          'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos',
+                          'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
+                          'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas',
+                          'Salto Alto', 'Sapatos'] %>
 
-      <!-- Categorias -->
-  	  <div class="row">
-        <% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
-                      'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
-                      'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos',
-                      'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
-                      'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas',
-                      'Salto Alto', 'Sapatos'] %>
+            <!-- Linhas cruzando título da seção -->
+            <div class="limit-heading">
+                <h2 class="heading"><span>Categorias</span></h2>
+            </div>
 
-        <!-- Linhas cruzando título da seção -->
-        <div class="limit-heading">
-          <h2 class="heading"><span>Categorias</span></h2>
+            <ul id="categorias-bottom">
+
+                <!-- Gera opções de categoria -->
+                <% for(var i=0; i<arr.length; i++){ %>
+
+                    <li class="titulo-categoria"><a href="/categoria"><%= arr[i] %></a></li>
+
+                <% } %>
+
+            </ul>
+
         </div>
-
-        <ul id="categorias-bottom">
-
-          <!-- Gera opções de categoria -->
-          <% for(var i=0; i<arr.length; i++){ %>
-
-            <li class="titulo-categoria"><a href="/categoria"><%= arr[i] %></a></li>
-
-          <% } %>
-
-        </ul>
-
-      </div>
 
     </div>
     
-  </div>
+</div>
 
 <% include ./partials/footer.ejs %>

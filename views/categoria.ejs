@@ -8,10 +8,10 @@
 		<div class="pull-right">
 			<span class="hidden-xs">Ordernar por:</span>
 			<select>
-			  <option value="MelhoresAvaliados">Melhores Avaliados</option>
-			  <option value="Recentes">Recentes</option>
-			  <option value="Maiores Preços">Maiores Preços</option>
-			  <option value="Menores Preços">Menores Preços</option>
+			    <option value="MelhoresAvaliados">Melhores Avaliados</option>
+			    <option value="Recentes">Recentes</option>
+			    <option value="Maiores Preços">Maiores Preços</option>
+			    <option value="Menores Preços">Menores Preços</option>
 			</select>
 		</div>
 
@@ -95,9 +95,9 @@
 
 			<!-- Anúncios -->
 			<img class="ad hidden-xs" 
-					 src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
+			     src="https://i.pinimg.com/736x/b6/49/06/b64906050ea6c8252eb927de46c20ad8--flower-boutique-bunch-of-flowers.jpg">
 			<img class="ad hidden-xs" 
-		       src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
+		         src="https://i.pinimg.com/736x/be/1f/bc/be1fbc1262145604e9d0a34e9a7fe8e3.jpg">
 
 		</div>
 
@@ -112,75 +112,75 @@
 			<!-- Percorre itens -->
 			<% itens.forEach(function(item){ %>
 
-  			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="thumbnail">
+  				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+          			<div class="thumbnail">
 
-          	<!-- Botão de favorito -->
-            <div class="wrapBtn">
-              <button onclick="favStatus(this);" class="favBtn">
-              	<span style="display: none" class="favText">Salvo</span>
-              	<span class="glyphicon glyphicon-heart-empty" aria-hidden="true">
-              	</span>
-              </button>
-            </div>
+          				<!-- Botão de favorito -->
+            			<div class="wrapBtn">
+            			  <button onclick="favStatus(this);" class="favBtn">
+            			  	<span style="display: none" class="favText">Salvo</span>
+            			  	<span class="glyphicon glyphicon-heart-empty" aria-hidden="true">
+            			  	</span>
+            			  </button>
+            			</div>
 
-            <!-- Item -->
-            <a href="/<%= item._id %>">
+            			<!-- Item -->
+            			<a href="/<%= item._id %>">
 
-              <img src="<%= item.imagem %>" alt="Vestido estampado"/>
+              				<img src="<%= item.imagem %>" alt="Vestido estampado"/>
 
-              <div class="caption">
+              				<div class="caption">
 
-                <h3><%= item.titulo %></h3>
-                <span class="preco-original">
-                	De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
-                </span>
-                <span class="preco-desconto">
-                	R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
-                </span>
+                				<h3><%= item.titulo %></h3>
+                				<span class="preco-original">
+                					De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+                				</span>
+                				<span class="preco-desconto">
+                					R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+                				</span>
 
-                <button class="btn comprarBtn">Comprar</button>
+                				<button class="btn comprarBtn">Comprar</button>
 
-              </div>
+              				</div>
 
-            </a>
+            			</a>
 
-          </div>
-  			</div>
+          			</div>
+  				</div>
 
-      <% }); %>
+    		<% }); %>
 
-      <!-- Paginação Bootstrap -->
-      <nav aria-label="Page navigation" class="text-center">
+      		<!-- Paginação Bootstrap -->
+      		<nav aria-label="Page navigation" class="text-center">
 
-			  <ul class="pagination">
+			    <ul class="pagination">
 
-			  	<!-- Página anterior -->
-			    <li class="page-item">
-			      <a class="page-link" href="#" aria-label="Previous">
-			        <span aria-hidden="true">&laquo;</span>
-			        <span class="sr-only">Previous</span>
-			      </a>
-			    </li>
+			  		<!-- Página anterior -->
+			    	<li class="page-item">
+			    	  <a class="page-link" href="#" aria-label="Previous">
+			    	    <span aria-hidden="true">&laquo;</span>
+			    	    <span class="sr-only">Previous</span>
+			    	  </a>
+			    	</li>
 
-			    <!-- Páginas numeradas -->
-			    <li class="page-item"><a class="page-link" href="#">1</a></li>
-			    <li class="page-item"><a class="page-link" href="#">2</a></li>
-			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			    	<!-- Páginas numeradas -->
+			    	<li class="page-item"><a class="page-link" href="#">1</a></li>
+			    	<li class="page-item"><a class="page-link" href="#">2</a></li>
+			    	<li class="page-item"><a class="page-link" href="#">3</a></li>
 
-			    <!-- Próxima página -->
-			    <li class="page-item">
-			      <a class="page-link" href="#" aria-label="Next">
-			        <span aria-hidden="true">&raquo;</span>
-			        <span class="sr-only">Next</span>
-			      </a>
-			    </li>
+			    	<!-- Próxima página -->
+			    	<li class="page-item">
+			    	  <a class="page-link" href="#" aria-label="Next">
+			    	    <span aria-hidden="true">&raquo;</span>
+			    	    <span class="sr-only">Next</span>
+			    	  </a>
+			    	</li>
 
-			  </ul>
+			  	</ul>
 
 			</nav>
 
-    </div>
+   		</div>
 
 	</div>
 

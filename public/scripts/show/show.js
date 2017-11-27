@@ -22,7 +22,7 @@ $(document).ready(function(){
    					 				 nos dois modos diferentes de display) =================*/
 
 	var sugestoes = $('.carrossel-container .content > div');
-	sugestoes.slice(0, 2).clone().appendTo('.content2');
+	sugestoes.slice(0, 1).clone().appendTo('.content2');
 
 
 // ======================= Zoom em imagem principal ======================== //
