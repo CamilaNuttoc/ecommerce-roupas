@@ -8,6 +8,10 @@
   }
 }
 
+.media-body p{
+  margin: 3px 0;
+}
+
 .avaliacao-current-user{
   text-align: center;
   form{
@@ -52,4 +56,8 @@
   .glyphicon-star-empty{
     width: 30px;
   }
+}
+
+[name="comentario[avaliacao]"]{
+  display: none;
 }

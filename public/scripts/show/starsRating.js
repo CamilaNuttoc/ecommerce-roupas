@@ -56,6 +56,9 @@ $(document).ready(function(){
     //Salva valor de counter em stored
     stored = counter;
 
+    //Marca input radio
+    var radio = $('input[name="comentario[avaliacao]"]:nth-of-type('+counter+')');
+    radio.attr('checked', true);
   });
 
 });

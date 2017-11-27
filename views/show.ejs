@@ -5,6 +5,22 @@
 	<!-- Área que mostra item selecionado -->
 	<section class="item-area">
 
+		<!-- Caminho percorrido até 
+		 categoria atual -->
+		<p class="path-categoria">
+
+			<!-- Mostra apenas última 
+			     sub-categoria caso em mobile -->
+			<span class="hidden-xs">
+				<a href="#">Feminino</a> > 
+				<a href="#">Roupas</a> >
+			</span>
+
+			<a href="#">Vestidos</a> >
+			<a href="#"><%= item.titulo %></a>
+
+		</p>
+
 		<div class="row">
 
 			<!-- Imagens a mais do mesmo produto -->
@@ -64,7 +80,7 @@
 							<!-- Adiciona letra maiúscula
 							     ao texto do label -->
 							<label><%= arrAll[i][0].charAt(0).toUpperCase() 
-											 + arrAll[i][0].slice(1) %>:</label>
+								   + arrAll[i][0].slice(1) %>:</label>
 	
 							<!-- Percorre length de cada opção -->
 							<% for(var j=0; j<arrAll[i].length-1; j++){ %>
@@ -103,9 +119,9 @@
 
 						<!-- Leva ao carrinho se opções da 
 						     peça tiverem sido escolhidas -->
-					  <button type="submit" onclick="checaRadios();" class="botao-default">
-					  	Adicionar ao carrinho
-					  </button>
+					  	<button type="submit" onclick="checaRadios();" class="botao-default">
+					  		Adicionar ao carrinho
+					  	</button>
 
 					</form>
 
@@ -148,7 +164,7 @@
 				<!-- Conteúdo de guias -->
 				<div class="tab-content">
 
-			  	<div class="tab-pane active">
+			  		<div class="tab-pane active">
 			  		Curabitur congue faucibus magna quis ullamcorper. Vivamus eget nisl
 			  		eu elit maximus tempus a quiseros. Suspendisse neque felis, ultrices 
 			  		et turpis ut, suscipit sagittis augue. Sed ac turpis dignissim, 
@@ -199,9 +215,9 @@
 	<div class="row carrossel-container hidden-sm hidden-xs">
 
 		<!-- Linhas cruzando título da seção -->
-    <div class="limit-heading">
-      <h2 class="heading"><span>Talvez você também goste de...</span></h2>
-    </div>
+   		<div class="limit-heading">
+      		<h2 class="heading"><span>Talvez você também goste de...</span></h2>
+    	</div>
 
     	<!-- Esconde o que passa da área do carrossel -->
     	<div class="carrossel-overfl">
@@ -212,9 +228,9 @@
     			<!-- Gera itens -->
     			<% for(var i=0; i<12; i++){ %>
 
- 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 content">
+ 					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 content">
 
-     	  	  				<div class="thumbnail">
+     	  	  			<div class="thumbnail">
 
      	  	  				<!-- Botão de favorito -->
        						<div class="wrapBtn">
@@ -248,88 +264,84 @@
 
   					</div>
 
-        	<% } %>
+        		<% } %>
+
+    		</div>
 
     	</div>
 
-    </div>
+    	<!-- Botões para navegação no carrossel -->
+    	<button class="btnCtrlPrev" onclick="move(this);">
+    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	</button>
+    	<button class="btnCtrlNext" onclick="move(this);">
+    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	</button>
 
-    <!-- Botões para navegação no carrossel -->
-    <button class="btnCtrlPrev" onclick="move(this);">
-    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    </button>
-    <button class="btnCtrlNext" onclick="move(this);">
-    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    </button>
-
-  </div>
+   	</div>
   
-  <!-- Sugestões (substituindo carrossel 
-       em mobile e tablet) -->                                              
-  <div class="row hidden-lg hidden-md">
+  	<!-- Sugestões (substituindo carrossel 
+  	     em mobile e tablet) -->                                              
+  	<div class="row hidden-lg hidden-md">
 
-  	<!-- Linhas cruzando título da seção -->
-    <div class="limit-heading">
-     <h2 class="heading"><span>Sugestões</span></h2>
-    </div>
+  		<!-- Linhas cruzando título da seção -->
+    	<div class="limit-heading">
+    	 	<h2 class="heading"><span>Sugestões</span></h2>
+    	</div>
 
-    <!-- Gera itens -->
-    <% for(var i=0; i<4; i++){ %>
-    	<% if(i !== 3){ %>
-		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 content2"></div>
-		<% }else{ %>
-		<div class="col-lg-3 col-md-4 hidden-sm col-xs-6 content2"></div>
-		<% } %>
+   		<!-- Gera itens -->
+   		<% for(var i=0; i<4; i++){ %>
 
-  	<% } %>
+   	 		<% if(i !== 3){ %>
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 content2"></div>
+			<% }else{ %>
+			<div class="col-lg-3 col-md-4 hidden-sm col-xs-6 content2"></div>
+			<% } %>
 
-  </div>
+  		<% } %>
 
-  <!-- Avaliações de usuários -->
+  	</div>
+
+  	<!-- Avaliações de usuários -->
 	<div class="row" id="avaliacao">
 
 		<!-- Linhas cruzando título da seção -->
 		<div class="limit-heading">
-      <h2 class="heading"><span>Avaliações</span></h2>
-    </div>
+    	  <h2 class="heading"><span>Avaliações</span></h2>
+    	</div>
 
-    <!-- Percorre por e gera 
-         comentários de usuários -->
+    	<!-- Percorre por e gera 
+         	 comentários de usuários -->
 		<% for(var i=0; i<item.comentarios.length; i++){ %>
 
-		<div class="col-md-12">
+			<div class="col-md-12">
 
-		  <div class="media">
+		  		<div class="media">
 
-		    <div class="media-left">
-		      <img class="media-object" alt="usuario"
-		           src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg">
-		    </div>
+		    		<div class="media-left">
+		      			<img class="media-object" alt="usuario"
+		           			 src="http://www.mulierchile.com/girl-profile-picture/girl-profile-picture-027.jpg">
+		    		</div>
 
-		    <div class="media-body">
+		    		<div class="media-body">
 
-		      <p class="pull-right">Postado há X tempo</p>
-		      <h4 class="media-heading"><strong>Nome do usuário</strong></h4>
+		      			<p class="pull-right hidden-xs">Postado há X tempo</p>
+		      			<h4 class="media-heading"><strong><%= item.comentarios[i].autor %></strong></h4>
+		      			<p class="hidden-lg hidden-md hidden-sm">Postado há X tempo</p>
 
-		      <div class="avaliacao-user<%= i %>"></div>
+		      			<div class="avaliacao-user<%= i %>"></div>
 
-		      <!-- Gera estrelas de acordo com usuário da db-->
-		      <script> genStars(<%= item.comentarios[i].avaliacao %>, <%= i %>);</script>
+		      			<!-- Gera estrelas de acordo com usuário da db-->
+		      			<script> genStars(<%= item.comentarios[i].avaliacao %>, <%= i %>);</script>
 
-		      <p>Comentário demonstrando nível de satisfação!Curabitur congue
-		         faucibus magna quis ullamcorper. Vivamus eget nisl eu elit maximus
-		         tempus a quis eros. Suspendisse neque felis, ultrices et turpis ut,
-		         suscipit sagittis augue. Sed ac turpis dignissim, pharetra tellus nec,
-		         suscipit eros. Aliquam vitae massa risus. Cras at massa nec dolor 
-		         posuere facilisis. Nunc facilisis ante quis consequat ultricies. Fusce 
-		         finibus varius lacinia. Aliquam consectetur egestas nunc eget aliquam.
-		      </p>
+		      			<p><%= item.comentarios[i].texto %>
+		      			</p>
 
-		    </div>
+		    		</div>
 
-		  </div>
+		  		</div>
 
-		</div>
+			</div>
 
 		<% } %>
 
@@ -343,40 +355,45 @@
 			<!-- Gera estrelas de acordo com usuário da db-->
 			<h4>
 				Faça <button id="abreLogin"><i>login</i></button>
-			  e deixe sua avaliação! :)
+			  	e deixe sua avaliação! :)
 			</h4>
 
 			<!-- Formulário de avaliação -->
-			<form action="#" method="POST">
+			<form action="/<%= item._id %>/comentario" method="POST">
 
-			<div class="avaliacao-user-online">
+				<div class="avaliacao-user-online">
 
-				<!-- Estrelas/nota -->
-				<div class="container-stars">
+					<!-- Estrelas/nota -->
+					<div class="container-stars">
 
-					<span class="estr1 glyphicon glyphicon-star-empty" aria-hidden="true"></span
-					><span class="star1 glyphicon glyphicon-star" aria-hidden="true"></span
-					><span class="estr2 glyphicon glyphicon-star-empty" aria-hidden="true"></span
-					><span class="star2 glyphicon glyphicon-star" aria-hidden="true"></span
-					><span class="estr3 glyphicon glyphicon-star-empty" aria-hidden="true"></span
-					><span class="star3 glyphicon glyphicon-star" aria-hidden="true"></span
-					><span class="estr4 glyphicon glyphicon-star-empty" aria-hidden="true"></span
-					><span class="star4 glyphicon glyphicon-star" aria-hidden="true"></span
-					><span class="estr5 glyphicon glyphicon-star-empty" aria-hidden="true"></span
-					><span class="star5 glyphicon glyphicon-star" aria-hidden="true"></span
-					>
+						<span class="estr1 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+						><span class="star1 glyphicon glyphicon-star" aria-hidden="true"></span
+						><span class="estr2 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+						><span class="star2 glyphicon glyphicon-star" aria-hidden="true"></span
+						><span class="estr3 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+						><span class="star3 glyphicon glyphicon-star" aria-hidden="true"></span
+						><span class="estr4 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+						><span class="star4 glyphicon glyphicon-star" aria-hidden="true"></span
+						><span class="estr5 glyphicon glyphicon-star-empty" aria-hidden="true"></span
+						><span class="star5 glyphicon glyphicon-star" aria-hidden="true"></span
+						>
+
+					</div>
 
 				</div>
 
-			</div>
+				<input type="radio" name="comentario[avaliacao]" value="1" required>
+				<input type="radio" name="comentario[avaliacao]" value="2">
+				<input type="radio" name="comentario[avaliacao]" value="3">
+				<input type="radio" name="comentario[avaliacao]" value="4">
+				<input type="radio" name="comentario[avaliacao]" value="5">
+				<!-- Área de comentário -->
+				<textarea placeholder="Digite seu comentário..." name="comentario[text]" required></textarea>
 
-			<!-- Área de comentário -->
-			<textarea placeholder="Digite seu comentário..."></textarea>
+				<!-- Envia comentário a db (em teoria) -->
+				<button type="submit" class="botao-default">Comentar</button>
 
-			<!-- Envia comentário a db (em teoria) -->
-			<button type="submit" class="botao-default">Comentar</button>
-
-		</form>
+			</form>
 
 		</div>
 
@@ -386,79 +403,79 @@
 	<div class="row">
 
 		<!-- Linhas cruzando título da seção -->
-    <div class="limit-heading">
-      <h2 class="heading"><span>Mais em Vestidos</span></h2>
-    </div>
+    	<div class="limit-heading">
+    	  <h2 class="heading"><span>Mais em Vestidos</span></h2>
+    	</div>
 
-    <!-- Gera itens -->
-    <% for(var i=0; i<12; i++){ %>
+    	<!-- Gera itens -->
+    	<% for(var i=0; i<12; i++){ %>
 
-  		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+  			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
 
-  			<div class="thumbnail">
+  				<div class="thumbnail">
 
-     	  	<!-- Botão de favorito -->
-       	  <div class="wrapBtn">
-        		<button onclick="favStatus(this);" class="favBtn">
-        			<span style="display: none" class="favText">Salvo</span>
-        			<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-        		</button>
-          </div>
+     	  			<!-- Botão de favorito -->
+       	  			<div class="wrapBtn">
+        				<button onclick="favStatus(this);" class="favBtn">
+        					<span style="display: none" class="favText">Salvo</span>
+        					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        				</button>
+        	  		</div>
 
-          <a href="/<%= item._id %>">
+          			<a href="/<%= item._id %>">
 
-          	<!-- Detalhes do item -->
-          	<img src="<%= item.imagem %>" alt="Vestido estampado"/>
-          	<div class="caption">
+          				<!-- Detalhes do item -->
+          				<img src="<%= item.imagem %>" alt="Vestido estampado"/>
+          				<div class="caption">
 
-          	  <h3><%= item.titulo %></h3>
-          	  <span class="preco-original">
-          	  	De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
-          	  </span>
-          	  <span class="preco-desconto">
-          	  	R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
-          	  </span>
+          	  				<h3><%= item.titulo %></h3>
+          	  				<span class="preco-original">
+          	  					De: R$<%= item.precoOriginal.toFixed(2).replace(".", ",") %>
+          	  				</span>
+          	  				<span class="preco-desconto">
+          	  					R$<%= item.precoPromocao.toFixed(2).replace(".", ",") %>
+          	  				</span>
+	
+          	  				<button class="btn comprarBtn">Comprar</button>
 
-          	  <button class="btn comprarBtn">Comprar</button>
+          				</div>
 
-          	</div>
+          			</a>
 
-          </a>
+        		</div>
 
-        </div>
+  			</div>
 
-  		</div>
-
-    <% } %>
-
-  </div>
-
-  <!-- Categorias -->
-  <div class="row">
-
-  	<!-- Linhas cruzando título da seção -->
-  	<% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
-  	              'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
-  	              'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 
-  	              'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
-  	              'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 
-  	              'Salto Alto', 'Sapatos'] %>
-
-  	<!-- Linhas cruzando título da seção -->
-    <div class="limit-heading">
-      <h2 class="heading"><span>Categorias</span></h2>
-    </div>
-
-    <ul id="categorias-bottom">
-
-    	<!-- Gera itens de categorias -->
-    	<% for(var i=0; i<arr.length; i++){ %>
-    	  <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
     	<% } %>
 
-    </ul>
+	</div>
 
-  </div>
+  	<!-- Categorias -->
+  	<div class="row">
+
+  		<!-- Linhas cruzando título da seção -->
+  		<% var arr = ['Feminino', 'Masculino', 'Infantil', 'Blusas', 'Vestidos',
+  		              'Calças', 'Praia', 'Camisas', 'Casacos', 'Coletes', 'Macacões',
+  		              'Pijamas', 'Regatas', 'Saias', 'Shorts', 'Bermudas', 'Polos', 
+  		              'Carteiras', 'Bijoux', 'Bolsas', 'Cintos', 'Chapéus', 'Óculos',
+  		              'Relógios', 'Sapatilhas', 'Tênis', 'Botas', 'Chinelas', 
+  		              'Salto Alto', 'Sapatos'] %>
+
+  		<!-- Linhas cruzando título da seção -->
+    	<div class="limit-heading">
+    	  <h2 class="heading"><span>Categorias</span></h2>
+    	</div>
+
+    	<ul id="categorias-bottom">
+
+    		<!-- Gera itens de categorias -->
+    		<% for(var i=0; i<arr.length; i++){ %>
+    		  <li class="titulo-categoria"><a href="#"><%= arr[i] %></a></li>
+    		<% } %>
+
+    	</ul>
+
+  	</div>
 
 </div>
 

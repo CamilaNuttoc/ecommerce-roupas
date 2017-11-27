@@ -52,6 +52,23 @@ app.get("/:id", function(req, res){
 	});
 });
 
+app.post("/:id/comentario", function(req, res){
+	Item.findById(req.params.id).populate("comentarios").exec(function(err, item){
+		var autor = 'Usuário online';
+		var texto = req.body.comentario.text;
+		var avaliacao = req.body.comentario.avaliacao;
+		Comentario.create({autor, avaliacao, texto}, function(err, comentario){
+			if(err){
+				console.log(err);
+			}else{
+				item.comentarios.push(comentario);
+				item.save();
+			}
+		});
+	});
+	
+});
+
 //Cria itens
 // for (var i=0; i<12; i++){
 // 	var imagem = 'https://ph-cdn4.ecosweb.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-floral-com-detalhe-transparente_180831_600_1.jpg';
