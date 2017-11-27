@@ -33,7 +33,7 @@
 // total de item em mobile
 .valores-xs{
   @media #{$mobile}{
-    margin-left: 5px;
+    margin-left: 10px;
   }
   @media #{$mobile-sm}{
     margin-left: 110px;

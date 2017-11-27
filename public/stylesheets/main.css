@@ -286,7 +286,13 @@ img {
     border: 0;
   }
   /* line 12, ../sass/partials/_form.scss */
-  .form-sec button, .form-sec label:first-of-type {
+  .form-sec button {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 370px) {
+  /* line 17, ../sass/partials/_form.scss */
+  .form-sec label:first-of-type {
     margin-left: 0;
   }
 }
@@ -683,13 +689,14 @@ header .pull-right {
 .row-carrinho form {
   width: 210px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 370px) {
   /* line 14, ../sass/partials/carrinho/_item.scss */
   .row-carrinho form {
     margin-left: 10px;
+    width: 160px;
   }
 }
-/* line 20, ../sass/partials/carrinho/_item.scss */
+/* line 21, ../sass/partials/carrinho/_item.scss */
 .row-carrinho select {
   width: 25%;
 }
@@ -756,7 +763,7 @@ header .pull-right {
   font-size: 12px;
 }
 /* line 12, ../sass/partials/carrinho/_resumo.scss */
-.row-carrinho-bottom a {
+.row-carrinho-bottom #cepDunno {
   text-decoration: underline;
   color: #aaa;
   font-size: 12px;
@@ -764,6 +771,10 @@ header .pull-right {
 /* line 17, ../sass/partials/carrinho/_resumo.scss */
 .row-carrinho-bottom h3 {
   text-align: left;
+}
+/* line 20, ../sass/partials/carrinho/_resumo.scss */
+.row-carrinho-bottom a:last-of-type {
+  display: block;
 }
 
 /* line 6, ../sass/partials/carrinho/_carrinho.scss */
@@ -795,7 +806,7 @@ header .pull-right {
 @media only screen and (max-width: 767px) {
   /* line 34, ../sass/partials/carrinho/_carrinho.scss */
   .valores-xs {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 }
 @media only screen and (max-width: 370px) {

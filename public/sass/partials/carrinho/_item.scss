@@ -13,8 +13,9 @@
 	}
 	form{
 	  width: 210px;
-	  @media #{$mobile}{
+	  @media #{$mobile-sm}{
       	margin-left: 10px;
+      	width: 160px;
       }
 	}
 	select{

@@ -9,7 +9,12 @@
   }
   @media #{$mobile}{
     border: 0;
-    button, label:first-of-type{
+    button{
+        margin-left: 0;
+    }
+  }
+  @media #{$mobile-sm}{
+    label:first-of-type{
         margin-left: 0;
     }
   }

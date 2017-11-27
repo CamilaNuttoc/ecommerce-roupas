@@ -158,12 +158,12 @@
 				<input type="submit" class="botao-default" value="Consultar">
 			</form>
 
-			<a href="#">Não sei meu CEP</a><hr>
+			<a href="#" id="cepDunno">Não sei meu CEP</a><hr>
 
 			<!-- Cupom -->
-  	  <button class="botao-default cupom">Adicionar cupom de desconto</button>
+  	  		<button class="botao-default cupom">Adicionar cupom de desconto</button>
 
-  	  <hr>
+  	  		<hr>
 
 		</div>
 
@@ -175,14 +175,15 @@
 			<hr>
 
 			<div class="pull-right">
-  	   	<h4 class="preco-total"></h4>
-  	   	<h5 class="total-parcelado"></h5>
-  	  </div>
+  	   			<h4 class="preco-total"></h4>
+  	   			<h5 class="total-parcelado"></h5>
+  	  		</div>
 
-  	  <h3>TOTAL</h3>
-  	  <button class="botao-default">Finalizar Compra</button>
-  	  <button class="botao-default">Escolher mais produtos</button>
-
+  	  		<h3>TOTAL</h3>
+  	  		<button class="botao-default" onclick="pagamento();">Finalizar Compra</button>
+  	  		<script>var pagamento = function(){alert("Compra realizada com sucesso! :)")}</script>
+  	  		<a href="/" class="botao-default">Escolher mais produtos</a>
+		
 		</div>
 
 	</div>
@@ -192,7 +193,7 @@
 		<div class="col-xs-12">
 			<h3>Seu carrinho está vazio...</h3>
 			<p>Que tal escolher alguns produtos?</p><br>
-  	  <a href="/" class="botao-default">Escolher produtos</a>
+  	  		<a href="/" class="botao-default">Escolher produtos</a>
 		</div>
 	</div>
 
