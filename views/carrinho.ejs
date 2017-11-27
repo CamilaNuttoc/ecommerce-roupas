@@ -148,7 +148,7 @@
 
 			<span>Prazo de Entrega - Informe o CEP para consultar: </span>
 
-			<form action="#" method="GET">
+			<form>
 				<input type="text" id="cep" size="5" maxlength="5" pattern=".{5,5}"
 							 required title="5 números são necessários nesse campo"
 							 onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')">
@@ -162,6 +162,10 @@
 
 			<!-- Cupom -->
   	  		<button class="botao-default cupom">Adicionar cupom de desconto</button>
+  	  		<form style="display: none">
+  	  			<input type="text" placeholder="982H381$" required>
+  	  			<button type="submit" class="botao-default">Validar cupom</button>
+  	  		</form>
 
   	  		<hr>
 

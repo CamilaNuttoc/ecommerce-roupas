@@ -820,27 +820,35 @@ header .pull-right {
 .cupom {
   width: 50%;
 }
+/* line 47, ../sass/partials/carrinho/_carrinho.scss */
+.cupom + form input {
+  padding: 10px;
+}
+/* line 50, ../sass/partials/carrinho/_carrinho.scss */
+.cupom + form button {
+  width: auto;
+}
 
-/* line 49, ../sass/partials/carrinho/_carrinho.scss */
+/* line 58, ../sass/partials/carrinho/_carrinho.scss */
 .economia {
   float: right;
 }
 
-/* line 54, ../sass/partials/carrinho/_carrinho.scss */
+/* line 63, ../sass/partials/carrinho/_carrinho.scss */
 .preco-total {
   margin: 0;
   text-align: right;
 }
 
-/* line 60, ../sass/partials/carrinho/_carrinho.scss */
+/* line 69, ../sass/partials/carrinho/_carrinho.scss */
 .row-carrinho-vazio {
   display: none;
 }
-/* line 62, ../sass/partials/carrinho/_carrinho.scss */
+/* line 71, ../sass/partials/carrinho/_carrinho.scss */
 .row-carrinho-vazio div {
   text-align: center;
 }
-/* line 65, ../sass/partials/carrinho/_carrinho.scss */
+/* line 74, ../sass/partials/carrinho/_carrinho.scss */
 .row-carrinho-vazio a {
   width: auto;
 }

@@ -43,6 +43,15 @@
 // Botão para inserir cupom
 .cupom{
 	width: 50%;
+	+ form{
+		input{
+			padding: 10px;
+		}
+		button{
+			width: auto;
+		}
+		
+	}
 }
 
 // Valor sendo economizado

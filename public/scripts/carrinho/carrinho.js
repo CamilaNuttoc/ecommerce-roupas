@@ -138,5 +138,15 @@ $(document).ready(function(){
     }
 
   });
+
+  //Mostra form de cupom
+  $(".cupom").on('click', function () {
+
+    /* Caso valor máximo de input
+       tenha sido atingindo, muda 
+       focus para próximo input */
+    $('.cupom + form').slideToggle();
+
+  });
   
 });
