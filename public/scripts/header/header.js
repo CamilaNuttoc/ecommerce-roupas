@@ -48,7 +48,7 @@ $(document).ready(function(){
   }
 
   //Controla visibilidade de submenus
-  $('.sub-menu-1').click(function(e){
+  $('.sub-menu-1').on('click', function(e){
     e.stopPropagation();
     if($(this).hasClass('open')){
       $(this).removeClass('open');
