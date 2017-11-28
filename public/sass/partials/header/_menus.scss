@@ -53,18 +53,21 @@
       transform: rotate(270deg);
     }
   }
+  @media #{$mobile}{
+    float: none;
+    position: static;
+    background: #333;
+  }
 }
 
-.sub-menu-1{
-  > .dropdown-menu{
+.sub-menu-2{
     top: -8px;
     left: 100%;
-  }
 }
 
 .sub-menu-2 li{
   @media #{$mobile}{
-    background: #333;
+    background: #555;
     border-bottom: 1px solid #222;
   }
 }

@@ -9,14 +9,27 @@
     .dropdown-menu li{
       border-top: 1px solid #eeefff;
       @media #{$mobile}{
-        border-top: 1px solid #333;
+        border-top: 1px solid #444;
       }
       &:first-of-type{
         border-top: 0;
       }
     }
-    .open .dropdown-menu> li > a{
+    .dropdown-menu> li > a{
       padding: 6px 15px;
+      @media #{$mobile}{
+        color: #ddd;
+      }
+      &:focus{
+        @media #{$mobile}{
+          background: #333;
+        }
+      }
+      &:hover{
+        @media #{$mobile}{
+          background: #444;
+        }
+      }
     }
   }
   .navbar-right{

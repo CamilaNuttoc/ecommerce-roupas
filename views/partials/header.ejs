@@ -153,11 +153,10 @@
 
               <!-- Dropdown <%= arrMenus[i] %> -->
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-                   role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#">
                    <%= arrMenus[i] %><span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu" id="dropdown-<%= arrMenus[i].toLowerCase() %>">
+                <ul class="dropdown-menu sub-menu-1" id="dropdown-<%= arrMenus[i].toLowerCase() %>" style="display: none;">
                     
                   <!-- Cria sub-menus -->
                   <% var arrSubmenus = ['Roupas', 'Acessórios', 'Calçados'] %>
@@ -167,13 +166,12 @@
 
                   <% for(var j=0; j<arrSubmenus.length; j++){ %>
                     <!-- <%= arrSubmenus[j] %> / Sub-menu nível 1 -->
-                    <li class="dropdown sub-menu-1">
-                      <a href="#<%= arrSubmenus[j] %>" id="<%= arrSubmenus[j] %>" class="dropdown-toggle padd" data-toggle="dropdown"
-                         role="button" aria-haspopup="true" aria-expanded="false">
+                    <li class="dropdown sub-menu-1-item">
+                      <a href="#<%= arrSubmenus[j] %>" id="<%= arrSubmenus[j] %>" class="padd">
                          <%= arrSubmenus[j] %><span class="caret"></span>
                       </a>
                       <!-- Sub-menu nível 2 -->
-                      <ul class="dropdown-menu sub-menu-2"></ul>
+                      <ul class="dropdown-menu sub-menu-2" style="display: none;"></ul>
                     </li>
                   <% } %>
 

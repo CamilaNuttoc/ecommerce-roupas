@@ -399,7 +399,7 @@ img {
 @media only screen and (max-width: 767px) {
   /* line 9, ../sass/partials/header/_collapse.scss */
   .collapse .categorias .dropdown-menu li {
-    border-top: 1px solid #333;
+    border-top: 1px solid #444;
   }
 }
 /* line 14, ../sass/partials/header/_collapse.scss */
@@ -407,37 +407,55 @@ img {
   border-top: 0;
 }
 /* line 18, ../sass/partials/header/_collapse.scss */
-.collapse .categorias .open .dropdown-menu > li > a {
+.collapse .categorias .dropdown-menu > li > a {
   padding: 6px 15px;
 }
-/* line 22, ../sass/partials/header/_collapse.scss */
+@media only screen and (max-width: 767px) {
+  /* line 18, ../sass/partials/header/_collapse.scss */
+  .collapse .categorias .dropdown-menu > li > a {
+    color: #ddd;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 23, ../sass/partials/header/_collapse.scss */
+  .collapse .categorias .dropdown-menu > li > a:focus {
+    background: #333;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 28, ../sass/partials/header/_collapse.scss */
+  .collapse .categorias .dropdown-menu > li > a:hover {
+    background: #444;
+  }
+}
+/* line 35, ../sass/partials/header/_collapse.scss */
 .collapse .navbar-right {
   margin-right: 90px;
   width: 50%;
   overflow: hidden;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 22, ../sass/partials/header/_collapse.scss */
+  /* line 35, ../sass/partials/header/_collapse.scss */
   .collapse .navbar-right {
     width: 40%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 22, ../sass/partials/header/_collapse.scss */
+  /* line 35, ../sass/partials/header/_collapse.scss */
   .collapse .navbar-right {
     margin: 0;
     width: 100%;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 22, ../sass/partials/header/_collapse.scss */
+  /* line 35, ../sass/partials/header/_collapse.scss */
   .collapse .navbar-right {
     margin: 2.5%;
     width: 95%;
   }
 }
 
-/* line 40, ../sass/partials/header/_collapse.scss */
+/* line 53, ../sass/partials/header/_collapse.scss */
 .collapsing {
   text-align: center;
 }
@@ -514,22 +532,30 @@ img {
     transform: rotate(270deg);
   }
 }
+@media only screen and (max-width: 767px) {
+  /* line 47, ../sass/partials/header/_menus.scss */
+  .dropdown-menu {
+    float: none;
+    position: static;
+    background: #333;
+  }
+}
 
-/* line 59, ../sass/partials/header/_menus.scss */
-.sub-menu-1 > .dropdown-menu {
+/* line 63, ../sass/partials/header/_menus.scss */
+.sub-menu-2 {
   top: -8px;
   left: 100%;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 65, ../sass/partials/header/_menus.scss */
+  /* line 68, ../sass/partials/header/_menus.scss */
   .sub-menu-2 li {
-    background: #333;
+    background: #555;
     border-bottom: 1px solid #222;
   }
 }
 
-/* line 72, ../sass/partials/header/_menus.scss */
+/* line 75, ../sass/partials/header/_menus.scss */
 .caret {
   color: #aaa;
 }

@@ -19,6 +19,7 @@ $(document).ready(function(){
   ];
  
   genDropdown();
+
   //Gera conteúdo do submenu
   function genDropdown(){
 
@@ -48,14 +49,32 @@ $(document).ready(function(){
   }
 
   //Controla visibilidade de submenus
-  $('.sub-menu-1').on('click', function(e){
-    e.stopPropagation();
-    if($(this).hasClass('open')){
-      $(this).removeClass('open');
+  $('.dropdown').on('click', function(){
+    if($(this).find('.sub-menu-1').css('display') !== 'none'){
+      $(this).find('.sub-menu-1').hide();
       return;
     }
-    $('.sub-menu-1').removeClass('open');
-    $(this).addClass('open');
+      $('.dropdown-menu').hide();
+      $(this).find('.sub-menu-1').slideDown();
+  });
+
+  //Controla visibilidade de submenus
+  $('.sub-menu-1-item').on('click', function(e){
+    e.stopPropagation();
+    if($(this).find('.sub-menu-2').css('display') !== 'none'){
+      $(this).find('.sub-menu-2').hide();
+      return;
+    }
+    $(this).find('.sub-menu-2').animate({width: 'toggle'}, 200, function() {
+      $('.sub-menu-2').hide();
+      $(this).show();
+    });
+  });
+
+  $('html').click(function() {
+    if(!$('.sub-menu-1 li, .sub-menu-2 li, .dropdown a').is(":focus")){
+      $('.dropdown-menu').hide();
+    }
   });
   
 });
